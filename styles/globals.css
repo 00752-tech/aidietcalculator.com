@@ -1,0 +1,54 @@
+/* Affiliate Offer Styles */
+.bg-primary {
+  background-color: #4a90e2;
+}
+
+.hover\:bg-primary-dark:hover {
+  background-color: #3a7bc8;
+}
+
+/* Ensure text is readable on dark backgrounds */
+.text-white {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Blue button and slider styles */
+.bg-\[rgb$$59\2c 130\2c 246$$\] {
+  background-color: rgb(59, 130, 246);
+}
+
+.hover\:bg-\[rgb$$29\2c 100\2c 216$$\]:hover {
+  background-color: rgb(29, 100, 216);
+}
+
+.accent-\[rgb$$59\2c 130\2c 246$$\] {
+  accent-color: rgb(59, 130, 246);
+}
+
+/* Green styles for blog affiliate offers */
+.from-green-500 {
+  --tw-gradient-from: #10B981;
+  --tw-gradient-to: #059669;
+}
+
+.to-green-600 {
+  --tw-gradient-to: #059669;
+}
+
+.text-green-600 {
+  color: #059669;
+}
+
+.hover\:bg-green-100:hover {
+  background-color: #D1FAE5;
+}
+
+/* Green button styles for affiliate offers */
+.affiliate-offer-button {
+  background-color: #10B981 !important;
+  color: white !important;
+}
+
+.affiliate-offer-button:hover {
+  background-color: #059669 !important;
+}
