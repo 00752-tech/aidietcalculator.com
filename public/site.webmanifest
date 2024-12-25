@@ -1,0 +1,29 @@
+{
+  "name": "AI Diet Calculator",
+  "short_name": "Diet Calc",
+  "icons": [
+    {
+      "src": "/favicon-270x270.png",
+      "sizes": "270x270",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
