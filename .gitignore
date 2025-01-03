@@ -1,1 +1,63 @@
-node_modules
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Build output
+.next/
+out/
+
+# Static files generated during export
+export/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.swns
+*.swp~
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Coverage reports
+coverage/
+
+# npm package files
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Testing-related files
+jest/
+.cypress/
+cypress/videos/
+cypress/screenshots/
+
+# MacOS system files
+.AppleDouble
+.LSOverride
+
+# Miscellaneous
+*.local
+*.log
+*.gz
