@@ -1,1 +1,0 @@
-"use strict";exports.id=372,exports.ids=[372],exports.modules={1372:(e,t,r)=>{r.r(t),r.d(t,{default:()=>s});let s=(0,r(5347).createProxy)(String.raw`C:\Users\devab\OneDrive\Documents\Berore-client-projects\diet-calculator-\components\ai-diet-planner.tsx#default`)}};
