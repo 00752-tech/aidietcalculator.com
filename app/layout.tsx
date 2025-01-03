@@ -1,21 +1,25 @@
-import "@/styles/globals.css"
-import "@/styles/blog.css"
-import { Metadata, Viewport } from "next"
-import Script from "next/script"
-import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
-import { Toaster } from "@/components/ui/toaster"
-import { StructuredData } from "@/components/structured-data"
-import { Footer } from "@/components/footer"
-import { CookieConsent } from "@/components/cookie-consent"
+import "@/styles/globals.css";
+// import "@/styles/blog.css"
+import { Metadata, Viewport } from "next";
+import "./globals.css";
+import { SiteHeader } from "@/components/site-header";
+import Script from "next/script";
+import { siteConfig } from "@/config/site";
+import { fontSans } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster";
+import { StructuredData } from "@/components/structured-data";
+import { Footer } from "@/components/footer";
+import { CookieConsent } from "@/components/cookie-consent";
 
 export const metadata: Metadata = {
   title: {
-    default: "Free AI Diet & Fitness Calculator | Smart Nutrition Planning Tools",
+    default:
+      "Free AI Diet & Fitness Calculator | Smart Nutrition Planning Tools",
     template: `%s | ${siteConfig.name}`,
   },
-  description: "Transform your health with our free AI-powered diet calculators. Get personalized meal plans, workout routines, track macros, analyze nutrients, and optimize your fitness journey with machine learning technology.",
+  description:
+    "Transform your health with our free AI-powered diet calculators. Get personalized meal plans, workout routines, track macros, analyze nutrients, and optimize your fitness journey with machine learning technology.",
   keywords: [
     // Trending keywords from research
     "AI diet calculator for weight loss",
@@ -41,7 +45,7 @@ export const metadata: Metadata = {
     "health calculator",
     "wellness tools",
     // New keyword
-    "AI workout plan generator"
+    "AI workout plan generator",
   ],
   authors: [{ name: "AI Diet Calculator Team" }],
   creator: "AI Diet Calculator",
@@ -52,9 +56,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: [
-      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
-    ],
+    icon: [{ url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" }],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
@@ -64,8 +66,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://aidietcalculator.com",
-    title: "Free AI-Powered Health & Fitness Calculators | Personalized Nutrition Tools",
-    description: "Optimize your health with our suite of free AI calculators. Get personalized meal plans, workout routines, track calories, analyze body composition, and plan your fitness journey.",
+    title:
+      "Free AI-Powered Health & Fitness Calculators | Personalized Nutrition Tools",
+    description:
+      "Optimize your health with our suite of free AI calculators. Get personalized meal plans, workout routines, track calories, analyze body composition, and plan your fitness journey.",
     siteName: "AI Diet Calculator",
     images: [
       {
@@ -79,11 +83,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Free AI Diet & Fitness Calculators | Smart Health Tools",
-    description: "Personalized meal plans, workout routines, calorie tracking, BMI, body fat, water intake, macros, and exercise calorie burn calculators. Optimize your health journey with AI.",
+    description:
+      "Personalized meal plans, workout routines, calorie tracking, BMI, body fat, water intake, macros, and exercise calorie burn calculators. Optimize your health journey with AI.",
     creator: "@aidietcalculator",
     images: ["https://aidietcalculator.com/twitter-image.jpg"],
   },
-}
+};
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -92,22 +97,49 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
-}
+};
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="google-site-verification" content="RhY8MQoncEED33YHQnoIBVvxJLYtINYFouF8Bcq3Q84" />
-        <link rel="icon" type="image/png" sizes="270x270" href="/favicon-270x270.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png" />
-        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta
+          name="google-site-verification"
+          content="RhY8MQoncEED33YHQnoIBVvxJLYtINYFouF8Bcq3Q84"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="270x270"
+          href="/favicon-270x270.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/favicon-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="180x180"
+          href="/favicon-180x180.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="48x48"
+          href="/favicon-48x48.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
         <link rel="manifest" href="/site.webmanifest" />
         {/* Google Analytics */}
         <Script
@@ -130,15 +162,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <StructuredData />
+        <SiteHeader />
         {children}
         <Toaster />
         <CookieConsent />
       </body>
       <Footer />
     </html>
-  )
+  );
 }
-
-
-
-import './globals.css'

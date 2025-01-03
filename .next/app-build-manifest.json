@@ -1,0 +1,182 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/app/_not-found/page-c8219ab21dbb5ed7.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/css/9b1a325aec222204.css",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/141-6cc5e267a67b8389.js",
+      "static/chunks/221-3b5de1818a1d8caa.js",
+      "static/chunks/app/layout-d8aad4ed9fe6c6e7.js"
+    ],
+    "/about-us/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/app/about-us/page-d7f777bc0faf9b53.js"
+    ],
+    "/blog/[slug]/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/470-5c25b3b0a4a3ee2b.js",
+      "static/chunks/app/blog/[slug]/page-249fbcf6999b2870.js"
+    ],
+    "/blog/[slug]/not-found": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/app/blog/[slug]/not-found-8683946ff4f3e20b.js"
+    ],
+    "/blog/ai-personalized-meal-planning-weight-loss/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/470-5c25b3b0a4a3ee2b.js",
+      "static/chunks/app/blog/ai-personalized-meal-planning-weight-loss/page-51181d5d0f98999d.js"
+    ],
+    "/blog/ai-powered-grocery-shopping-weight-loss/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/470-5c25b3b0a4a3ee2b.js",
+      "static/chunks/app/blog/ai-powered-grocery-shopping-weight-loss/page-2627dff434c64800.js"
+    ],
+    "/blog/common-diet-mistakes-ai-solutions/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/470-5c25b3b0a4a3ee2b.js",
+      "static/chunks/app/blog/common-diet-mistakes-ai-solutions/page-cf71346e15d76a89.js"
+    ],
+    "/blog/future-of-nutrition-ai-vs-human-dietitians/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/470-5c25b3b0a4a3ee2b.js",
+      "static/chunks/app/blog/future-of-nutrition-ai-vs-human-dietitians/page-7924a79580462f11.js"
+    ],
+    "/blog/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/app/blog/page-9b9a8e85a89ab5ac.js"
+    ],
+    "/blog/emotional-eating-ai-solutions/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/470-5c25b3b0a4a3ee2b.js",
+      "static/chunks/app/blog/emotional-eating-ai-solutions/page-e0364b72ad349b80.js"
+    ],
+    "/how-it-works/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/app/how-it-works/page-b9fe666e8cb72e79.js"
+    ],
+    "/blog/intermittent-fasting-ai-optimization/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/470-5c25b3b0a4a3ee2b.js",
+      "static/chunks/app/blog/intermittent-fasting-ai-optimization/page-b67373d1c2daa36c.js"
+    ],
+    "/blog/understanding-macronutrients/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/470-5c25b3b0a4a3ee2b.js",
+      "static/chunks/app/blog/understanding-macronutrients/page-6f79e1112f240c7f.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/141-6cc5e267a67b8389.js",
+      "static/chunks/651-2cb21a5dfba90fd5.js",
+      "static/chunks/app/page-2bb2fd7cb7711677.js"
+    ],
+    "/privacy-policy/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/app/privacy-policy/page-87ba09dbdd2d9814.js"
+    ],
+    "/blog/ai-personalized-nutrition/page": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/972-9a320670f531dcee.js",
+      "static/chunks/142-0b7c5b969b1ae93f.js",
+      "static/chunks/878-eed820ebc815fbb2.js",
+      "static/chunks/470-5c25b3b0a4a3ee2b.js",
+      "static/chunks/app/blog/ai-personalized-nutrition/page-b0d2a04b8a6a45e9.js"
+    ],
+    "/blog/ai-personalized-nutrition/layout": [
+      "static/chunks/webpack-778fdc3d23dd9f29.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-951fb73e07b5aa42.js",
+      "static/chunks/main-app-e327b85342c84836.js",
+      "static/chunks/app/blog/ai-personalized-nutrition/layout-4955fdfaea7553a2.js"
+    ]
+  }
+}

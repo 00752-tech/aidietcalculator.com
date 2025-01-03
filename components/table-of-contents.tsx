@@ -1,10 +1,10 @@
 'use client'
 
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { Button } from "./ui/button"
 
 const tools = [
   { name: "Calorie Calculator", id: "calorie-calculator" },
