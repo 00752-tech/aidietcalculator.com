@@ -1,41 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
   <url>
     <loc>https://aidietcalculator.com/</loc>
-    <lastmod>2024-12-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>1.00</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/how-it-works</loc>
-    <lastmod>2024-12-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/about-us</loc>
-    <lastmod>2024-12-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog</loc>
-    <lastmod>2024-12-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
   </url>
-  {blogPosts.map((post) => (
-    <url key={post.slug}>
-      <loc>{`https://aidietcalculator.com/blog/${post.slug}`}</loc>
-      <lastmod>{post.date}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  ))}
   <url>
     <loc>https://aidietcalculator.com/privacy-policy</loc>
-    <lastmod>2024-12-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
   </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/personalized-nutrition-planning</loc>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/weight-loss-machine-learning</loc>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/common-diet-mistakes-ai-solutions</loc>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/understanding-macronutrients</loc>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/ai-personalized-meal-planning-weight-loss</loc>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/intermittent-fasting-ai-optimization</loc>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/ai-powered-grocery-shopping-weight-loss</loc>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/emotional-eating-ai-solutions</loc>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/future-of-nutrition-ai-vs-human-dietitians</loc>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/ai-personalized-nutrition</loc>
+    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+
 </urlset>
