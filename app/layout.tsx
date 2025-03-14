@@ -108,9 +108,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta
-          name="google-site-verification"
-          content="RhY8MQoncEED33YHQnoIBVvxJLYtINYFouF8Bcq3Q84"
-        />
+    name="google-site-verification"
+    content="RhY8MQoncEED33YHQnoIBVvxJLYtINYFouF8Bcq3Q84"
+  />
+  <meta name="msvalidate.01" content="0D933C8A8D6D92AC7CECDB6E21259A4F" />
         <link
           rel="icon"
           type="image/png"
