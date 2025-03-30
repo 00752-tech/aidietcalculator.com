@@ -14,7 +14,7 @@ const offers = [
     color: "bg-gradient-to-br from-blue-400 to-cyan-300",
   },
   {
-    title: "JAVABURN",
+    title: "JavaBurn",
     description: "Transform Your Coffee into a Fat-Burning Powerhouse!",
     price: "$79/60-day supply",
     link: "https://tinyurl.com/Learn-about-JavaBurns-coffee",
