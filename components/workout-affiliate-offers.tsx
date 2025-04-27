@@ -4,9 +4,9 @@ import { Dumbbell, Zap, Sparkles } from 'lucide-react'
 
 const offers = [
   {
-    title: "BioTrust Low Carb Protein Powder",
-    description: "Premium protein blend for muscle growth and recovery.",
-    link: "https://www.dpbolvw.net/click-101319539-15626102",
+    title: "The 21-day Smoothie Diet",
+    description: "21 day rapid weight loss program.",
+    link: "https://tinyurl.com/21-day-diet-drink",
     icon: Dumbbell,
     color: "bg-gradient-to-br from-blue-400 to-cyan-300",
   },
