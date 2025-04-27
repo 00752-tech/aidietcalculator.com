@@ -3,84 +3,220 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
+  <!-- Main Pages -->
   <url>
     <loc>https://aidietcalculator.com/</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/how-it-works</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/about-us</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
-    <priority>0.64</priority>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/privacy-policy</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
-    <priority>0.64</priority>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.60</priority>
   </url>
   <url>
+    <loc>https://aidietcalculator.com/terms-of-service</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/contact-us</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Core Calculator Tools -->
+  <url>
+    <loc>https://aidietcalculator.com/calorie-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/ai-diet-meal-planner</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/body-fat-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Secondary Calculators -->
+  <url>
+    <loc>https://aidietcalculator.com/bmi-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/water-intake-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/macro-nutrient-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/protein-intake-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/exercise-calorie-burn-estimator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/ai-workout-plan-generator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/keto-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/intermittent-fasting-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/ideal-weight-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/bmr-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/sleep-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/one-rep-max-calculator</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Diet Guides -->
+  <url>
+    <loc>https://aidietcalculator.com/keto-diet</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/paleo-diet</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/vegan-diet</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/mediterranean-diet</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/intermittent-fasting</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
     <loc>https://aidietcalculator.com/blog/personalized-nutrition-planning</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog/weight-loss-machine-learning</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog/common-diet-mistakes-ai-solutions</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog/understanding-macronutrients</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog/ai-personalized-meal-planning-weight-loss</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog/intermittent-fasting-ai-optimization</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog/ai-powered-grocery-shopping-weight-loss</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog/emotional-eating-ai-solutions</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog/future-of-nutrition-ai-vs-human-dietitians</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://aidietcalculator.com/blog/ai-personalized-nutrition</loc>
-    <lastmod>2025-01-03T17:17:09+00:00</lastmod>
+    <lastmod>2025-01-03</lastmod>
     <priority>0.64</priority>
   </url>
-
-
+  <url>
+    <loc>https://aidietcalculator.com/blog/calculate-daily-calories</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/weight-loss-tips</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/healthy-eating-budget</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aidietcalculator.com/blog/exercise-nutrition</loc>
+    <lastmod>2025-01-03</lastmod>
+    <priority>0.64</priority>
+  </url>
 </urlset>
