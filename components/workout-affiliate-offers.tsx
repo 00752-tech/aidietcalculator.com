@@ -19,7 +19,7 @@ const offers = [
   },
   {
     title: "HepatoBurn",
-    description: "Detox your body, boost your metabolism naturally!",
+    description: "Detox your body, boost your metabolism naturally.",
     icon: Sparkles,
     color: "bg-gradient-to-br from-yellow-400 to-orange-300",
   },
