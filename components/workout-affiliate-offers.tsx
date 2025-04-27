@@ -19,8 +19,7 @@ const offers = [
   },
   {
     title: "HepatoBurn",
-    description: "By rapidly detoxifying your body and optimizing liver function, you automatically boost metabolism.",
-    link: "https://tinyurl.com/hepatoburn-now",
+    description: "Detox your body, boost your metabolism naturally!",
     icon: Sparkles,
     color: "bg-gradient-to-br from-yellow-400 to-orange-300",
   },
