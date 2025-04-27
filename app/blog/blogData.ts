@@ -4,17 +4,17 @@ const affiliateOffers = {
   "alpine-ice-hack": {
     title: "Alpine Ice Hack",
     description: "New \"Alpine Water\" 93% more Powerful than Ozempic?",
-    link: "https://tinyurl.com/see-how-to-drop-weight-quickly",
+    link: "https://tinyurl.com/drop-weight-today",
   },
   "javaburn": {
     title: "JAVABURN",
     description: "Transform Your Coffee into a Fat-Burning Powerhouse!",
-    link: "https://tinyurl.com/Learn-about-JavaBurns-coffee",
+    link: "https://tinyurl.com/drink-coffee-lose-weight",
   },
   "liv-pure": {
     title: "Liv Pure",
     description: "Unlock Your Body's Natural Fat-Burning Potential.",
-    link: "https://tinyurl.com/Discover-LivPures-fat-burner",
+    link: "https://tinyurl.com/natural-fat-burn",
   },
 };
 
