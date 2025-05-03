@@ -15,11 +15,11 @@ import { CookieConsent } from "@/components/cookie-consent";
 export const metadata: Metadata = {
   title: {
     default:
-      "Free AI Diet & Fitness Calculator | Smart Nutrition Planning Tools",
+      "Free AI Diet Calculators | Personalized Nutrition & Fitness Tools 2025",
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Transform your health with our free AI-powered diet calculators. Get personalized meal plans, workout routines, track macros, analyze nutrients, and optimize your fitness journey with machine learning technology.",
+    "Get free, personalized diet calculations with our 15+ AI-powered nutrition tools. Calculate calories, macros, BMI, body fat, workout plans, and more with precision. Start optimizing your health today!",
   keywords: [
     // Trending keywords from research
     "AI diet calculator for weight loss",
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://aidietcalculator.com",
     title:
-      "Free AI-Powered Health & Fitness Calculators | Personalized Nutrition Tools",
+      "Free AI Diet Calculators - Personalized Nutrition & Fitness Tools",
     description:
-      "Optimize your health with our suite of free AI calculators. Get personalized meal plans, workout routines, track calories, analyze body composition, and plan your fitness journey.",
+      "Our AI-powered diet calculators provide free, personalized nutrition and fitness calculations. Discover 15+ specialized tools including calorie counters, macro planners, and workout generators designed to optimize your health journey.",
     siteName: "AI Diet Calculator",
     images: [
       {
