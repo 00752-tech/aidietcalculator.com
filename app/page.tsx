@@ -75,10 +75,10 @@ export default function Home() {
       <main className="container mx-auto px-4 py-8 pt-20">
         <header className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Free AI-Powered Health & Fitness Calculators
+            Free AI Diet Calculators - Personalized Nutrition & Fitness Tools
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Harness the power of artificial intelligence to optimize your health and fitness journey. Explore our suite of free calculators and get personalized insights.
+            Our AI-powered diet calculators provide free, personalized nutrition and fitness calculations. Discover 15+ specialized tools including calorie counters, macro planners, and workout generators designed to optimize your health journey.
           </p>
         </header>
         <TableOfContents />
