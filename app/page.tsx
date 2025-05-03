@@ -71,16 +71,17 @@ export const viewport: Viewport = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F8F9FF]">
-      <SiteHeader />
-      <main className="container mx-auto px-4 py-8 pt-20">
-        <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Free AI Diet Calculators - Personalized Nutrition & Fitness Tools
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our AI-powered diet calculators provide free, personalized nutrition and fitness calculations. Discover 15+ specialized tools including calorie counters, macro planners, and workout generators designed to optimize your health journey.
-          </p>
-        </header>
+  <SiteHeader />
+  <main className="container mx-auto px-4 py-8 pt-20">
+    <header className="text-center mb-16">
+      <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <span className="text-[#3B82F6] block">Free AI Diet Calculators</span>
+        <span className="text-gray-800 dark:text-white block mt-2">Personalized Nutrition & Fitness Tools</span>
+      </h1>
+      <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+        Our AI-powered diet calculators provide free, personalized nutrition and fitness calculations. Discover 15+ specialized tools including calorie counters, macro planners, and workout generators designed to optimize your health journey.
+      </p>
+    </header>
         <TableOfContents />
         
         <div className="flex justify-center mb-8">
