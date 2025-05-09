@@ -74,7 +74,7 @@ export default function Home() {
   <SiteHeader />
   <main className="container mx-auto px-4 py-8 pt-20">
     <header className="text-center mb-16">
-      <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+      <br /><br /><h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
         <span className="text-[#3B82F6] block">Free AI Diet Calculators</span>
         <span className="text-gray-800 dark:text-white block mt-2">Personalized Nutrition & Fitness Tools</span>
       </h1>
