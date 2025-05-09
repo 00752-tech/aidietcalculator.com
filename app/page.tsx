@@ -78,13 +78,14 @@ export default function Home() {
         <span className="text-[#3B82F6] block">Free AI Diet Calculators</span>
         <span className="text-gray-800 dark:text-white block mt-2">Personalized Nutrition & Fitness Tools</span>
       </h1>
-      <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-Discover personalized nutrition and fitness calculations with our free AI-powered diet and fitness calculators. Our advanced tools provide accurate, tailored recommendations designed to help you optimize your health journey. Whether you're looking for weight loss, muscle gain, or maintenance, get the precise insights you need to start your plan immediately.<br><br>
-Explore our comprehensive suite of 15+ specialized tools covering essential aspects of health and fitness. Easily calculate your daily calorie needs using the trusted Mifflin-St Jeor equation, generate a personalized meal plan based on your preferences and goals, estimate your body composition with our Body Fat and BMI calculators, determine optimal macronutrient ratios, find your ideal weight range, and create a custom workout plan tailored to your level and equipment.<br><br>
-Leveraging cutting-edge AI algorithms and scientifically-backed methods, our calculators offer highly accurate and easy-to-use solutions to support your long-term, sustainable health management.
-</p>
-
-    </header>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Discover personalized nutrition and fitness calculations with our free AI-powered diet and fitness calculators. Our advanced tools provide accurate, tailored recommendations designed to help you optimize your health journey. Whether you're looking for weight loss, muscle gain, or maintenance, get the precise insights you need to start your plan immediately.
+            <br /><br />
+            Explore our comprehensive suite of 15+ specialized tools covering essential aspects of health and fitness. Easily calculate your daily calorie needs using the trusted Mifflin-St Jeor equation, generate a personalized meal plan based on your preferences and goals, estimate your body composition with our Body Fat and BMI calculators, determine optimal macronutrient ratios, find your ideal weight range, and create a custom workout plan tailored to your level and equipment.
+            <br /><br />
+            Leveraging cutting-edge AI algorithms and scientifically-backed methods, our calculators offer highly accurate and easy-to-use solutions to support your long-term, sustainable health management.
+          </p>
+</header>
         <TableOfContents />
         
         <div className="flex justify-center mb-8">
