@@ -56,7 +56,7 @@ export default function AIDietPlanner() {
           AI-Powered Diet & Meal Planner
         </h1>
         <p className="text-xl text-muted-foreground">
-          Transform your body with our personalized meal plans and recipes, powered by artificial intelligence.
+          Ready to revolutionize your diet? Our AI Diet Calculator, officially the AI-Powered Diet & Meal Planner, leverages artificial intelligence to create personalized meal plans based on your individual nutritional needs, preferences, and goals. This powerful tool provides tailored nutrition plans and diverse, balanced meal options designed to help you transform your body and improve adherence to your dietary goals. To get started, simply enter your daily calorie target, preferred number of meals, diet type, and any allergies or food intolerances, and click to generate your custom AI Meal Plan.
         </p>
       </div>
       <div className="grid gap-8 md:grid-cols-2">
