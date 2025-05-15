@@ -47,7 +47,7 @@ export function ExerciseCalorieBurnEstimator() {
       weightKg = parseFloat(weight)
     }
 
-    if (isNaN(weightKg) || isNaN(durationHours)) {
+    if (isNaN(weightKg) || weightKg <= 0 || isNaN(durationHours) || durationHours <= 0) {
       setError("Please enter valid numbers for weight and duration.")
       setResult(null)
       setIsCalculating(false)
@@ -75,95 +75,104 @@ export function ExerciseCalorieBurnEstimator() {
   }
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <CardTitle className="text-2xl">AI-Powered Exercise Calorie Burn Estimator</CardTitle>
-        <CardDescription>Estimate the number of calories burned during various exercises</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form className="space-y-6">
-          <div className="flex justify-end">
-            <Button type="button" variant="outline" size="sm" onClick={toggleUnitSystem}>
-              <ArrowRightLeft className="mr-2 h-4 w-4" />
-              Switch to {unitSystem === "imperial" ? "Metric" : "Imperial"}
+    <>
+      {/* SEO-optimized intro paragraph */}
+      <div className="max-w-2xl mx-auto mb-6 px-4">
+        <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200">
+          <strong>Get precise estimates of the calories burned during various exercises with our AI-powered Exercise Calorie Burn Estimator.</strong> This tool offers personalized calculations based on your weight and exercise duration, helping you plan more effective workouts, track progress, and optimize your fitness goals like weight loss or maintenance.
+        </p>
+      </div>
+
+      <Card className="w-full max-w-2xl mx-auto">
+        <CardHeader>
+          <CardTitle className="text-2xl">AI-Powered Exercise Calorie Burn Estimator</CardTitle>
+          <CardDescription>Estimate the number of calories burned during various exercises</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <form className="space-y-6">
+            <div className="flex justify-end">
+              <Button type="button" variant="outline" size="sm" onClick={toggleUnitSystem}>
+                <ArrowRightLeft className="mr-2 h-4 w-4" />
+                Switch to {unitSystem === "imperial" ? "Metric" : "Imperial"}
+              </Button>
+            </div>
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="weight">Weight ({unitSystem === "imperial" ? "lbs" : "kg"})</Label>
+                <Input
+                  id="weight"
+                  type="number"
+                  placeholder={`Enter weight in ${unitSystem === "imperial" ? "lbs" : "kg"}`}
+                  value={weight}
+                  onChange={(e) => setWeight(e.target.value)}
+                  className="bg-gray-50"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="duration">Duration (minutes)</Label>
+                <Input
+                  id="duration"
+                  type="number"
+                  placeholder="Enter exercise duration in minutes"
+                  value={duration}
+                  onChange={(e) => setDuration(e.target.value)}
+                  className="bg-gray-50"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="exercise">Exercise Type</Label>
+                <Select value={exercise} onValueChange={setExercise}>
+                  <SelectTrigger id="exercise" className="bg-gray-50">
+                    <SelectValue placeholder="Select exercise type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {Object.keys(exerciseData).map((ex) => (
+                      <SelectItem key={ex} value={ex}>
+                        {ex.charAt(0).toUpperCase() + ex.slice(1)}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            <Button
+              type="button"
+              onClick={calculateCalorieBurn}
+              className="w-full"
+              disabled={isCalculating}
+            >
+              {isCalculating ? "Calculating..." : "Estimate Calorie Burn"}
             </Button>
-          </div>
-          <div className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="weight">Weight ({unitSystem === "imperial" ? "lbs" : "kg"})</Label>
-              <Input
-                id="weight"
-                type="number"
-                placeholder={`Enter weight in ${unitSystem === "imperial" ? "lbs" : "kg"}`}
-                value={weight}
-                onChange={(e) => setWeight(e.target.value)}
-                className="bg-gray-50"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="duration">Duration (minutes)</Label>
-              <Input
-                id="duration"
-                type="number"
-                placeholder="Enter exercise duration in minutes"
-                value={duration}
-                onChange={(e) => setDuration(e.target.value)}
-                className="bg-gray-50"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="exercise">Exercise Type</Label>
-              <Select value={exercise} onValueChange={setExercise}>
-                <SelectTrigger id="exercise" className="bg-gray-50">
-                  <SelectValue placeholder="Select exercise type" />
-                </SelectTrigger>
-                <SelectContent>
-                  {Object.keys(exerciseData).map((ex) => (
-                    <SelectItem key={ex} value={ex}>
-                      {ex.charAt(0).toUpperCase() + ex.slice(1)}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
+          </form>
 
-          <Button
-            type="button"
-            onClick={calculateCalorieBurn}
-            className="w-full"
-            disabled={isCalculating}
-          >
-            {isCalculating ? "Calculating..." : "Estimate Calorie Burn"}
-          </Button>
-        </form>
+          {result && (
+            <div className="mt-6 space-y-4">
+              <h3 className="text-lg font-semibold">Your Estimated Calorie Burn:</h3>
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">Calories Burned</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-3xl font-bold text-primary">{result.caloriesBurned} calories</p>
+                </CardContent>
+              </Card>
 
-        {result && (
-          <div className="mt-6 space-y-4">
-            <h3 className="text-lg font-semibold">Your Estimated Calorie Burn:</h3>
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Calories Burned</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold text-primary">{result.caloriesBurned} calories</p>
-              </CardContent>
-            </Card>
-
-            <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-              <Info className="h-4 w-4 mt-0.5" />
-              <p>
-                This calorie burn estimate is based on average values and may vary depending on individual factors such as fitness level, age, and gender. For more accurate results, consider using a heart rate monitor or consulting with a fitness professional.
-              </p>
+              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                <Info className="h-4 w-4 mt-0.5" />
+                <p>
+                  This calorie burn estimate is based on average values and may vary depending on individual factors such as fitness level, age, and gender. For more accurate results, consider using a heart rate monitor or consulting with a fitness professional.
+                </p>
+              </div>
             </div>
-          </div>
-        )}
-        {error && (
-          <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-md">
-            {error}
-          </div>
-        )}
-      </CardContent>
-    </Card>
+          )}
+          {error && (
+            <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-md">
+              {error}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </>
   )
 }
