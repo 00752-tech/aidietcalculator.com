@@ -1,12 +1,48 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Dumbbell, Zap } from 'lucide-react'
+import { Dumbbell, Zap, Sparkles, ArrowRight } from 'lucide-react'
 import { Button } from "./ui/button"
+
+// Affiliate Ad Component
+function OldSchoolNewBodyAd() {
+  return (
+    <Card className="bg-gradient-to-br from-pink-50 to-yellow-50 border-pink-200 shadow-lg my-8">
+      <CardHeader className="flex items-center gap-3">
+        <Sparkles className="h-8 w-8 text-pink-500" />
+        <h3 className="text-2xl font-bold text-pink-700">
+          5 Steps To Looking 10 Years Younger
+        </h3>
+      </CardHeader>
+      <CardContent>
+        <p className="mb-4 text-gray-700">
+          <strong>Are you over 35 and want to look and feel younger?</strong> Discover the <span className="text-pink-700 font-semibold">Old School New Body</span> system-a proven, science-backed approach that helps you reverse the aging process, burn fat, and regain youthful energy at any age.
+        </p>
+        <ul className="mb-4 list-disc pl-6 text-gray-700">
+          <li>Learn the <strong>5 key principles</strong> to slow aging and restore youth hormones</li>
+          <li>Works for both men and women-even if you're 40, 50, 60 or beyond</li>
+          <li>No extreme diets, drugs, or endless cardio required</li>
+          <li>Created by fitness experts Steve & Becky Holman</li>
+        </ul>
+        <a
+          href="https://67982p5ys98p0y9k38kqgv4s1v.hop.clickbank.net/?&traffic_source=aidietcalc"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white font-bold rounded-md transition-colors duration-200"
+        >
+          Unlock the 5 Steps Now <ArrowRight className="ml-2 w-5 h-5" />
+        </a>
+        <p className="mt-3 text-xs text-gray-500">
+          <em>Affiliate Disclosure: If you purchase through this link, we may earn a commission at no extra cost to you. Thank you for supporting our site!</em>
+        </p>
+      </CardContent>
+    </Card>
+  )
+}
 
 interface WorkoutPlan {
   warmUp: string;
@@ -22,22 +58,14 @@ export function WorkoutPlanGenerator() {
   const [workoutPlan, setWorkoutPlan] = useState<WorkoutPlan | null>(null)
   const [isGenerating, setIsGenerating] = useState(false)
 
-  // Optional: regenerate plan on param change
-  // useEffect(() => {
-  //   if (workoutPlan) {
-  //     generateWorkoutPlan()
-  //   }
-  // }, [fitnessLevel, workoutDuration, fitnessGoal, equipment])
-
   const generateWorkoutPlan = () => {
     setIsGenerating(true)
-    // In a real application, this would call an AI service to generate the workout plan
     setTimeout(() => {
       let warmUp, mainWorkout, coolDown
 
       if (equipment === "minimal") {
         warmUp = "5 minutes of light cardio (jogging in place, jumping jacks, high knees)"
-        mainWorkout = fitnessLevel === "beginner" 
+        mainWorkout = fitnessLevel === "beginner"
           ? "3 sets of 10 push-ups, 3 sets of 15 bodyweight squats, 3 sets of 10 lunges per leg, 3 sets of 30-second plank holds"
           : "4 sets of 15 push-ups, 4 sets of 20 bodyweight squats, 4 sets of 15 lunges per leg, 4 sets of 45-second plank holds, 3 sets of 10 burpees"
         coolDown = "5 minutes of stretching focusing on major muscle groups (legs, back, chest, arms)"
@@ -175,6 +203,10 @@ export function WorkoutPlanGenerator() {
                   <p>{workoutPlan.coolDown}</p>
                 </CardContent>
               </Card>
+
+              {/* Affiliate Ad Placement */}
+              <OldSchoolNewBodyAd />
+
             </div>
           )}
 
