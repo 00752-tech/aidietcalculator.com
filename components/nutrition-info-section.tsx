@@ -5,6 +5,12 @@ export function NutritionInfoSection() {
   return (
     <section className="py-16 bg-muted/50">
       <div className="container mx-auto px-4">
+        {/* SEO-optimized first paragraph for Goal Completion */}
+        <div className="max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
+            <strong>Discover how our AI Diet Calculator can help you create balanced, healthy meal plans tailored just for you.</strong> By taking into account all essential aspects of nutrition, including macronutrients like proteins, carbohydrates, and fats, understanding crucial portion control, and optimizing meal timing, our tool provides personalized guidance. Whether you have vegetarian, vegan, allergen-free, or specific cultural and religious dietary considerations, the AI Diet Calculator accommodates your unique needs.
+          </p>
+        </div>
         <h2 className="text-3xl font-bold text-center mb-4">Understanding Nutrition</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Our AI Diet Calculator takes into account all essential aspects of nutrition to create balanced, healthy meal plans that work for you.
