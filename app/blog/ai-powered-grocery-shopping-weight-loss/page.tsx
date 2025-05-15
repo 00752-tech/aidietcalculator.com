@@ -64,7 +64,7 @@ export default function BlogPost() {
             </p>
           </section>
 
-          {/* Intro paragraph for this post */}
+          {/* Blog intro paragraph */}
           <section className="mb-8">
             <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-100">
               Discover how AI-powered tools like our AI Diet Calculator can revolutionize your weight loss journey. This guide explores how artificial intelligence can assist with personalized nutrition planning, smarter grocery shopping for weight loss, and help you achieve sustainable results by avoiding common diet mistakes. Learn how AI can provide a personalized meal plan tailored to your unique needs and goals.
@@ -73,8 +73,8 @@ export default function BlogPost() {
 
           <TableOfContents content={post.content || ""} />
 
-          {/* Main Blog Content */}
-          <section className="my-8">
+          {/* Main Blog Content - Consistent Typography */}
+          <section className="prose prose-indigo dark:prose-invert max-w-none my-8">
             <BlogContentProcessor content={post.content || ""} />
           </section>
 
