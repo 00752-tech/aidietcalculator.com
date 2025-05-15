@@ -28,6 +28,12 @@ export function HowItWorksSection() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
+        {/* SEO-optimized first paragraph */}
+        <div className="max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
+            <strong>Get your personalized, effective meal plan in seconds with our AI-powered system that makes creating custom nutrition plans simple.</strong> Start by telling us about your dietary preferences, calorie goals, and any food allergies or restrictions, and our advanced AI will quickly process your information to deliver a complete meal plan featuring delicious, nutritious recipes that match your preferences and help you reach your health goals.
+          </p>
+        </div>
         <h2 className="text-3xl font-bold text-center mb-4">How It Works</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Our AI-powered system makes creating personalized meal plans simple and effective. Follow these steps to start your journey to better nutrition.
