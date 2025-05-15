@@ -37,10 +37,10 @@ export default function BlogPost() {
     }));
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-950 dark:to-purple-950">
       <SiteHeader />
-      <main className="container mx-auto px-4 py-8 pt-24">
-        <article className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <main className="container mx-auto max-w-3xl px-6 py-12 pt-28">
+        <article className="bg-white dark:bg-indigo-900/80 p-8 rounded-2xl shadow-lg ring-1 ring-indigo-100 dark:ring-indigo-800">
           <BlogStructuredData post={post} />
           <div className="relative h-64 w-full mb-8">
             <Image
@@ -48,19 +48,28 @@ export default function BlogPost() {
               alt={post.title}
               layout="fill"
               objectFit="cover"
-              className="rounded-lg"
+              className="rounded-xl"
             />
           </div>
-          <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-          <div className="flex items-center text-gray-600 mb-6">
+          <h1 className="text-4xl font-extrabold mb-6 text-indigo-900 dark:text-indigo-200 drop-shadow-md">{post.title}</h1>
+          <div className="flex items-center text-gray-600 dark:text-gray-300 mb-8">
             <span className="mr-4">{post.date}</span>
             <span>By {post.author}</span>
           </div>
+          {/* SEO-optimized first paragraph */}
+          <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-100 mb-6">
+            Looking for personalized nutrition tailored specifically to you? <strong>AI Diet Calculator</strong> is a service that leverages cutting-edge artificial intelligence technology to provide tailored meal plans, aiming to make personalized nutrition accessible to everyone. Founded by a team of nutrition experts and AI enthusiasts, our platform believes a one-size-fits-all approach is outdated. We consider your unique preferences, dietary restrictions, and health goals to create meal plans that are as individual as you are. These plans are designed not only to meet your dietary needs but also to introduce variety and excitement to healthy eating.
+          </p>
+          {/* Improved intro for this post */}
+          <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-100 mb-6">
+            Discover how AI-powered tools like our AI Diet Calculator can revolutionize your weight loss journey. This guide explores how artificial intelligence can assist with personalized nutrition planning, smarter grocery shopping for weight loss, and help you achieve sustainable results by avoiding common diet mistakes. Learn how AI can provide a personalized meal plan tailored to your unique needs and goals.
+          </p>
           <TableOfContents content={post.content} />
-          <BlogContentProcessor content={post.content} />
-          
+          {/* --- Main Blog Content --- */}
+          <section className="my-8">
+            <BlogContentProcessor content={post.content} />
+          </section>
           <SocialShare url={`https://aidietcalculator.com/blog/${post.slug}`} title={post.title} />
-          
           {post.affiliateOffer && (
             <BlogAffiliateOffer
               title={post.affiliateOffer.title}
@@ -68,18 +77,17 @@ export default function BlogPost() {
               link={post.affiliateOffer.link}
             />
           )}
-          
           <AffiliateDisclosure />
         </article>
-        
         <RelatedArticles articles={relatedArticles} />
-        
         <CommentsSection />
-        
-        <div className="mt-12 bg-primary text-white p-8 rounded-lg text-center max-w-3xl mx-auto">
+        {/* Call to Action */}
+        <div className="mt-12 bg-indigo-700 dark:bg-indigo-800 text-white p-8 rounded-2xl text-center max-w-3xl mx-auto shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Diet?</h2>
-          <p className="mb-6">Try our AI-powered Diet Calculator and get a personalized meal plan tailored to your unique needs and goals.</p>
-          <Link href="/" className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+          <p className="mb-6 text-lg">
+            Try our AI-powered Diet Calculator and get a personalized meal plan tailored to your unique needs and goals.
+          </p>
+          <Link href="/" className="bg-white text-indigo-700 px-6 py-3 rounded-full font-semibold hover:bg-indigo-100 transition-colors">
             Get Your Personalized Meal Plan
           </Link>
         </div>
