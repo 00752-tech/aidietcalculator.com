@@ -109,7 +109,8 @@ export function CalorieCalculator() {
     <Card className="w-full max-w-2xl mx-auto bg-white shadow-sm">
       <CardHeader>
         <CardTitle className="text-2xl">AI-Powered Calorie Calculator</CardTitle>
-        <CardDescription>Discover your personalized daily calorie needs for weight loss, muscle gain, or maintaining a healthy weight with our advanced AI-powered Calorie Calculator. This tool provides accurate, tailored recommendations based on cutting-edge nutritional science and the trusted Mifflin-St Jeor equation. By considering your age, gender, height, weight, and activity level, our calculator delivers instant results to help you start your nutrition plan immediately.<br>Calculate your personalized daily calorie needs for weight loss, maintenance, or gain.</CardDescription>
+        <CardDescription>Discover your personalized daily calorie needs for weight loss, muscle gain, or maintaining a healthy weight with our advanced AI-powered Calorie Calculator. This tool provides accurate, tailored recommendations based on cutting-edge nutritional science and the trusted Mifflin-St Jeor equation. By considering your age, gender, height, weight, and activity level, our calculator delivers instant results to help you start your nutrition plan immediately.
+Calculate your personalized daily calorie needs for weight loss, maintenance, or gain.</CardDescription>
       </CardHeader>
       <CardContent>
         <form className="space-y-6">
