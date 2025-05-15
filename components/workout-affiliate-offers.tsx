@@ -1,3 +1,31 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Dumbbell, Zap, Sparkles } from 'lucide-react'
+
+const offers = [
+  {
+    title: "The 21-day Smoothie Diet",
+    description: "21 day rapid weight loss program.",
+    link: "https://tinyurl.com/21-day-diet-drink",
+    icon: Dumbbell,
+    color: "bg-gradient-to-br from-blue-400 to-cyan-300",
+  },
+  {
+    title: "Gluco Extend",
+    description: "Support healthy blood sugar naturally.",
+    link: "https://tinyurl.com/gluco-extend-now",
+    icon: Zap,
+    color: "bg-gradient-to-br from-purple-400 to-pink-300",
+  },
+  {
+    title: "HepatoBurn",
+    description: "Detox your body, boost your metabolism naturally.",
+    link: "https://tinyurl.com/hepatoburn-now",
+    icon: Sparkles,
+    color: "bg-gradient-to-br from-yellow-400 to-orange-300",
+  },
+]
+
 export function WorkoutAffiliateOffers() {
   return (
     <div className="mt-12 p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg text-gray-800">
