@@ -1,34 +1,17 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Dumbbell, Zap, Sparkles } from 'lucide-react'
-
-const offers = [
-  {
-    title: "The 21-day Smoothie Diet",
-    description: "21 day rapid weight loss program.",
-    link: "https://tinyurl.com/21-day-diet-drink",
-    icon: Dumbbell,
-    color: "bg-gradient-to-br from-blue-400 to-cyan-300",
-  },
-  {
-    title: "Gluco Extend",
-    description: "Support healthy blood sugar naturally.",
-    link: "https://tinyurl.com/gluco-extend-now",
-    icon: Zap,
-    color: "bg-gradient-to-br from-purple-400 to-pink-300",
-  },
-  {
-    title: "HepatoBurn",
-    description: "Detox your body, boost your metabolism naturally.",
-    icon: Sparkles,
-    color: "bg-gradient-to-br from-yellow-400 to-orange-300",
-  },
-]
-
 export function WorkoutAffiliateOffers() {
   return (
     <div className="mt-12 p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg text-gray-800">
       <h2 className="mb-6 text-3xl font-bold text-center text-gray-800">Enhance Your Fitness Journey</h2>
+      {/* SEO-optimized subheadline and affiliate disclaimer */}
+      <div className="max-w-2xl mx-auto mb-8">
+        <p className="text-base text-gray-700 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
+          <strong>Supercharge your workout results with these premium, scientifically-formulated supplements designed to support your fitness goals.</strong>
+          <br />
+          <span className="text-blue-600 font-semibold">
+            Please note: Some links below are affiliate links. We may earn a small commission if you make a purchase through them-at no extra cost to you. This helps support our site and allows us to continue providing helpful fitness content. Thank you for your support!
+          </span>
+        </p>
+      </div>
       <div className="grid gap-6 md:grid-cols-3">
         {offers.map((offer, index) => (
           <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg">
