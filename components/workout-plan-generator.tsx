@@ -8,7 +8,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Dumbbell, Zap, Sparkles, ArrowRight } from 'lucide-react'
 import { Button } from "./ui/button"
 
-// Affiliate Ad Component
+interface WorkoutPlan {
+  warmUp: string;
+  mainWorkout: string;
+  coolDown: string;
+}
+
+// Inline affiliate ad component
 function OldSchoolNewBodyAd() {
   return (
     <Card className="bg-gradient-to-br from-pink-50 to-yellow-50 border-pink-200 shadow-lg my-8">
@@ -42,12 +48,6 @@ function OldSchoolNewBodyAd() {
       </CardContent>
     </Card>
   )
-}
-
-interface WorkoutPlan {
-  warmUp: string;
-  mainWorkout: string;
-  coolDown: string;
 }
 
 export function WorkoutPlanGenerator() {
@@ -206,7 +206,6 @@ export function WorkoutPlanGenerator() {
 
               {/* Affiliate Ad Placement */}
               <OldSchoolNewBodyAd />
-
             </div>
           )}
 
