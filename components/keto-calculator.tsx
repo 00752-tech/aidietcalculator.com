@@ -8,7 +8,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Slider } from "@/components/ui/slider"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Info, ArrowRightLeft } from 'lucide-react'
+import { Info, ArrowRightLeft, Heart } from 'lucide-react'
 
 interface KetoResult {
   calories: number
@@ -16,6 +16,57 @@ interface KetoResult {
   carbs: number
   fat: number
 }
+
+const MitolynAd = () => {
+  return (
+    <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200 shadow-lg my-8">
+      <CardHeader className="flex items-center gap-3">
+        <Heart className="h-8 w-8 text-green-600" />
+        <h3 className="text-2xl font-bold text-green-800">
+          Natural Blood Sugar Support
+        </h3>
+      </CardHeader>
+      <CardContent>
+        <div className="mb-6">
+          <h4 className="font-bold text-lg text-green-700 mb-2">
+            MITOLYN - Advanced Glucose Metabolism Formula
+          </h4>
+          <p className="mb-3 text-gray-700">
+            Specially formulated to support healthy blood sugar levels and natural insulin sensitivity - perfect complement to your keto lifestyle.
+          </p>
+          <ul className="mb-4 list-disc pl-6 text-gray-700">
+            <li>Promotes healthy glucose metabolism</li>
+            <li>Supports natural insulin sensitivity</li>
+            <li>100% natural, non-GMO ingredients</li>
+            <li>No artificial fillers or preservatives</li>
+            <li>Made in USA in FDA-registered facility</li>
+          </ul>
+          <div className="flex flex-col md:flex-row gap-4">
+            <a
+              href="https://mitolyn.com/welcome/?hop=zzzzz&hopId=4f9c80db-7c96-4791-9c9e-c4b313b1133a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-md transition-colors duration-200 shadow-md flex-1"
+            >
+              Learn More About MITOLYN
+            </a>
+            <a
+              href="https://18f7ax6zjado3l9hngwk48cpfn.hop.clickbank.net/?&traffic_source=aidietcalc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-md transition-colors duration-200 shadow-md flex-1"
+            >
+              Special Keto Offer (ClickBank)
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-gray-500">
+            <em>Affiliate Disclosure: We may earn a commission if you purchase through these links, at no extra cost to you.</em>
+          </p>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
 
 export function KetoCalculator() {
   const [gender, setGender] = useState<string>("female")
@@ -226,6 +277,9 @@ export function KetoCalculator() {
           {result && (
             <div className="mt-6 space-y-4">
               <h3 className="text-lg font-semibold">Your Personalized Keto Macros:</h3>
+              
+              <MitolynAd />
+              
               <Card>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg">Daily Macronutrient Targets</CardTitle>
