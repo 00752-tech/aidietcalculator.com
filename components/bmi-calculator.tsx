@@ -141,7 +141,7 @@ export function BMICalculator() {
           </form>
 
           {result && (
-            <div className="mt-6 space-y-6"> {/* Increased space-y for better separation */}
+            <div className="mt-6 space-y-6">
               <h3 className="text-lg font-semibold">Your BMI Result:</h3>
               <Card>
                 <CardHeader className="pb-2">
@@ -153,25 +153,44 @@ export function BMICalculator() {
                 </CardContent>
               </Card>
 
-              {/* --- Results Ad Section --- */}
-              <Card className="bg-blue-50 border-blue-200"> {/* Added background/border for distinction */}
+              {/* Results Ad Section */}
+              <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 shadow-sm">
                 <CardHeader className="pb-2">
-                   <CardTitle className="text-lg text-blue-700">Unlock Your Health Potential</CardTitle>
+                  <CardTitle className="text-xl text-blue-800">Take Action Based on Your BMI</CardTitle>
+                  <CardDescription className="text-blue-600">
+                    Discover a science-backed approach to achieving your ideal weight
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-base text-gray-800">
-                    Ready to take the next step based on your BMI? Discover a revolutionary approach to optimizing your health and achieving your wellness goals.
+                    {result.category === "Underweight" 
+                      ? "If you're looking to gain weight healthily, our recommended program provides expert guidance on nutrition and exercise tailored for healthy weight gain."
+                      : result.category === "Normal weight"
+                      ? "Maintain your healthy weight with science-backed strategies for long-term wellness and optimal body composition."
+                      : result.category === "Overweight"
+                      ? "Ready to make a change? Our proven system helps people with your BMI safely and effectively reach their weight goals."
+                      : "For those in the obese category, our medically-reviewed program offers a structured approach to sustainable weight loss and improved health."}
                   </p>
-                   {/* Affiliate Link Button */}
-                  <a href="https://18f7ax6zjado3l9hngwk48cpfn.hop.clickbank.net/?&traffic_source=aidietcalc" target="_blank" rel="noopener noreferrer" className="block">
-                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                        Learn More About Optimizing Your Health
-                     </Button>
+                  <a 
+                    href="https://18f7ax6zjado3l9hngwk48cpfn.hop.clickbank.net/?&traffic_source=aidietcalc" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white">
+                      {result.category === "Underweight" 
+                        ? "Learn Healthy Weight Gain Strategies" 
+                        : result.category === "Normal weight"
+                        ? "Optimize Your Health Now"
+                        : "Start Your Transformation Today"}
+                    </Button>
                   </a>
+                  <p className="text-xs text-gray-500 text-center">
+                    Clicking this button will take you to an external offer
+                  </p>
                 </CardContent>
               </Card>
-              {/* --- End Results Ad Section --- */}
-
+              {/* End Results Ad Section */}
 
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <Info className="h-4 w-4 mt-0.5" />
