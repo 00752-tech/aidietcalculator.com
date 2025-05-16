@@ -17,12 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/components/ui": ["./components/ui"],
-      "@/lib/*": ["./lib/*"],
-      "@/utils": ["./lib/utils"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/styles/*": ["./styles/*"]
+      "~/*": ["./*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
