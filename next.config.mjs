@@ -1,5 +1,10 @@
-// @ts-check
-const path = require('path')
+// next.config.mjs
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+// Convert the URL to a path for __dirname equivalent
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 /**
  * Helper function to merge configurations
@@ -38,13 +43,13 @@ const baseConfig = {
     // Configure path aliases
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': path.resolve(__dirname),
-      '@/components': path.resolve(__dirname, 'components'),
-      '@/components/ui': path.resolve(__dirname, 'components/ui'),
-      '@/lib': path.resolve(__dirname, 'lib'),
-      '@/utils': path.resolve(__dirname, 'lib/utils'),
-      '@/hooks': path.resolve(__dirname, 'hooks'),
-      '@/styles': path.resolve(__dirname, 'styles'),
+      '@': __dirname,
+      '@/components': path.join(__dirname, 'components'),
+      '@/components/ui': path.join(__dirname, 'components/ui'),
+      '@/lib': path.join(__dirname, 'lib'),
+      '@/utils': path.join(__dirname, 'lib/utils'),
+      '@/hooks': path.join(__dirname, 'hooks'),
+      '@/styles': path.join(__dirname, 'styles'),
     }
     return config
   },
@@ -53,9 +58,9 @@ const baseConfig = {
 // Try to load user config if exists
 let userConfig = {}
 try {
-  userConfig = require('./v0-user-next.config')
+  userConfig = (await import('./v0-user-next.config.js')).default
 } catch (e) {
   console.log('No user config found, using base configuration only')
 }
 
-module.exports = mergeConfigs(baseConfig, userConfig)
+export default mergeConfigs(baseConfig, userConfig)
