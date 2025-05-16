@@ -29,14 +29,18 @@ export function BMICalculator() {
     let weightInKg: number
 
     if (unitSystem === "imperial") {
+      // Assume height input is in inches for imperial
+      // Assume weight input is in pounds (lbs) for imperial
       heightInM = parseFloat(height) * 0.0254 // Convert inches to meters
       weightInKg = parseFloat(weight) * 0.453592 // Convert lbs to kg
     } else {
+      // Assume height input is in cm for metric
+      // Assume weight input is in kg for metric
       heightInM = parseFloat(height) / 100 // Convert cm to meters
       weightInKg = parseFloat(weight)
     }
 
-    if (isNaN(heightInM) || isNaN(weightInKg) || heightInM === 0) {
+    if (isNaN(heightInM) || isNaN(weightInKg) || heightInM <= 0) { // Ensure height is positive
       setError("Please enter valid numbers for height and weight.")
       setResult(null)
       setIsCalculating(false)
@@ -47,7 +51,7 @@ export function BMICalculator() {
     const category = getBMICategory(bmi)
 
     setResult({
-      bmi: parseFloat(bmi.toFixed(1)),
+      bmi: parseFloat(bmi.toFixed(1)), // Round BMI to one decimal place
       category
     })
 
@@ -62,15 +66,21 @@ export function BMICalculator() {
   }
 
   const toggleUnitSystem = () => {
+    // Convert existing values when switching units
     if (unitSystem === "imperial") {
       setUnitSystem("metric")
+      // Convert inches to cm, lbs to kg
       setHeight(h => h ? (parseFloat(h) * 2.54).toFixed(1) : "")
       setWeight(w => w ? (parseFloat(w) * 0.453592).toFixed(1) : "")
     } else {
       setUnitSystem("imperial")
+      // Convert cm to inches, kg to lbs
       setHeight(h => h ? (parseFloat(h) / 2.54).toFixed(1) : "")
       setWeight(w => w ? (parseFloat(w) / 0.453592).toFixed(1) : "")
     }
+     // Clear result and error on unit switch
+     setResult(null);
+     setError(null);
   }
 
   return (
@@ -131,7 +141,7 @@ export function BMICalculator() {
           </form>
 
           {result && (
-            <div className="mt-6 space-y-4">
+            <div className="mt-6 space-y-6"> {/* Increased space-y for better separation */}
               <h3 className="text-lg font-semibold">Your BMI Result:</h3>
               <Card>
                 <CardHeader className="pb-2">
@@ -142,6 +152,26 @@ export function BMICalculator() {
                   <p className="text-lg">Category: <span className="font-semibold">{result.category}</span></p>
                 </CardContent>
               </Card>
+
+              {/* --- Results Ad Section --- */}
+              <Card className="bg-blue-50 border-blue-200"> {/* Added background/border for distinction */}
+                <CardHeader className="pb-2">
+                   <CardTitle className="text-lg text-blue-700">Unlock Your Health Potential</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-base text-gray-800">
+                    Ready to take the next step based on your BMI? Discover a revolutionary approach to optimizing your health and achieving your wellness goals.
+                  </p>
+                   {/* Affiliate Link Button */}
+                  <a href="https://18f7ax6zjado3l9hngwk48cpfn.hop.clickbank.net/?&traffic_source=aidietcalc" target="_blank" rel="noopener noreferrer" className="block">
+                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                        Learn More About Optimizing Your Health
+                     </Button>
+                  </a>
+                </CardContent>
+              </Card>
+              {/* --- End Results Ad Section --- */}
+
 
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <Info className="h-4 w-4 mt-0.5" />
