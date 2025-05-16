@@ -36,7 +36,7 @@ export function BodyFatPercentageCalculator() {
     const waistNum = parseFloat(waist)
     const hipNum = parseFloat(hip)
 
-    if (isNaN(ageNum) {
+    if (isNaN(ageNum)) {
       setError("Please enter a valid age")
       setIsCalculating(false)
       return
@@ -58,14 +58,11 @@ export function BodyFatPercentageCalculator() {
     let category: string;
 
     if (gender === "male") {
-      // US Navy method for men
       bodyFatPercentage = 86.010 * Math.log10(waistNum - neckNum) - 70.041 * Math.log10(heightNum) + 36.76
     } else {
-      // US Navy method for women
       bodyFatPercentage = 163.205 * Math.log10(waistNum + hipNum - neckNum) - 97.684 * Math.log10(heightNum) - 78.387
     }
 
-    // Determine category based on age and gender
     if (gender === "male") {
       if (ageNum < 20) {
         category = bodyFatPercentage < 8 ? "Essential fat" :
@@ -101,10 +98,9 @@ export function BodyFatPercentageCalculator() {
 
   return (
     <>
-      {/* SEO-optimized intro paragraph */}
       <div className="max-w-2xl mx-auto mb-6 px-4">
         <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200">
-          <strong>Use our AI-Powered Body Fat Percentage Calculator</strong> to accurately estimate your body composition. This tool uses the US Navy method to calculate body fat based on your measurements, providing a more accurate assessment than BMI alone. Understanding your body fat percentage helps you track fitness progress, set realistic goals, and optimize your health. Simply enter your measurements to get started.
+          <strong>Use our AI-Powered Body Fat Percentage Calculator</strong> to accurately estimate your body composition. This tool uses the US Navy method to calculate body fat based on your measurements, providing a more accurate assessment than BMI alone. Understanding your body fat percentage helps you track fitness progress, set realistic goals, and optimize your health.
         </p>
       </div>
 
@@ -274,7 +270,6 @@ export function BodyFatPercentageCalculator() {
             </div>
           )}
 
-          {/* Affiliate offer section */}
           <div className="mt-8 border-t pt-6">
             <h3 className="text-lg font-semibold mb-4">Recommended Products</h3>
             <div className="grid gap-4 md:grid-cols-2">
