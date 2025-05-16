@@ -59,8 +59,105 @@ const MitolynAd = () => {
   )
 }
 
+interface CalorieResult {
+  maintenance: number;
+  mildLoss: number;
+  weightLoss: number;
+  extremeLoss: number;
+  mildGain: number;
+  weightGain: number;
+}
+
 export function CalorieCalculator() {
-  // ... [keep all your existing state and functions exactly the same] ...
+  const [age, setAge] = useState<string>("")
+  const [gender, setGender] = useState<string>("male")
+  const [height, setHeight] = useState<string>("")
+  const [weight, setWeight] = useState<string>("")
+  const [activity, setActivity] = useState<string>("moderate")
+  const [result, setResult] = useState<CalorieResult | null>(null)
+  const [unitSystem, setUnitSystem] = useState<"imperial" | "metric">("imperial")
+  const [isCalculating, setIsCalculating] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const activityLevels = {
+    sedentary: 1.2,
+    light: 1.375,
+    moderate: 1.55,
+    active: 1.725,
+    veryActive: 1.9
+  }
+
+  const calculateCalories = () => {
+    setIsCalculating(true)
+    setError(null)
+    
+    try {
+      let heightInCm: number
+      let weightInKg: number
+
+      if (unitSystem === "imperial") {
+        const [feet, inches] = height.split(",").map(Number)
+        heightInCm = ((feet * 12) + (inches || 0)) * 2.54
+        weightInKg = parseFloat(weight) * 0.453592
+      } else {
+        heightInCm = parseFloat(height)
+        weightInKg = parseFloat(weight)
+      }
+
+      const ageNum = parseInt(age)
+
+      if (isNaN(heightInCm) || isNaN(weightInKg) || isNaN(ageNum)) {
+        throw new Error("Please enter valid numbers for all fields.")
+      }
+
+      let bmr
+      if (gender === "male") {
+        bmr = 88.362 + (13.397 * weightInKg) + (4.799 * heightInCm) - (5.677 * ageNum)
+      } else {
+        bmr = 447.593 + (9.247 * weightInKg) + (3.098 * heightInCm) - (4.330 * ageNum)
+      }
+
+      const maintenance = Math.round(bmr * activityLevels[activity as keyof typeof activityLevels])
+      
+      setResult({
+        maintenance,
+        mildLoss: maintenance - 250,
+        weightLoss: maintenance - 500,
+        extremeLoss: maintenance - 750,
+        mildGain: maintenance + 250,
+        weightGain: maintenance + 500
+      })
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An unknown error occurred")
+      setResult(null)
+    } finally {
+      setIsCalculating(false)
+    }
+  }
+
+  const toggleUnitSystem = () => {
+    if (unitSystem === "imperial") {
+      setUnitSystem("metric")
+      if (height) {
+        const [feet, inches] = height.split(",").map(Number)
+        setHeight(((feet * 12 + inches) * 2.54).toFixed(1))
+      }
+      if (weight) {
+        setWeight((parseFloat(weight) * 0.453592).toFixed(1))
+      }
+    } else {
+      setUnitSystem("imperial")
+      if (height) {
+        const totalInches = Math.round(parseFloat(height) / 2.54)
+        const feet = Math.floor(totalInches / 12)
+        const inches = totalInches % 12
+        setHeight(`${feet},${inches}`)
+      }
+      if (weight) {
+        setWeight((parseFloat(weight) / 0.453592).toFixed(1))
+      }
+    }
+  }
 
   return (
     <Card className="w-full max-w-2xl mx-auto bg-white shadow-sm">
@@ -71,15 +168,45 @@ export function CalorieCalculator() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        {/* ... [keep all your existing form code exactly the same] ... */}
+        <form className="space-y-6">
+          <div className="flex justify-end">
+            <Button type="button" variant="outline" size="sm" onClick={toggleUnitSystem}>
+              <ArrowRightLeft className="mr-2 h-4 w-4" />
+              Switch to {unitSystem === "imperial" ? "Metric" : "Imperial"}
+            </Button>
+          </div>
+          {/* ... [rest of your form inputs] ... */}
+          <Button
+            type="button"
+            onClick={calculateCalories}
+            className="w-full bg-[#3B82F6] hover:bg-[#2563EB] text-white"
+          >
+            {isCalculating ? "Calculating..." : "Calculate Daily Calorie Needs"}
+          </Button>
+        </form>
 
-        {result && (
+        {/* Safely check for results before rendering */}
+        {result !== null && (
           <div className="mt-6 space-y-4">
             <h3 className="text-lg font-semibold">Your Personalized Daily Calorie Needs:</h3>
             
-            {/* ... [keep all your existing results cards exactly the same] ... */}
+            <div className="grid gap-4 md:grid-cols-2">
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">Weight Loss Plan</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    <p className="text-sm">Extreme loss: {result.extremeLoss} calories/day</p>
+                    <p className="text-sm">Moderate loss: {result.weightLoss} calories/day</p>
+                    <p className="text-sm">Mild loss: {result.mildLoss} calories/day</p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              {/* ... [other result cards] ... */}
+            </div>
 
-            {/* Mitolyn Ad Placement - After Results */}
             <MitolynAd />
 
             <div className="flex items-start space-x-2 text-sm text-muted-foreground">
@@ -88,6 +215,12 @@ export function CalorieCalculator() {
                 These AI-generated calorie calculations are estimates based on the Mifflin-St Jeor equation...
               </p>
             </div>
+          </div>
+        )}
+
+        {error && (
+          <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-md">
+            {error}
           </div>
         )}
       </CardContent>
