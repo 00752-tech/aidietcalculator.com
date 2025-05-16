@@ -175,21 +175,99 @@ export function CalorieCalculator() {
               Switch to {unitSystem === "imperial" ? "Metric" : "Imperial"}
             </Button>
           </div>
-          {/* ... [rest of your form inputs] ... */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <Label htmlFor="age">Age (15-80)</Label>
+              <Input
+                id="age"
+                type="number"
+                min="15"
+                max="80"
+                placeholder="Enter your age (15-80)"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
+                className="bg-white border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label>Gender</Label>
+              <RadioGroup
+                value={gender}
+                onValueChange={setGender}
+                className="flex space-x-6"
+              >
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="male" id="male" className="border-gray-300" />
+                  <Label htmlFor="male" className="font-normal">Male</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="female" id="female" className="border-gray-300" />
+                  <Label htmlFor="female" className="font-normal">Female</Label>
+                </div>
+              </RadioGroup>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="height">
+                Height ({unitSystem === "imperial" ? "feet,inches" : "cm"})
+              </Label>
+              <Input
+                id="height"
+                type="text"
+                placeholder={unitSystem === "imperial" ? "Enter height (e.g., 5,10)" : "Enter height in cm"}
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+                className="bg-white border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              />
+              <p className="text-sm text-muted-foreground">
+                {unitSystem === "imperial" ? "Format: feet,inches (e.g., 5,10)" : "Enter height in centimeters"}
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="weight">Weight ({unitSystem === "imperial" ? "lbs" : "kg"})</Label>
+              <Input
+                id="weight"
+                type="number"
+                placeholder={unitSystem === "imperial" ? "Enter weight in lbs" : "Enter weight in kg"}
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
+                className="bg-white border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+
+            <div className="space-y-2 md:col-span-2">
+              <Label htmlFor="activity">Activity Level</Label>
+              <Select value={activity} onValueChange={setActivity}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select activity level" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="sedentary">Sedentary (little or no exercise)</SelectItem>
+                  <SelectItem value="light">Light (exercise 1-3 days/week)</SelectItem>
+                  <SelectItem value="moderate">Moderate (exercise 3-5 days/week)</SelectItem>
+                  <SelectItem value="active">Active (exercise 6-7 days/week)</SelectItem>
+                  <SelectItem value="veryActive">Very Active (intense exercise daily)</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
           <Button
             type="button"
             onClick={calculateCalories}
             className="w-full bg-[#3B82F6] hover:bg-[#2563EB] text-white"
+            disabled={isCalculating}
           >
             {isCalculating ? "Calculating..." : "Calculate Daily Calorie Needs"}
           </Button>
         </form>
 
-        {/* Safely check for results before rendering */}
-        {result !== null && (
+        {/* Results Section - Only renders when result exists */}
+        {result ? (
           <div className="mt-6 space-y-4">
             <h3 className="text-lg font-semibold">Your Personalized Daily Calorie Needs:</h3>
-            
             <div className="grid gap-4 md:grid-cols-2">
               <Card>
                 <CardHeader className="pb-2">
@@ -204,19 +282,39 @@ export function CalorieCalculator() {
                 </CardContent>
               </Card>
               
-              {/* ... [other result cards] ... */}
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">Weight Maintenance</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm">Maintain current weight: {result.maintenance} calories/day</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="md:col-span-2">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">Weight Gain Strategy</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    <p className="text-sm">Mild gain: {result.mildGain} calories/day</p>
+                    <p className="text-sm">Moderate gain: {result.weightGain} calories/day</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
 
+            {/* Mitolyn Ad - Only shows after results */}
             <MitolynAd />
 
             <div className="flex items-start space-x-2 text-sm text-muted-foreground">
               <Info className="h-4 w-4 mt-0.5" />
               <p>
-                These AI-generated calorie calculations are estimates based on the Mifflin-St Jeor equation...
+                These AI-generated calorie calculations are estimates based on the Mifflin-St Jeor equation. Individual needs may vary. For personalized nutrition advice, consult with a healthcare professional or registered dietitian.
               </p>
             </div>
           </div>
-        )}
+        ) : null}
 
         {error && (
           <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-md">
