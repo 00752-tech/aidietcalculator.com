@@ -54,9 +54,9 @@ import { FAQAccordion } from "@/components/faq-accordion"
 
 
 export const metadata: Metadata = {
-  title: "AI Diet & Fitness Calculators | Personalized Health Tools",
-  description: "Explore our suite of free AI-powered health calculators including calorie, body fat, BMI, water intake, macro nutrients, exercise calorie burn, and workout plan generator. Get personalized meal plans and achieve your fitness goals.",
-  keywords: ["AI diet calculator", "free AI calculators", "calorie calculator", "body fat calculator", "BMI calculator", "water intake calculator", "macro nutrient calculator", "exercise calorie burn", "workout plan generator", "personalized meal plans", "fitness tools"],
+  title: "AI Health & Fitness Calculators | aidietcalculator.com",
+  description: "Use our AI-powered suite to calculate, plan, and track your health journey. Find your ideal weight, BMR, daily water needs, and get workout plans. Free tools inside!",
+  keywords: ["AI diet calculator, free AI health tools, free AI fitness tools, free AI calculators, online diet calculator free, AI diet plan generator, AI meal planner free, personalized AI meal plan, calorie calculator online, free calorie calculator, body fat calculator online, free body fat calculator, BMI calculator adult, free BMI calculator, water intake calculator daily, free water intake calculator, macro calculator free, macronutrient calculator, protein intake calculator, free protein calculator, exercise calorie burn calculator, calories burned calculator, workout plan generator free AI, AI workout routine generator, keto calculator free, intermittent fasting calculator free, ideal weight calculator, BMR calculator free, daily caloric needs calculator, sleep calculator, one rep max calculator, health calculators online free, fitness calculators online free, nutrition calculator free"],
 }
 
 export const viewport: Viewport = {
