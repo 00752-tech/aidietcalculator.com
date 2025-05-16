@@ -1,164 +1,309 @@
 "use client"
 
-import { useState, useCallback } from "react"
-import { Brain, Cpu, Dna, Salad, Utensils, Zap } from 'lucide-react'
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Slider } from "@/components/ui/slider"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-import { MealPlanDisplay } from "@/components/meal-plan-display"
-import { AffiliateOffers } from "@/components/affiliate-offers"
-import { useToast } from "@/components/ui/use-toast"
-import { generateMealPlan } from "@/utils/mealPlanGenerator"
-import { DietType, MealPlan } from "@/types/mealPlan"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Info, Scale, Ruler, Venus, Mars } from 'lucide-react'
+import Link from "next/link"
 
-export default function AIDietPlanner() {
-  const [calories, setCalories] = useState(2000)
-  const [meals, setMeals] = useState(3)
-  const [dietType, setDietType] = useState<DietType>("balanced")
-  const [allergies, setAllergies] = useState<string[]>([])
-  const [mealPlan, setMealPlan] = useState<MealPlan | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const { toast } = useToast()
+interface BodyFatResult {
+  bodyFatPercentage: number;
+  category: string;
+}
 
-  const handleGenerateMealPlan = useCallback(() => {
-    setIsLoading(true)
-    try {
-      const newMealPlan = generateMealPlan(calories, meals, dietType, allergies)
-      setMealPlan(newMealPlan)
-      toast({
-        title: "Meal Plan Generated",
-        description: "Your personalized meal plan is ready!",
-      })
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: error instanceof Error ? error.message : "An error occurred while generating the meal plan.",
-        variant: "destructive",
-      })
-      setMealPlan(null)
-    } finally {
-      setIsLoading(false)
+export function BodyFatPercentageCalculator() {
+  const [gender, setGender] = useState<string>("male")
+  const [age, setAge] = useState<string>("")
+  const [weight, setWeight] = useState<string>("")
+  const [height, setHeight] = useState<string>("")
+  const [neck, setNeck] = useState<string>("")
+  const [waist, setWaist] = useState<string>("")
+  const [hip, setHip] = useState<string>("")
+  const [result, setResult] = useState<BodyFatResult | null>(null)
+  const [isCalculating, setIsCalculating] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const calculateBodyFat = () => {
+    setIsCalculating(true)
+    setError(null)
+
+    const ageNum = parseFloat(age)
+    const weightNum = parseFloat(weight)
+    const heightNum = parseFloat(height)
+    const neckNum = parseFloat(neck)
+    const waistNum = parseFloat(waist)
+    const hipNum = parseFloat(hip)
+
+    if (isNaN(ageNum) {
+      setError("Please enter a valid age")
+      setIsCalculating(false)
+      return
     }
-  }, [calories, meals, dietType, allergies, toast])
+
+    if (isNaN(weightNum) || isNaN(heightNum) || isNaN(neckNum) || isNaN(waistNum)) {
+      setError("Please enter valid measurements for all required fields")
+      setIsCalculating(false)
+      return
+    }
+
+    if (gender === "female" && isNaN(hipNum)) {
+      setError("Hip measurement is required for females")
+      setIsCalculating(false)
+      return
+    }
+
+    let bodyFatPercentage: number;
+    let category: string;
+
+    if (gender === "male") {
+      // US Navy method for men
+      bodyFatPercentage = 86.010 * Math.log10(waistNum - neckNum) - 70.041 * Math.log10(heightNum) + 36.76
+    } else {
+      // US Navy method for women
+      bodyFatPercentage = 163.205 * Math.log10(waistNum + hipNum - neckNum) - 97.684 * Math.log10(heightNum) - 78.387
+    }
+
+    // Determine category based on age and gender
+    if (gender === "male") {
+      if (ageNum < 20) {
+        category = bodyFatPercentage < 8 ? "Essential fat" :
+          bodyFatPercentage < 20 ? "Athletic" :
+          bodyFatPercentage < 25 ? "Fitness" :
+          bodyFatPercentage < 30 ? "Average" : "Obese"
+      } else {
+        category = bodyFatPercentage < 8 ? "Essential fat" :
+          bodyFatPercentage < 14 ? "Athletic" :
+          bodyFatPercentage < 18 ? "Fitness" :
+          bodyFatPercentage < 25 ? "Average" : "Obese"
+      }
+    } else {
+      if (ageNum < 20) {
+        category = bodyFatPercentage < 15 ? "Essential fat" :
+          bodyFatPercentage < 24 ? "Athletic" :
+          bodyFatPercentage < 30 ? "Fitness" :
+          bodyFatPercentage < 35 ? "Average" : "Obese"
+      } else {
+        category = bodyFatPercentage < 15 ? "Essential fat" :
+          bodyFatPercentage < 21 ? "Athletic" :
+          bodyFatPercentage < 25 ? "Fitness" :
+          bodyFatPercentage < 32 ? "Average" : "Obese"
+      }
+    }
+
+    setResult({
+      bodyFatPercentage: parseFloat(bodyFatPercentage.toFixed(1)),
+      category
+    })
+    setIsCalculating(false)
+  }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-extrabold tracking-tight lg:text-5xl">
-          AI-Powered Diet & Meal Planner
-        </h1>
-        <p className="text-xl text-muted-foreground">
-          Ready to revolutionize your diet? Our AI Diet Calculator, officially the AI-Powered Diet & Meal Planner, leverages artificial intelligence to create personalized meal plans based on your individual nutritional needs, preferences, and goals. This powerful tool provides tailored nutrition plans and diverse, balanced meal options designed to help you transform your body and improve adherence to your dietary goals. To get started, simply enter your daily calorie target, preferred number of meals, diet type, and any allergies or food intolerances, and click to generate your custom AI Meal Plan.
+    <>
+      {/* SEO-optimized intro paragraph */}
+      <div className="max-w-2xl mx-auto mb-6 px-4">
+        <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200">
+          <strong>Use our AI-Powered Body Fat Percentage Calculator</strong> to accurately estimate your body composition. This tool uses the US Navy method to calculate body fat based on your measurements, providing a more accurate assessment than BMI alone. Understanding your body fat percentage helps you track fitness progress, set realistic goals, and optimize your health. Simply enter your measurements to get started.
         </p>
       </div>
-      <div className="grid gap-8 md:grid-cols-2">
-        <div className="space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800">
-          <div className="space-y-2">
-            <Label htmlFor="calories">Daily Calorie Target</Label>
-            <div className="flex items-center space-x-4">
-              <Slider
-                id="calories"
-                min={1200}
-                max={4000}
-                step={50}
-                value={[calories]}
-                onValueChange={(value) => setCalories(value[0])}
-                className="flex-grow accent-[rgb(59,130,246)]"
-              />
-              <Input
-                type="number"
-                value={calories}
-                onChange={(e) => setCalories(Number(e.target.value))}
-                className="w-20"
-              />
+
+      <Card className="w-full max-w-2xl mx-auto">
+        <CardHeader>
+          <CardTitle className="text-2xl flex items-center gap-2">
+            <Scale className="h-6 w-6" />
+            AI-Powered Body Fat Percentage Calculator
+          </CardTitle>
+          <CardDescription>Get an accurate estimate of your body composition using the US Navy method</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <form className="space-y-6">
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="gender">Gender</Label>
+                  <div className="flex gap-4">
+                    <Button
+                      type="button"
+                      variant={gender === "male" ? "default" : "outline"}
+                      onClick={() => setGender("male")}
+                      className="flex items-center gap-2"
+                    >
+                      <Mars className="h-4 w-4" /> Male
+                    </Button>
+                    <Button
+                      type="button"
+                      variant={gender === "female" ? "default" : "outline"}
+                      onClick={() => setGender("female")}
+                      className="flex items-center gap-2"
+                    >
+                      <Venus className="h-4 w-4" /> Female
+                    </Button>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="age">Age (years)</Label>
+                  <Input
+                    id="age"
+                    type="number"
+                    placeholder="Enter your age"
+                    value={age}
+                    onChange={(e) => setAge(e.target.value)}
+                    className="bg-gray-50"
+                  />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="weight">Weight (lbs)</Label>
+                  <Input
+                    id="weight"
+                    type="number"
+                    placeholder="Enter your weight"
+                    value={weight}
+                    onChange={(e) => setWeight(e.target.value)}
+                    className="bg-gray-50"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="height">Height (inches)</Label>
+                  <Input
+                    id="height"
+                    type="number"
+                    placeholder="Enter your height"
+                    value={height}
+                    onChange={(e) => setHeight(e.target.value)}
+                    className="bg-gray-50"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="neck">Neck (inches)</Label>
+                  <Input
+                    id="neck"
+                    type="number"
+                    placeholder="Neck circumference"
+                    value={neck}
+                    onChange={(e) => setNeck(e.target.value)}
+                    className="bg-gray-50"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="waist">Waist (inches)</Label>
+                  <Input
+                    id="waist"
+                    type="number"
+                    placeholder="Waist circumference"
+                    value={waist}
+                    onChange={(e) => setWaist(e.target.value)}
+                    className="bg-gray-50"
+                  />
+                </div>
+                {gender === "female" && (
+                  <div className="space-y-2">
+                    <Label htmlFor="hip">Hip (inches)</Label>
+                    <Input
+                      id="hip"
+                      type="number"
+                      placeholder="Hip circumference"
+                      value={hip}
+                      onChange={(e) => setHip(e.target.value)}
+                      className="bg-gray-50"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <Button
+              type="button"
+              onClick={calculateBodyFat}
+              className="w-full"
+              disabled={isCalculating}
+            >
+              {isCalculating ? "Calculating..." : "Calculate Body Fat %"}
+            </Button>
+          </form>
+
+          {result && (
+            <div className="mt-6 space-y-4">
+              <h3 className="text-lg font-semibold">Your Body Composition Results:</h3>
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg flex items-center gap-2">
+                    <Ruler className="h-5 w-5" />
+                    Body Fat Analysis
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <p className="text-lg">Body Fat Percentage: <span className="font-bold text-primary">{result.bodyFatPercentage}%</span></p>
+                    <p className="text-lg">Category: <span className="font-bold text-primary">{result.category}</span></p>
+                    
+                    <div className="bg-gray-100 p-4 rounded-md">
+                      <h4 className="font-medium mb-2">What This Means:</h4>
+                      <ul className="space-y-1 text-sm">
+                        <li>• <strong>Essential fat:</strong> Minimum needed for basic physiological functions</li>
+                        <li>• <strong>Athletic:</strong> Typical for athletes and very fit individuals</li>
+                        <li>• <strong>Fitness:</strong> Healthy range for active individuals</li>
+                        <li>• <strong>Average:</strong> Typical for general population</li>
+                        <li>• <strong>Obese:</strong> Increased health risks</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                <Info className="h-4 w-4 mt-0.5" />
+                <p>
+                  This calculation uses the US Navy body fat formula. For more accurate results, consider professional testing like DEXA scans or hydrostatic weighing. 
+                  <Link href="https://mitolyn.com/welcome/?hop=zzzzz&hopId=4f9c80db-7c96-4791-9c9e-c4b313b1133a" className="text-blue-500 hover:underline ml-1">
+                    Learn about advanced body composition tracking
+                  </Link>
+                </p>
+              </div>
+            </div>
+          )}
+          {error && (
+            <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-md">
+              {error}
+            </div>
+          )}
+
+          {/* Affiliate offer section */}
+          <div className="mt-8 border-t pt-6">
+            <h3 className="text-lg font-semibold mb-4">Recommended Products</h3>
+            <div className="grid gap-4 md:grid-cols-2">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-4">
+                  <h4 className="font-medium mb-2">Premium Body Fat Calipers</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Get more accurate measurements at home with professional-grade calipers.</p>
+                  <Button asChild className="w-full">
+                    <Link href="https://18f7ax6zjado3l9hngwk48cpfn.hop.clickbank.net/?&traffic_source=aidietcalc">
+                      View Options
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-4">
+                  <h4 className="font-medium mb-2">Smart Scale with Body Composition</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Track body fat, muscle mass, and more with advanced smart scales.</p>
+                  <Button asChild variant="outline" className="w-full">
+                    <Link href="https://mitolyn.com/welcome/?hop=zzzzz&hopId=4f9c80db-7c96-4791-9c9e-c4b313b1133a">
+                      Learn More
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="meals">Number of Meals</Label>
-            <Select value={meals.toString()} onValueChange={(value) => setMeals(Number(value))}>
-              <SelectTrigger id="meals">
-                <SelectValue placeholder="Select meals per day" />
-              </SelectTrigger>
-              <SelectContent>
-                {[2, 3, 4, 5, 6].map((num) => (
-                  <SelectItem key={num} value={num.toString()}>
-                    {num} meals
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="diet-type">Diet Type</Label>
-            <Select value={dietType} onValueChange={(value) => setDietType(value as DietType)}>
-              <SelectTrigger id="diet-type">
-                <SelectValue placeholder="Select diet type" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="balanced">Balanced</SelectItem>
-                <SelectItem value="low-carb">Low Carb</SelectItem>
-                <SelectItem value="high-protein">High Protein</SelectItem>
-                <SelectItem value="vegetarian">Vegetarian</SelectItem>
-                <SelectItem value="vegan">Vegan</SelectItem>
-                <SelectItem value="keto">Keto</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="allergies">Allergies & Intolerances</Label>
-            <Input
-              id="allergies"
-              placeholder="e.g., nuts, dairy (comma-separated)"
-              value={allergies.join(", ")}
-              onChange={(e) => setAllergies(e.target.value.split(",").map((item) => item.trim()))}
-            />
-          </div>
-          <Button onClick={handleGenerateMealPlan} className="w-full bg-[rgb(59,130,246)] hover:bg-[rgb(29,100,216)] text-white" disabled={isLoading}>
-            {isLoading ? "Generating..." : "Generate AI Meal Plan"}
-          </Button>
-        </div>
-        <div className="space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800">
-          <h2 className="text-2xl font-bold">AI-Powered Features</h2>
-          <ul className="space-y-4">
-            <li className="flex items-start space-x-3">
-              <Brain className="h-6 w-6 text-indigo-500" />
-              <span>Smart Nutrient Balancing</span>
-            </li>
-            <li className="flex items-start space-x-3">
-              <Dna className="h-6 w-6 text-green-500" />
-              <span>Personalized Macro Optimization</span>
-            </li>
-            <li className="flex items-start space-x-3">
-              <Salad className="h-6 w-6 text-yellow-500" />
-              <span>Diverse Recipe Suggestions</span>
-            </li>
-            <li className="flex items-start space-x-3">
-              <Utensils className="h-6 w-6 text-red-500" />
-              <span>Adaptive Meal Scheduling</span>
-            </li>
-            <li className="flex items-start space-x-3">
-              <Cpu className="h-6 w-6 text-purple-500" />
-              <span>Continuous Learning & Improvement</span>
-            </li>
-            <li className="flex items-start space-x-3">
-              <Zap className="h-6 w-6 text-blue-500" />
-              <span>Real-time Diet Adjustments</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="mt-8">
-        <MealPlanDisplay mealPlan={mealPlan} />
-      </div>
-      <AffiliateOffers />
-    </div>
+        </CardContent>
+      </Card>
+    </>
   )
 }
