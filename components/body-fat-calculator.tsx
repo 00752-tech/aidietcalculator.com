@@ -250,6 +250,32 @@ export function BodyFatCalculator() {
                 </CardContent>
               </Card>
 
+              {/* Affiliate Ad Placement */}
+              <Card className="border-blue-200 bg-blue-50">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">Want to Reduce Your Body Fat?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <p>
+                      Based on your results, our AI recommends checking out <strong>Mitolyne</strong>, a scientifically-formulated supplement that helps support healthy fat metabolism and body composition.
+                    </p>
+                    <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
+                      <a 
+                        href="https://18f7ax6zjado3l9hngwk48cpfn.hop.clickbank.net/?&traffic_source=aidietcalc" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Learn About Mitolyne
+                      </a>
+                    </Button>
+                    <p className="text-xs text-muted-foreground">
+                      *This is an affiliate recommendation. Results may vary. Consult your healthcare provider before starting any supplement.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <Info className="h-4 w-4 mt-0.5" />
                 <p>
