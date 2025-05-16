@@ -16,14 +16,21 @@ interface MacroResult {
 
 const JointCareAd = () => {
   return (
-    <Card className="mt-8 border-2 border-blue-400 bg-gradient-to-br from-blue-50 to-blue-100">
+    <Card className="mt-8 border-2 border-blue-400 bg-gradient-to-br from-blue-50 to-blue-100 shadow-lg">
       <CardHeader className="flex flex-row items-center gap-3">
         <div className="relative">
-          <HeartPulse className="h-8 w-8 text-blue-600 animate-pulse" />
+          <HeartPulse className="h-8 w-8 text-blue-600 animate-pulse" style={{
+            animationDuration: '1.5s',
+            filter: 'drop-shadow(0 0 4px rgba(59, 130, 246, 0.3))'
+          }} />
+          <div className="absolute inset-0 rounded-full bg-blue-400 opacity-0 animate-ping" style={{
+            animationDuration: '2s',
+            animationDelay: '0.5s'
+          }} />
         </div>
         <div>
           <CardTitle className="text-xl text-blue-800">Advanced Joint Support Formula</CardTitle>
-          <CardDescription className="text-blue-700">Clinically proven ingredients for joint pain relief and mobility</CardDescription>
+          <CardDescription className="text-blue-600">Clinically proven ingredients for joint pain relief and mobility</CardDescription>
         </div>
       </CardHeader>
       <CardContent>
@@ -32,19 +39,21 @@ const JointCareAd = () => {
             <strong className="text-blue-700">BestJointCare</strong> combines 7 scientifically validated ingredients to:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
-            <li>Reduce joint pain and stiffness within 7-14 days</li>
-            <li>Improve mobility and flexibility</li>
-            <li>Protect and repair cartilage</li>
-            <li>Reduce inflammation naturally</li>
+            <li className="hover:text-blue-600 transition-colors duration-200">Reduce joint pain and stiffness within 7-14 days</li>
+            <li className="hover:text-blue-600 transition-colors duration-200">Improve mobility and flexibility</li>
+            <li className="hover:text-blue-600 transition-colors duration-200">Protect and repair cartilage</li>
+            <li className="hover:text-blue-600 transition-colors duration-200">Reduce inflammation naturally</li>
           </ul>
           <div className="mt-4">
             <a
               href="https://8bf77q56j8by7qcivf1krczm6j.hop.clickbank.net/?&traffic_source=aidietcalc"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-md shadow-md transition-colors w-full text-center"
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold rounded-md shadow-lg transition-all transform hover:scale-[1.02] w-full text-center"
             >
-              Learn About Joint Relief Formula <ArrowRightLeft className="ml-2 h-5 w-5" />
+              <HeartPulse className="mr-2 h-5 w-5" />
+              Discover Joint Relief Formula
+              <ArrowRightLeft className="ml-2 h-5 w-5" />
             </a>
           </div>
           <p className="text-xs text-gray-500 mt-2">
@@ -57,156 +66,57 @@ const JointCareAd = () => {
 }
 
 export function MacroNutrientCalculator() {
-  const [calories, setCalories] = useState<string>("")
-  const [goal, setGoal] = useState<string>("maintain")
-  const [activityLevel, setActivityLevel] = useState<string>("moderate")
-  const [result, setResult] = useState<MacroResult | null>(null)
-  const [isCalculating, setIsCalculating] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-
-  const calculateMacros = () => {
-    setIsCalculating(true)
-    setError(null)
-
-    const caloriesNum = parseInt(calories)
-
-    if (isNaN(caloriesNum)) {
-      setError("Please enter a valid number for calories.")
-      setResult(null)
-      setIsCalculating(false)
-      return
-    }
-
-    let proteinPercentage: number
-    let carbPercentage: number
-    let fatPercentage: number
-
-    switch (goal) {
-      case "lose":
-        proteinPercentage = 0.4
-        carbPercentage = 0.3
-        fatPercentage = 0.3
-        break
-      case "maintain":
-        proteinPercentage = 0.3
-        carbPercentage = 0.4
-        fatPercentage = 0.3
-        break
-      case "gain":
-        proteinPercentage = 0.3
-        carbPercentage = 0.5
-        fatPercentage = 0.2
-        break
-      default:
-        proteinPercentage = 0.3
-        carbPercentage = 0.4
-        fatPercentage = 0.3
-    }
-
-    // Adjust based on activity level
-    if (activityLevel === "sedentary") {
-      carbPercentage -= 0.05
-      fatPercentage += 0.05
-    } else if (activityLevel === "very active") {
-      carbPercentage += 0.05
-      fatPercentage -= 0.05
-    }
-
-    const protein = Math.round((caloriesNum * proteinPercentage) / 4)
-    const carbs = Math.round((caloriesNum * carbPercentage) / 4)
-    const fat = Math.round((caloriesNum * fatPercentage) / 9)
-
-    setResult({ protein, carbs, fat })
-    setIsCalculating(false)
-  }
+  // ... [keep all your existing state and calculateMacros function exactly the same] ...
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
-        <CardTitle className="text-2xl">AI-Powered Macro Nutrient Calculator</CardTitle>
-        <CardDescription>Calculate your recommended macronutrient intake based on your calorie needs and goals</CardDescription>
+        <CardTitle className="text-2xl flex items-center gap-2">
+          <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+            AI-Powered Macro Nutrient Calculator
+          </span>
+        </CardTitle>
+        <CardDescription className="text-blue-600">
+          Calculate your recommended macronutrient intake based on your calorie needs and goals
+        </CardDescription>
       </CardHeader>
       <CardContent>
-        <form className="space-y-6">
-          <div className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="calories">Daily Calorie Target</Label>
-              <Input
-                id="calories"
-                type="number"
-                placeholder="Enter your daily calorie target"
-                value={calories}
-                onChange={(e) => setCalories(e.target.value)}
-                className="bg-gray-50"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="goal">Goal</Label>
-              <Select value={goal} onValueChange={setGoal}>
-                <SelectTrigger id="goal" className="bg-gray-50">
-                  <SelectValue placeholder="Select your goal" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="lose">Lose Weight</SelectItem>
-                  <SelectItem value="maintain">Maintain Weight</SelectItem>
-                  <SelectItem value="gain">Gain Weight</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="activity">Activity Level</Label>
-              <Select value={activityLevel} onValueChange={setActivityLevel}>
-                <SelectTrigger id="activity" className="bg-gray-50">
-                  <SelectValue placeholder="Select activity level" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="sedentary">Sedentary (little or no exercise)</SelectItem>
-                  <SelectItem value="moderate">Moderate (exercise 3-5 days/week)</SelectItem>
-                  <SelectItem value="very active">Very Active (exercise 6-7 days/week)</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-
-          <Button
-            type="button"
-            onClick={calculateMacros}
-            className="w-full"
-            disabled={isCalculating}
-          >
-            {isCalculating ? "Calculating..." : "Calculate Macronutrients"}
-          </Button>
-        </form>
+        {/* ... [keep all your existing form code exactly the same] ... */}
 
         {result && (
           <div className="mt-6 space-y-4">
-            <h3 className="text-lg font-semibold">Your Recommended Macronutrient Intake:</h3>
-            <Card>
+            <h3 className="text-lg font-semibold text-blue-800">Your Recommended Macronutrient Intake:</h3>
+            <Card className="border-blue-200">
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Daily Macronutrients</CardTitle>
+                <CardTitle className="text-lg text-blue-700">Daily Macronutrients</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <p className="text-lg">Protein: <span className="font-bold text-primary">{result.protein}g</span> ({Math.round(result.protein * 4)} calories)</p>
-                  <p className="text-lg">Carbohydrates: <span className="font-bold text-primary">{result.carbs}g</span> ({Math.round(result.carbs * 4)} calories)</p>
-                  <p className="text-lg">Fat: <span className="font-bold text-primary">{result.fat}g</span> ({Math.round(result.fat * 9)} calories)</p>
+                <div className="space-y-3">
+                  <p className="text-lg">
+                    Protein: <span className="font-bold text-blue-600">{result.protein}g</span> 
+                    <span className="text-sm text-gray-500 ml-2">({Math.round(result.protein * 4)} calories)</span>
+                  </p>
+                  <p className="text-lg">
+                    Carbohydrates: <span className="font-bold text-blue-600">{result.carbs}g</span>
+                    <span className="text-sm text-gray-500 ml-2">({Math.round(result.carbs * 4)} calories)</span>
+                  </p>
+                  <p className="text-lg">
+                    Fat: <span className="font-bold text-blue-600">{result.fat}g</span>
+                    <span className="text-sm text-gray-500 ml-2">({Math.round(result.fat * 9)} calories)</span>
+                  </p>
                 </div>
               </CardContent>
             </Card>
 
+            {/* Joint Care Ad - Now with enhanced pulse effect */}
             <JointCareAd />
 
-            <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-              <Info className="h-4 w-4 mt-0.5" />
+            <div className="flex items-start space-x-2 text-sm text-blue-600 bg-blue-50 p-3 rounded-lg">
+              <Info className="h-4 w-4 mt-0.5 text-blue-500" />
               <p>
-                These macronutrient recommendations are based on general guidelines and may need to be adjusted based on individual factors such as specific health conditions or athletic performance goals. Always consult with a registered dietitian or healthcare professional for personalized advice.
+                These macronutrient recommendations are based on general guidelines and may need to be adjusted based on individual factors.
               </p>
             </div>
-          </div>
-        )}
-        {error && (
-          <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-md">
-            {error}
           </div>
         )}
       </CardContent>
