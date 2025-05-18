@@ -2,26 +2,10 @@ import fs from 'fs'
 import https from 'https'
 import path from 'path'
 
-const faviconUrls = [
-  {
-    url: 'https://internetmillionaire.vip/wp-content/uploads/2024/12/270-by-270.png',
-    filename: 'favicon-270x270.png'
-  },
-  {
-    url: 'https://internetmillionaire.vip/wp-content/uploads/2024/12/192-by-192.png',
-    filename: 'favicon-192x192.png'
-  },
-  {
-    url: 'https://internetmillionaire.vip/wp-content/uploads/2024/12/180-by-180.png',
-    filename: 'favicon-180x180.png'
-  },
-  {
-    url: 'https://internetmillionaire.vip/wp-content/uploads/2024/12/favicon-48-by-48.png',
-    filename: 'favicon-48x48.png'
-  }
-]
+const faviconUrl = 'https://pplx-res.cloudinary.com/image/private/user_uploads/21441830/cadae564-6085-4495-9700-396dbcc28c1a/ai-diet-calc-favicon.jpg'
+const filename = 'favicon.jpg'
 
-const downloadFavicon = (url: string, filename: string) => {
+const downloadFavicon = (url, filename) => {
   return new Promise((resolve, reject) => {
     https.get(url, (response) => {
       if (response.statusCode === 200) {
@@ -42,14 +26,13 @@ const downloadFavicon = (url: string, filename: string) => {
   })
 }
 
-const downloadAllFavicons = async () => {
-  for (const favicon of faviconUrls) {
-    try {
-      await downloadFavicon(favicon.url, favicon.filename)
-    } catch (error) {
-      console.error(error)
-    }
+const main = async () => {
+  try {
+    await downloadFavicon(faviconUrl, filename)
+    console.log('Favicon download complete!')
+  } catch (error) {
+    console.error(error)
   }
 }
 
-downloadAllFavicons()
+main()
