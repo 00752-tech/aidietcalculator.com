@@ -55,7 +55,7 @@ import { FAQAccordion } from "@/components/faq-accordion"
 
 export const metadata: Metadata = {
   title: "AI Diet Calculator & Meal Planner | Free Calorie & Nutrition Tools",
-  description: "Get accurate, personalized diet plans with our free AI nutrition tools. Calculate calories, plan meals, track macros, and achieve your health goals with artificial intelligence.",
+  description: "Get personalized AI diet plans, calorie tracking & meal prep. Free nutrition calculator for weight loss, macros & fitness goals. Try our AI-powered tools now!",
   keywords: ["AI diet calculator, ai calorie counter, ai meal planning, free ai calorie counter, ai calorie counter app, best ai calorie counter, are ai diet calculators accurate, how accurate is ai calorie counter, do ai diet calculators work, ai diet calculator vs human, ai photo calorie counter, ai food scanner, personalized ai meal plan, ai meal planner free, ai diet plan generator, ai powered calorie counter, artificial intelligence nutrition, diet recommendation system, machine learning nutrition, calorie calculator online, macro calculator free, protein intake calculator, workout plan generator AI, BMR calculator free, ideal weight calculator"],
 }
 
