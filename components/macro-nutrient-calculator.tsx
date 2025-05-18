@@ -7,12 +7,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Info, ArrowRightLeft, HeartPulse } from 'lucide-react'
-
-interface MacroResult {
-  protein: number;
-  carbs: number;
-  fat: number;
-}
+import { MacroResultContext, useMacroResult, MacroResult } from "@/lib/macro-result-context"
 
 const JointCareAd = () => {
   return (
@@ -66,60 +61,62 @@ const JointCareAd = () => {
 }
 
 export function MacroNutrientCalculator() {
-  // ... [keep all your existing state and calculateMacros function exactly the same] ...
+  const [result, setResult] = useState<MacroResult | null>(null);
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <CardTitle className="text-2xl flex items-center gap-2">
-          <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-            AI-Powered Macro Nutrient Calculator
-          </span>
-        </CardTitle>
-        <CardDescription className="text-blue-600">
-          Calculate your recommended macronutrient intake based on your calorie needs and goals
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        {/* ... [keep all your existing form code exactly the same] ... */}
+    <MacroResultContext.Provider value={{ result, setResult }}>
+      <Card className="w-full max-w-2xl mx-auto">
+        <CardHeader>
+          <CardTitle className="text-2xl flex items-center gap-2">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              AI-Powered Macro Nutrient Calculator
+            </span>
+          </CardTitle>
+          <CardDescription className="text-blue-600">
+            Calculate your recommended macronutrient intake based on your calorie needs and goals
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          {/* ... [keep all your existing form code exactly the same] ... */}
 
-        {result && (
-          <div className="mt-6 space-y-4">
-            <h3 className="text-lg font-semibold text-blue-800">Your Recommended Macronutrient Intake:</h3>
-            <Card className="border-blue-200">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg text-blue-700">Daily Macronutrients</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <p className="text-lg">
-                    Protein: <span className="font-bold text-blue-600">{result.protein}g</span> 
-                    <span className="text-sm text-gray-500 ml-2">({Math.round(result.protein * 4)} calories)</span>
-                  </p>
-                  <p className="text-lg">
-                    Carbohydrates: <span className="font-bold text-blue-600">{result.carbs}g</span>
-                    <span className="text-sm text-gray-500 ml-2">({Math.round(result.carbs * 4)} calories)</span>
-                  </p>
-                  <p className="text-lg">
-                    Fat: <span className="font-bold text-blue-600">{result.fat}g</span>
-                    <span className="text-sm text-gray-500 ml-2">({Math.round(result.fat * 9)} calories)</span>
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+          {result && (
+            <div className="mt-6 space-y-4">
+              <h3 className="text-lg font-semibold text-blue-800">Your Recommended Macronutrient Intake:</h3>
+              <Card className="border-blue-200">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg text-blue-700">Daily Macronutrients</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <p className="text-lg">
+                      Protein: <span className="font-bold text-blue-600">{result.protein}g</span> 
+                      <span className="text-sm text-gray-500 ml-2">({Math.round(result.protein * 4)} calories)</span>
+                    </p>
+                    <p className="text-lg">
+                      Carbohydrates: <span className="font-bold text-blue-600">{result.carbs}g</span>
+                      <span className="text-sm text-gray-500 ml-2">({Math.round(result.carbs * 4)} calories)</span>
+                    </p>
+                    <p className="text-lg">
+                      Fat: <span className="font-bold text-blue-600">{result.fat}g</span>
+                      <span className="text-sm text-gray-500 ml-2">({Math.round(result.fat * 9)} calories)</span>
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
 
-            {/* Joint Care Ad - Now with enhanced pulse effect */}
-            <JointCareAd />
+              {/* Joint Care Ad - Now with enhanced pulse effect */}
+              <JointCareAd />
 
-            <div className="flex items-start space-x-2 text-sm text-blue-600 bg-blue-50 p-3 rounded-lg">
-              <Info className="h-4 w-4 mt-0.5 text-blue-500" />
-              <p>
-                These macronutrient recommendations are based on general guidelines and may need to be adjusted based on individual factors.
-              </p>
+              <div className="flex items-start space-x-2 text-sm text-blue-600 bg-blue-50 p-3 rounded-lg">
+                <Info className="h-4 w-4 mt-0.5 text-blue-500" />
+                <p>
+                  These macronutrient recommendations are based on general guidelines and may need to be adjusted based on individual factors.
+                </p>
+              </div>
             </div>
-          </div>
-        )}
-      </CardContent>
-    </Card>
+          )}
+        </CardContent>
+      </Card>
+    </MacroResultContext.Provider>
   )
 }

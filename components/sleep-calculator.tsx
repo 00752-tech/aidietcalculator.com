@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -18,6 +18,11 @@ export function SleepCalculator() {
   const [sleepCycles, setSleepCycles] = useState<string>("5")
   const [result, setResult] = useState<SleepSchedule | null>(null)
   const [isCalculating, setIsCalculating] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const calculateSleepSchedule = () => {
     setIsCalculating(true)
@@ -33,13 +38,19 @@ export function SleepCalculator() {
       bedtime.setDate(bedtime.getDate() - 1)
     }
 
+    // Format times in a deterministic way (24h, always en-GB)
+    const formattedBedtime = bedtime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false })
+    const formattedWakeup = wakeup.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false })
+
     setResult({
-      bedtime: bedtime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      wakeupTime: wakeup.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      bedtime: formattedBedtime,
+      wakeupTime: formattedWakeup
     })
 
     setIsCalculating(false)
   }
+
+  if (!isClient) return null;
 
   return (
     <>
