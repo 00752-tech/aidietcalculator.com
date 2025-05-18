@@ -111,7 +111,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     name="google-site-verification"
     content="RhY8MQoncEED33YHQnoIBVvxJLYtINYFouF8Bcq3Q84"
   />
-  <meta name="msvalidate.01" content="0D933C8A8D6D92AC7CECDB6E21259A4F" />
+  <meta name="msvalidate.01" content="53E73AC5DA2CE94096AD71CA76115F81" />
         <link
           rel="icon"
           type="image/png"
