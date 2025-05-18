@@ -54,9 +54,9 @@ import { FAQAccordion } from "@/components/faq-accordion"
 
 
 export const metadata: Metadata = {
-  title: "AI Health & Fitness Calculators | aidietcalculator.com",
-  description: "Use our AI-powered suite to calculate, plan, and track your health journey. Find your ideal weight, BMR, daily water needs, and get workout plans. Free tools inside!",
-  keywords: ["AI diet calculator, artificial intelligence nutrition, diet recommendation system using machine learning, ai meal planning, ai calorie tracker, artificial intelligence in food and nutrition, artificial intelligence and nutrition, best ai for meal planning, ai for meal planning, free AI health tools, free AI fitness tools, free AI calculators, online diet calculator free, AI diet plan generator, AI meal planner free, personalized AI meal plan, calorie calculator online, free calorie calculator, body fat calculator online, free body fat calculator, BMI calculator adult, free BMI calculator, water intake calculator daily, free water intake calculator, macro calculator free, macronutrient calculator, protein intake calculator, free protein calculator, exercise calorie burn calculator, calories burned calculator, workout plan generator free AI, AI workout routine generator, keto calculator free, intermittent fasting calculator free, ideal weight calculator, BMR calculator free, daily caloric needs calculator, sleep calculator, one rep max calculator, health calculators online free, fitness calculators online free, nutrition calculator free"],
+  title: "AI Diet Calculator & Meal Planner | Free Calorie & Nutrition Tools",
+  description: "Get accurate, personalized diet plans with our free AI nutrition tools. Calculate calories, plan meals, track macros, and achieve your health goals with artificial intelligence.",
+  keywords: ["AI diet calculator, ai calorie counter, ai meal planning, free ai calorie counter, ai calorie counter app, best ai calorie counter, are ai diet calculators accurate, how accurate is ai calorie counter, do ai diet calculators work, ai diet calculator vs human, ai photo calorie counter, ai food scanner, personalized ai meal plan, ai meal planner free, ai diet plan generator, ai powered calorie counter, artificial intelligence nutrition, diet recommendation system, machine learning nutrition, calorie calculator online, macro calculator free, protein intake calculator, workout plan generator AI, BMR calculator free, ideal weight calculator"],
 }
 
 export const viewport: Viewport = {
