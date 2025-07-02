@@ -1004,51 +1004,16 @@ export default function Home() {
 </section>
 
 
-        <section id="bmr-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Enhanced BMR Calculator" icon={Zap} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Calculate your Basal Metabolic Rate (BMR) with our AI-enhanced BMR Calculator. Understand your body's calorie needs at rest and optimize your nutrition plan.
-          </p>
-          <BMRCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Why Use Our AI BMR Calculator?</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Accurate BMR calculations using advanced formulas</li>
-              <li>Personalized results based on age, gender, height, and weight</li>
-              <li>Insights into your body's baseline calorie needs</li>
-              <li>Helps in creating effective weight loss or gain strategies</li>
-              <li>Supports overall metabolic health understanding</li>
-            </ul>
-          </div>
-          <BMRCalculatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Enhanced BMR Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-enhanced BMR Calculator for accurate Basal Metabolic Rate calculations. Ideal for understanding baseline calorie needs and optimizing nutrition plans.",
-            "featureList": [
-              "Accurate BMR calculations",
-              "Personalized results",
-              "Baseline calorie insights",
-              "Weight management support",
-              "Metabolic health understanding"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/bmr-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "ratingCount": "190"
-            }
-          })}} />
-        </section>
+        <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+  ⚡ <strong>How Many Calories Does Your Body Burn... Doing Nothing?</strong>
+  <br /><br />
+  Most people totally ignore this—yet your Basal Metabolic Rate (BMR) is the <em>foundation</em> of fat loss, lean muscle, and lasting energy. 
+  <br /><br />
+  🧠 Our AI-enhanced BMR Calculator cuts through the guesswork using advanced metabolic formulas—instantly personalized to your age, body type, and goals.
+  <br /><br />
+  🎯 Already trusted by <strong>190+ users daily</strong> to build smarter nutrition strategies and reverse plateaus. Whether you’re cutting, bulking, or fine-tuning recovery—this tool gives you the baseline.
+</p>
+
 
         <section id="macro-balance-calculator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="AI-Powered Macro Balance Calculator" icon={PieChart} />
@@ -1067,6 +1032,12 @@ export default function Home() {
             </ul>
           </div>
           <MacroNutrientCalculatorSnippet />
+<p className="text-sm text-center text-muted-foreground mt-2">
+  🔒 Last 3 custom macro plans generated <strong>in the past 90 seconds</strong>. 
+  <br />
+  ➕ Start yours now—it's free, fast, and verified by AI.
+</p>
+
           <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
