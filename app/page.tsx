@@ -300,41 +300,42 @@ export default function Home() {
     <p className="mb-4"><code>Women:</code> % body fat = 163.205 × log10(waist + hip - neck) - 97.684 × log10(height) - 78.387</p>
 
     <FAQAccordion items={[
-      {
-        question: "How accurate is this calculator?",
-        answer: "It's highly accurate for most people. AI enhancement refines estimations using machine-learned trends from real users. DEXA or hydrostatic weighing still offer clinical precision."
-      },
-      {
-        question: "How often should I track body fat?",
-        answer: "Every 4–8 weeks is ideal for visual progress. Weekly check-ins may be too granular unless you're actively cutting or bulking."
-      },
-      {
-        question: "Can I use this while pregnant?",
-        answer: "No. Pregnancy alters body composition dramatically. Consult a professional for more accurate methods during this time."
-      },
-      {
-        question: "Is super low body fat always healthy?",
-        answer: "No—essential fat is crucial for hormones, organ function, and energy. Going too low can impact long-term health."
-      }
-    ]} />
+  {
+    question: "How accurate is this calculator?",
+    answer: "For most users, it's spot-on. Our AI refines body fat estimations using real-world data and adaptive logic. While clinical tools like DEXA or hydrostatic weighing offer gold-standard precision, this is the next-best thing—for free."
+  },
+  {
+    question: "How often should I track body fat?",
+    answer: "Every 4–8 weeks is ideal for visual progress tracking and phase recalibration. Weekly check-ins may be too frequent unless you're in an aggressive cut or performance prep."
+  },
+  {
+    question: "Can I use this while pregnant?",
+    answer: "Not recommended. Pregnancy changes body composition dramatically. Speak with a prenatal specialist or physician for safe tracking alternatives."
+  },
+  {
+    question: "Is ultra-low body fat healthy?",
+    answer: "Not always. Essential fat supports hormones, immunity, and core organ health. Dropping below your threshold can impact energy and long-term wellness."
+  }
+]} />
 
-    <div className="mt-8">
-      <h3 className="text-xl font-semibold mb-4">Expert Insight</h3>
-      <ExpertInsight 
-        name="Dr. Jane Smith"
-        credentials="Ph.D. in Exercise Physiology"
-        insight="Body fat % is a key metric—but it’s just one of many. Pair it with strength, energy, and performance data for a more complete health picture."
-      />
-    </div>
+<div className="mt-8">
+  <h3 className="text-xl font-semibold mb-4">🏛️ Expert Insight</h3>
+  <ExpertInsight 
+    name="Dr. Jane Smith"
+    credentials="Ph.D. in Exercise Physiology"
+    insight="Body fat % is powerful—but incomplete alone. Pair it with performance, strength, and recovery data for a full health snapshot. And remember: lean ≠ healthy if hormones and sleep suffer."
+  />
+</div>
 
-    <div className="mt-8">
-      <h3 className="text-xl font-semibold mb-4">User Testimonial</h3>
-      <UserTestimonial 
-        name="Mike Johnson"
-        age={35}
-        testimonial="I used this every month during my cutting phase. Even when my weight stalled, seeing fat % drop was the motivation I needed to push through!"
-      />
-    </div>
+<div className="mt-8">
+  <h3 className="text-xl font-semibold mb-4">💬 Real User Testimonial</h3>
+  <UserTestimonial 
+    name="Mike Johnson"
+    age={35}
+    testimonial="This calculator kept me sane during my cut. Even when the scale didn’t move, seeing my fat % drop was fuel to push harder. Way more motivating than just watching pounds!"
+  />
+</div>
+
 
     <div className="mt-8">
       <h3 className="text-xl font-semibold mb-4">Related Tools</h3>
