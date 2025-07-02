@@ -582,50 +582,72 @@ export default function Home() {
 
 
         <section id="protein-intake-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Powered Protein Intake Calculator" icon={Utensils} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Optimize your protein intake with our AI-powered Protein Intake Calculator. Get personalized recommendations based on your weight, activity level, and fitness goals.
-          </p>
-          <ProteinIntakeCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Protein Intake Calculator</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Personalized protein recommendations based on individual factors</li>
-              <li>Adjusts for different activity levels and fitness goals</li>
-              <li>Helps optimize muscle growth, recovery, and overall health</li>
-              <li>Supports weight management efforts</li>
-              <li>Provides both daily and per-meal protein targets</li>
-            </ul>
-          </div>
-          <ProteinIntakeCalculatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Powered Protein Intake Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-powered Protein Intake Calculator for personalized protein recommendations. Ideal for optimizing muscle growth, recovery, and overall health based on individual factors and goals.",
-            "featureList": [
-              "Personalized protein recommendations",
-              "Activity level adjustments",
-              "Goal-specific calculations",
-              "Daily and per-meal protein targets",
-              "Weight management support"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/protein-intake-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "150"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI-Powered Protein Intake Calculator" icon={Utensils} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    🥩 <strong>Dial In Your Protein Goals—AI-Tuned, Muscle-Optimized</strong>
+    <br /><br />
+    Whether you’re building mass, cutting fat, or just staying toned—this tool calculates <em>your exact daily protein target</em> using real body data and fitness intent. No spreadsheets. No guessing. Just input your stats and let the AI handle it.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Custom protein recommendations based on your weight, lifestyle & goals</li>
+    <li>Adjusts for intensity, age & training status</li>
+    <li>Perfect for bulking, recovery or maintaining lean muscle</li>
+    <li>Get daily AND per-meal intake targets—designed for simplicity</li>
+    <li>No signup. No fluff. Just precision protein planning</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🎯 Trusted by <strong>150+ users daily</strong> for accurate fueling. 
+    <br /><br />
+    ✅ Want to maximize growth and recovery? <em>Watch the quick video walkthrough</em> to see how smart users combine AI-based protein plans with supplement stacks for next-level results.
+  </p>
+
+  <ProteinIntakeCalculator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Protein Intake Calculator</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Tailored protein recommendations based on your fitness profile</li>
+      <li>Supports lean muscle gain, repair & metabolic health</li>
+      <li>Adapts to different workout levels and dietary goals</li>
+      <li>Helps you avoid under-eating or over-supplementing</li>
+      <li>Provides both total daily and per-meal guidance</li>
+    </ul>
+  </div>
+
+  <ProteinIntakeCalculatorSnippet />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Powered Protein Intake Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-powered Protein Intake Calculator for personalized protein recommendations. Ideal for optimizing muscle growth, recovery, and overall health based on individual factors and goals.",
+    "featureList": [
+      "Personalized protein recommendations",
+      "Activity level adjustments",
+      "Goal-specific calculations",
+      "Daily and per-meal protein targets",
+      "Weight management support"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/protein-intake-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "150"
+    }
+  })}} />
+</section>
+
         
         <section id="exercise-calorie-burn-estimator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="AI-Enhanced Exercise Calorie Burn Estimator" icon={Dumbbell} />
