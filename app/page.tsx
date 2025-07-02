@@ -10,6 +10,7 @@ const AIDietPlanner = dynamic(() => import('@/components/ai-diet-planner'), {
   ssr: false 
 })
 
+import { ToolUsageTicker } from "@/components/tool-usage-ticker"
 import { SiteHeader } from "@/components/site-header"
 import { BenefitsSection } from "@/components/benefits-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
