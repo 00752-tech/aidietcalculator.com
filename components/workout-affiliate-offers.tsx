@@ -49,9 +49,10 @@ export function WorkoutAffiliateOffers() {
 
       {/* Disclaimer */}
       <div className="max-w-3xl mx-auto mb-8">
-        <p className="text-xs italic text-gray-500 text-center mt-2">
-  Affiliate links may be present. We may earn a small commission if you purchase—this helps support our free fitness tools.
+        <p className="text-sm italic text-muted-foreground text-center mt-2">
+  Some links may be affiliate links. We may earn a small commission if you make a purchase—at no extra cost to you. This helps keep our tools free 💙
 </p>
+
 
       </div>
 
