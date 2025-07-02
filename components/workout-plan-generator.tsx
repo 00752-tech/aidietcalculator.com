@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-
 'use client'
 
+import React, { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Sparkles, ArrowRight } from 'lucide-react'
+// ...rest of your component
+
 
 const OldSchoolNewBodyAd = () => {
   const handleCTAClick = () => {
