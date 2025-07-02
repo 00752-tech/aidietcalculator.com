@@ -1192,6 +1192,17 @@ export default function Home() {
     }
   })}} />
 </section>
+<section className="mt-20 text-center max-w-4xl mx-auto">
+  <h2 className="text-4xl font-bold mb-6">Your Personal Health Engine—Powered by AI</h2>
+  <p className="text-lg text-muted-foreground">
+    You've seen the problem: calculators that guess. Diet plans that don’t adapt. Workouts with zero strategy.
+    <br /><br />
+    That’s why we built a smarter solution: <strong>15 free AI tools</strong> designed to work together and optimize every part of your health journey—calories, macros, hydration, workouts, sleep, metabolism and more.
+    <br /><br />
+    🎯 Already trusted by <strong>11,000+ users weekly</strong> to build custom plans that <em>actually work</em>. Whether you're here to shred fat, gain lean mass, or boost daily energy—we’ve got a calculator made for you.
+  </p>
+</section>
+
 
         <section aria-label="How It Works" className="mt-20">
           <HowItWorksSection />
