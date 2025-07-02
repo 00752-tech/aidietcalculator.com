@@ -447,50 +447,72 @@ export default function Home() {
 
         
         <section id="water-intake-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Enhanced Water Intake Calculator" icon={Droplet} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Stay properly hydrated with our AI-enhanced Water Intake Calculator. Get personalized recommendations based on your body weight, activity level, and climate to ensure optimal hydration.
-          </p>
-          <WaterIntakeCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Why Use Our AI Water Intake Calculator?</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Personalized water intake recommendations based on individual factors</li>
-              <li>Adjusts for activity level and climate conditions</li>
-              <li>Helps maintain proper hydration for optimal health and performance</li>
-              <li>Easy-to-follow daily water intake goals</li>
-              <li>Promotes better overall health and well-being</li>
-            </ul>
-          </div>
-          <WaterIntakeCalculatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Enhanced Water Intake Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-enhanced Water Intake Calculator for personalized hydration recommendations. Ideal for maintaining optimal hydration based on individual factors and lifestyle.",
-            "featureList": [
-              "Personalized water intake recommendations",
-              "Activity level and climate adjustments",
-              "Daily hydration goals",
-              "Improved health and performance",
-              "Easy-to-follow guidelines"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/water-intake-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "170"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI-Enhanced Water Intake Calculator" icon={Droplet} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    💧 <strong>Hydrate Smarter—Precision-Personalized by AI</strong>
+    <br /><br />
+    Water isn’t optional—it’s your body’s operating system. Our AI-powered Water Intake Calculator analyzes your body size, lifestyle, and climate to deliver <em>your perfect hydration target</em>. It’s fast, free, and based on actual physiology—not generic charts.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Custom water intake goals based on your weight, activity & environment</li>
+    <li>Built for athletes, desk workers, and everyone in between</li>
+    <li>Adapts to dry/humid climates for smarter hydration timing</li>
+    <li>Supports energy, digestion, recovery, and mental clarity</li>
+    <li>No email needed. Just input → get results → hydrate right</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🚀 Trusted by <strong>170+ users daily</strong> to crush hydration goals.
+    <br /><br />
+    ✅ Want elite-level performance? <em>Watch our quick video walkthrough</em> to see how users combine hydration tracking with meal & workout planning for peak results.
+  </p>
+
+  <WaterIntakeCalculator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Why Use Our AI Water Intake Calculator?</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Water targets customized to <strong>you</strong>—not textbook averages</li>
+      <li>Smart adjustments for activity level and climate</li>
+      <li>Helps fight fatigue, dry skin, joint pain & bloating</li>
+      <li>Daily goals broken down for easy habit building</li>
+      <li>Supports metabolism, recovery & mental clarity</li>
+    </ul>
+  </div>
+
+  <WaterIntakeCalculatorSnippet />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Enhanced Water Intake Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-enhanced Water Intake Calculator for personalized hydration recommendations. Ideal for maintaining optimal hydration based on individual factors and lifestyle.",
+    "featureList": [
+      "Personalized water intake recommendations",
+      "Activity level and climate adjustments",
+      "Daily hydration goals",
+      "Improved health and performance",
+      "Easy-to-follow guidelines"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/water-intake-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "170"
+    }
+  })}} />
+</section>
+
         
         <section id="macro-nutrient-calculator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="AI-Powered Macro Nutrient Calculator" icon={PieChart} />
