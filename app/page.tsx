@@ -520,19 +520,19 @@ export default function Home() {
   <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
     🥩 <strong>Unlock Your Perfect Macro Split—Tailored by AI</strong>
     <br /><br />
-    Whether you’re cutting, bulking, or just optimizing how you feel day-to-day, this free tool gives you <em>precise macronutrient targets</em>—protein, carbs, and fat—dialed in to your goals, body, and training style. No guesswork. No math. Just fast clarity.
+    Whether you're cutting fat, building lean mass, or optimizing energy, this free calculator breaks down your ideal daily intake of <em>protein, carbs, and fat</em>—instantly and precisely. No math. No templates. Just your body, your goals, and a smarter strategy.
   </p>
 
   <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
-    <li>Personalized macro breakdowns for fat loss, lean gains & performance</li>
-    <li>Smart adjustments for body composition, training level & lifestyle</li>
-    <li>Perfect for meal planning, grocery lists & nutrition tracking</li>
-    <li>Backed by clinical science—verified by 190+ daily users</li>
-    <li>No email needed. Just input → get results → fuel smart</li>
+    <li>Custom macro targets for weight loss, muscle gain, or maintenance</li>
+    <li>Smart adjustments for your body composition and activity level</li>
+    <li>Perfect for planning meals, hitting daily goals, and boosting performance</li>
+    <li>Backed by science. Loved by <strong>190+ users every day</strong></li>
+    <li>No signup required—just results, instantly</li>
   </ul>
 
   <p className="text-center text-lg max-w-2xl mx-auto mb-6">
-    🧠 Want next-level results? <em>Watch our video walkthrough</em> to see how elite users combine macro targets with AI-crafted meal plans & supplements for transformation you can feel.
+    🔍 Want max results? <em>Watch the quick video guide</em> to see how users pair macro targets with AI-generated meal plans and supplements for body recomposition that works.
   </p>
 
   <MacroNutrientCalculator />
@@ -540,11 +540,11 @@ export default function Home() {
   <div className="mt-8 text-center max-w-2xl mx-auto">
     <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Macro Nutrient Calculator</h3>
     <ul className="list-disc text-left pl-6 space-y-2">
-      <li>Tailored macro splits for weight loss, muscle gain, or maintenance</li>
-      <li>Adapts to your unique metabolism, activity level & fitness goals</li>
-      <li>Makes meal planning simple and goal-aligned</li>
-      <li>Improves results across diet, energy & recovery</li>
-      <li>Supports sustainable nutrition strategies long-term</li>
+      <li>Tailored macronutrient ratios for your specific goals</li>
+      <li>Smart adjustments based on body type and training style</li>
+      <li>Optimizes diet for better energy, recovery, and results</li>
+      <li>Simplifies meal planning—no spreadsheets or formulas</li>
+      <li>Supports long-term success with flexible, data-driven recommendations</li>
     </ul>
   </div>
 
@@ -578,6 +578,7 @@ export default function Home() {
     }
   })}} />
 </section>
+
 
 
         <section id="protein-intake-calculator" className="mb-16 flex flex-col items-center">
