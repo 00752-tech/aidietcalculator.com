@@ -11,7 +11,8 @@ const offers = [
     icon: Check,
     activation: "✅ Activated by 2,347 users this month",
     badge: "🔥 Trending Protocol",
-    cta: "Start My Plan"
+    cta: "Start My Plan",
+    bgGradient: "bg-gradient-to-br from-blue-50 to-blue-100",
   },
   {
     title: "☕ JavaBurn: Burn Fat With Your Morning Coffee",
@@ -20,7 +21,8 @@ const offers = [
     icon: Sparkles,
     activation: "✅ Activated by 3,912 users this month",
     badge: "☕ Coffee Protocol",
-    cta: "View Blueprint"
+    cta: "View Blueprint",
+    bgGradient: "bg-gradient-to-br from-orange-50 to-orange-100",
   },
   {
     title: "🌿 Mitolyn: All-Natural Keto Companion",
@@ -29,7 +31,8 @@ const offers = [
     icon: Leaf,
     activation: "✅ Activated by 1,884 users this month",
     badge: "🌿 Clean Keto Stack",
-    cta: "View Protocol"
+    cta: "View Protocol",
+    bgGradient: "bg-gradient-to-br from-green-50 to-green-100",
   },
 ]
 
@@ -54,23 +57,20 @@ export function KetoAffiliateOffers() {
       {/* Offer Grid */}
       <div className="grid gap-6 md:grid-cols-3">
         {offers.map((offer, index) => (
-          <Card key={index} className="relative overflow-hidden flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-transform duration-200 ease-in-out border border-gray-200 rounded-lg p-6 bg-white">
-            
+          <Card key={index} className={`${offer.bgGradient} overflow-hidden flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-transform duration-200 ease-in-out border border-gray-200 rounded-lg p-6`}>
             {/* Badge */}
-            <div className="absolute top-2 right-2 text-xs font-semibold bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
+            <div className="absolute top-2 right-2 text-xs font-semibold bg-yellow-100 text-yellow-800 px-2 py-1 rounded shadow-sm">
               {offer.badge}
             </div>
-            
+
             <div className="mb-4">
               <offer.icon className="w-6 h-6 text-gray-600 mb-2" />
               <CardTitle className="text-xl font-bold text-gray-900 leading-snug">{offer.title}</CardTitle>
               <p className="text-sm text-muted-foreground mt-2">{offer.description}</p>
             </div>
-            
+
             <div className="mt-4">
-              <p className="text-xs text-muted-foreground text-center mb-3">
-                {offer.activation}
-              </p>
+              <p className="text-xs text-muted-foreground text-center mb-3">{offer.activation}</p>
               <button
                 onClick={() => window.open(offer.link, "_blank")}
                 className="group w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md flex items-center justify-center gap-2 transition-colors duration-300"
