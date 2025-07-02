@@ -1,7 +1,6 @@
 'use client'
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Check, Sparkles, Leaf, ArrowRight } from 'lucide-react'
 
 const offers = [
@@ -31,34 +30,35 @@ const offers = [
 export function KetoAffiliateOffers() {
   return (
     <div className="mt-12 p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg text-gray-800">
-      <h2 className="mb-6 text-3xl font-bold text-center">🔥 Recommended Keto Tools</h2>
-      <div className="max-w-2xl mx-auto mb-8">
-        <p className="text-base text-gray-700 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
+      <h2 className="mb-6 text-3xl font-bold text-center text-gray-800">🔥 Recommended Keto Tools</h2>
+
+      <div className="max-w-3xl mx-auto mb-8">
+        <p className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
           <strong>Crush cravings, accelerate fat-loss, and stay in ketosis longer—these affiliate-supported resources can help.</strong>
-          <br />
+          <br /><br />
           <span className="text-sm text-blue-600 font-semibold">
-            Disclaimer: We may earn a small commission when purchases are made—at no extra cost to you. Thank you for supporting the AI Diet Calculator ecosystem.
+            Disclaimer: We may earn a small commission when purchases are made—at no extra cost to you. This supports the site and keeps our tools free.
           </span>
         </p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
         {offers.map((offer, index) => (
-          <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+          <Card key={index} className="overflow-hidden flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
             <CardHeader className={`${offer.color} text-white p-6`}>
-              <offer.icon className="w-12 h-12 mb-4" />
-              <CardTitle className="text-2xl font-bold leading-tight">{offer.title}</CardTitle>
+              <offer.icon className="w-10 h-10 mb-4" />
+              <CardTitle className="text-xl font-bold leading-tight">{offer.title}</CardTitle>
             </CardHeader>
-            <CardContent className="p-6">
-              <p className="mb-4 text-gray-600">{offer.description}</p>
-              <Button 
-                className="w-full bg-[#3B82F6] hover:bg-[#2563EB] text-white transition-colors duration-300 pointer-events-none" 
-                asChild
+
+            <CardContent className="p-6 flex flex-col justify-between space-y-4 h-full">
+              <p className="text-gray-600 text-sm">{offer.description}</p>
+
+              <button
+                onClick={() => window.open(offer.link, "_blank")}
+                className="w-full bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold py-2 px-4 rounded-md flex items-center justify-center gap-2 transition-colors duration-300"
               >
-                <span className="flex items-center justify-center gap-2" onClick={() => window.open(offer.link, '_blank')}>
-                  View Protocol <ArrowRight className="w-4 h-4" />
-                </span>
-              </Button>
+                View Protocol <ArrowRight className="w-4 h-4" />
+              </button>
             </CardContent>
           </Card>
         ))}
