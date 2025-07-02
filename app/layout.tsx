@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
-import Script from "next/script";
+import Script from "next/script"; // Import Script from next/script
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
@@ -108,10 +108,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta
-    name="google-site-verification"
-    content="RhY8MQoncEED33YHQnoIBVvxJLYtINYFouF8Bcq3Q84"
-  />
-  <meta name="msvalidate.01" content="53E73AC5DA2CE94096AD71CA76115F81" />
+          name="google-site-verification"
+          content="RhY8MQoncEED33YHQnoIBVvxJLYtINYFouF8Bcq3Q84"
+        />
+        <meta name="msvalidate.01" content="53E73AC5DA2CE94096AD71CA76115F81" />
         <link
           rel="icon"
           type="image/png"
@@ -153,6 +153,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-Q2EXYV66X3');
+          `}
+        </Script>
+
+        {/* Microsoft Clarity */}
+        <Script id="microsoft-clarity-script" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "s8nwqflxvk");
           `}
         </Script>
       </head>
