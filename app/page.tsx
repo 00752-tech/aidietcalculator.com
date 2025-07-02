@@ -930,49 +930,72 @@ export default function Home() {
 </section>
 
         <section id="ideal-weight-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Powered Ideal Weight Calculator" icon={Scale} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Discover your ideal weight range with our AI-powered Ideal Weight Calculator. Get personalized recommendations based on your height, gender, and body frame.
-          </p>
-          <IdealWeightCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Ideal Weight Calculator</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Personalized ideal weight range based on multiple factors</li>
-              <li>Considers body frame size for more accurate estimations</li>
-              <li>Provides insights into healthy weight ranges for your body type</li>
-              <li>Helps set realistic weight goals for better health outcomes</li>
-              <li>Supports long-term weight management strategies</li>
-            </ul>
-          </div>
-          <IdealWeightCalculatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Powered Ideal Weight Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-powered Ideal Weight Calculator for personalized weight range recommendations. Ideal for setting realistic weight goals and supporting long-term health management.",
-            "featureList": [
-              "Personalized ideal weight range",
-              "Body frame considerations",
-              "Healthy weight insights",
-              "Realistic goal setting",
-              "Long-term weight management support"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/ideal-weight-calculator-screenshot.jpg",
-            "softwareVersion": "1.0","aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "170"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI-Powered Ideal Weight Calculator" icon={Scale} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    ⚖️ <strong>Discover Your Ideal Weight—Smart, Personalized, AI-Backed</strong>
+    <br /><br />
+    Forget guesswork and outdated charts. This free tool calculates your <em>perfect weight range</em> based on your height, gender, and body frame size—giving you clarity on what’s realistic, sustainable, and healthy for your unique structure.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Personalized ideal weight targets based on actual frame & physiology</li>
+    <li>Adjusts for male/female body composition differences</li>
+    <li>Supports realistic goal-setting—not crash dieting or extremes</li>
+    <li>Helps plan next steps for bulking, cutting or clean maintenance</li>
+    <li>Fast, accurate, no signup required</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🎯 Used by <strong>170+ users every day</strong> to clarify long-term goals.
+    <br /><br />
+    ✅ Want real transformation? <em>Watch our short explainer</em> and see how smart users combine their ideal weight profile with AI-generated calorie and macro planning.
+  </p>
+
+  <IdealWeightCalculator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Ideal Weight Calculator</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Target ranges based on your height, gender & frame size</li>
+      <li>Insights into healthy weight ranges—not just ‘skinny’</li>
+      <li>Supports sustainable fitness strategy—not quick fixes</li>
+      <li>Pairs beautifully with diet and training tools for full-body progress</li>
+      <li>Helps eliminate overwhelm when setting goals</li>
+    </ul>
+  </div>
+
+  <IdealWeightCalculatorSnippet />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Powered Ideal Weight Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-powered Ideal Weight Calculator for personalized weight range recommendations. Ideal for setting realistic weight goals and supporting long-term health management.",
+    "featureList": [
+      "Personalized ideal weight range",
+      "Body frame considerations",
+      "Healthy weight insights",
+      "Realistic goal setting",
+      "Long-term weight management support"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/ideal-weight-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "170"
+    }
+  })}} />
+</section>
+
 
         <section id="bmr-calculator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="AI-Enhanced BMR Calculator" icon={Zap} />
