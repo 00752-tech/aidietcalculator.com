@@ -5,32 +5,32 @@ export function NutritionInfoSection() {
   return (
     <section className="py-16 bg-muted/50">
       <div className="container mx-auto px-4">
-        {/* SEO-optimized first paragraph for Goal Completion */}
-        <div className="max-w-2xl mx-auto mb-8">
-          <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
-            <strong>Discover how our AI Diet Calculator can help you create balanced, healthy meal plans tailored just for you.</strong> By taking into account all essential aspects of nutrition, including macronutrients like proteins, carbohydrates, and fats, understanding crucial portion control, and optimizing meal timing, our tool provides personalized guidance. Whether you have vegetarian, vegan, allergen-free, or specific cultural and religious dietary considerations, the AI Diet Calculator accommodates your unique needs.
+        <div className="max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-center text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200">
+            <strong>Food isn’t just fuel—it’s strategy.</strong><br />
+            Our AI Diet Calculator builds personalized nutrition plans around what actually works for your body: protein balance, meal timing, portion strategy, and dietary preferences that match your lifestyle. Whether you’re vegan, gluten-sensitive, or keto-curious—our system adapts.
           </p>
         </div>
-        <h2 className="text-3xl font-bold text-center mb-4">Understanding Nutrition</h2>
+
+        <h2 className="text-3xl font-bold text-center mb-4">What Our AI System Optimizes</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Our AI Diet Calculator takes into account all essential aspects of nutrition to create balanced, healthy meal plans that work for you.
+          These nutrition fundamentals are dialed in for every plan we generate—no fluff, no filler, just verified dietary logic.
         </p>
+
         <div className="grid gap-8 md:grid-cols-2">
           <Card>
             <CardHeader>
               <h3 className="text-2xl font-semibold flex items-center gap-2">
                 <Apple className="h-6 w-6 text-primary" />
-                Macronutrients
+                Macronutrient Mastery
               </h3>
             </CardHeader>
             <CardContent>
-              <p className="mb-4">
-                Macronutrients are the building blocks of nutrition, providing your body with the energy it needs to function:
-              </p>
+              <p className="mb-4">Balance your macros for sustainable results:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Proteins:</strong> Essential for muscle building and repair</li>
-                <li><strong>Carbohydrates:</strong> Primary energy source for your body</li>
-                <li><strong>Fats:</strong> Important for hormone production and nutrient absorption</li>
+                <li><strong>Protein:</strong> Key for muscle repair and satiety</li>
+                <li><strong>Carbs:</strong> Fuel workouts, balance energy</li>
+                <li><strong>Fats:</strong> Boost recovery and regulate hormones</li>
               </ul>
             </CardContent>
           </Card>
@@ -39,17 +39,15 @@ export function NutritionInfoSection() {
             <CardHeader>
               <h3 className="text-2xl font-semibold flex items-center gap-2">
                 <Beef className="h-6 w-6 text-primary" />
-                Portion Control
+                Portion Strategy
               </h3>
             </CardHeader>
             <CardContent>
-              <p className="mb-4">
-                Understanding portion sizes is crucial for maintaining a healthy diet:
-              </p>
+              <p className="mb-4">Never eyeball your meals again:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Proper portions help maintain caloric balance</li>
-                <li>Different foods require different portion sizes</li>
-                <li>Our AI helps you measure portions accurately</li>
+                <li>AI calculates exact portion sizes per food group</li>
+                <li>Targets your caloric goal with real-time math</li>
+                <li>Scales meals for training days vs rest days</li>
               </ul>
             </CardContent>
           </Card>
@@ -62,13 +60,11 @@ export function NutritionInfoSection() {
               </h3>
             </CardHeader>
             <CardContent>
-              <p className="mb-4">
-                When you eat is just as important as what you eat:
-              </p>
+              <p className="mb-4">Your body runs on rhythms. We sync to them:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Regular meal times help stabilize blood sugar</li>
-                <li>Proper spacing between meals aids digestion</li>
-                <li>Strategic meal timing can boost metabolism</li>
+                <li>Smart spacing between meals for digestion & focus</li>
+                <li>Optimized carb timing for workout recovery</li>
+                <li>Late-night hunger reduction via evening macro shifts</li>
               </ul>
             </CardContent>
           </Card>
@@ -77,17 +73,15 @@ export function NutritionInfoSection() {
             <CardHeader>
               <h3 className="text-2xl font-semibold flex items-center gap-2">
                 <Leaf className="h-6 w-6 text-primary" />
-                Dietary Preferences
+                Preference Intelligence
               </h3>
             </CardHeader>
             <CardContent>
-              <p className="mb-4">
-                We accommodate various dietary preferences and restrictions:
-              </p>
+              <p className="mb-4">No more “just eat tilapia” plans:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Vegetarian and vegan options available</li>
-                <li>Allergen-free meal alternatives</li>
-                <li>Cultural and religious dietary considerations</li>
+                <li>Auto-filters meals for food allergies or intolerances</li>
+                <li>Includes vegan, vegetarian, or paleo formats</li>
+                <li>Respects religious and cultural dietary boundaries</li>
               </ul>
             </CardContent>
           </Card>
