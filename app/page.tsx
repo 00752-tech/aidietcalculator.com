@@ -74,18 +74,27 @@ export default function Home() {
   <SiteHeader />
   <main className="container mx-auto px-4 py-8 pt-20">
     <header className="text-center mb-16">
-      <br /><br /><h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-        <span className="text-[#3B82F6] block">Free AI Diet Calculators</span>
-        <span className="text-gray-800 dark:text-white block mt-2">Personalized Nutrition & Fitness Tools</span>
-      </h1>
-             <br /><br /> <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover personalized nutrition and fitness calculations with our free AI-powered diet and fitness calculators. Our advanced tools provide accurate, tailored recommendations designed to help you optimize your health journey. Whether you're looking for weight loss, muscle gain, or maintenance, get the precise insights you need to start your plan immediately.
-            <br /><br />
-            Explore our comprehensive suite of 15+ specialized tools covering essential aspects of health and fitness. Easily calculate your daily calorie needs using the trusted Mifflin-St Jeor equation, generate a personalized meal plan based on your preferences and goals, estimate your body composition with our Body Fat and BMI calculators, determine optimal macronutrient ratios, find your ideal weight range, and create a custom workout plan tailored to your level and equipment.
-            <br /><br />
-            Leveraging cutting-edge AI algorithms and scientifically-backed methods, our calculators offer highly accurate and easy-to-use solutions to support your long-term, sustainable health management.
-          </p>
+  <br /><br />
+  <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+    <span className="text-[#3B82F6] block">🔥 The Smarter Way to Lose Weight</span>
+    <span className="text-gray-800 dark:text-white block mt-2">Built by AI. Tailored to You.</span>
+  </h1>
+  <br /><br />
+  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+    Forget cookie-cutter diet plans. <strong>AI Diet Calculator</strong> builds <em>your perfect meal strategy</em>—
+    free, fast, and tailored to you. Drop fat, build lean muscle, and feel incredible with science-backed personalization.
+    <br /><br />
+    🚀 Just enter your goals. We do the math.
+    <ul className="list-disc pl-6 text-left mt-4 mb-4">
+      <li>AI-generated diet plans, workouts & macros</li>
+      <li>No fluff, no signup, just results</li>
+    </ul>
+    🎯 Already over <strong>11,000 plans created</strong> this week. Want even faster progress?
+    <br /><br />
+    ✅ Check out our AI-recommended supplements & weight loss boosters—these affiliate-supported picks are what smart users add to their plans for next-level results.
+  </p>
 </header>
+
         <TableOfContents />
         
         <div className="flex justify-center mb-8">
