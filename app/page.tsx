@@ -650,50 +650,72 @@ export default function Home() {
 
         
         <section id="exercise-calorie-burn-estimator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Enhanced Exercise Calorie Burn Estimator" icon={Dumbbell} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Accurately estimate calories burned during various activities with our AI-enhanced Exercise Calorie Burn Estimator. Get personalized insights to optimize your workouts and achieve your fitness goals.
-          </p>
-          <ExerciseCalorieBurnEstimator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Why Use Our AI Exercise Calorie Burn Estimator?</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Precise calorie burn estimates for a wide range of activities</li>
-              <li>Personalized calculations based on your weight and exercise intensity</li>
-              <li>Helps plan more effective workouts for weight loss or maintenance</li>
-              <li>Tracks progress and motivates you to reach your fitness goals</li>
-              <li>Provides insights to balance calorie intake with exercise output</li>
-            </ul>
-          </div>
-          <ExerciseCalorieBurnEstimatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Enhanced Exercise Calorie Burn Estimator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-enhanced Exercise Calorie Burn Estimator for accurate calculations of calories burned during various activities. Ideal for optimizing workouts and achieving fitness goals.",
-            "featureList": [
-              "Precise calorie burn estimates",
-              "Personalized calculations",
-              "Workout optimization",
-              "Progress tracking",
-              "Calorie balance insights"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/exercise-calorie-burn-estimator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "160"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI-Enhanced Exercise Calorie Burn Estimator" icon={Dumbbell} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    🔥 <strong>Know Exactly What You Burn—AI-Verified in Seconds</strong>
+    <br /><br />
+    Cardio. Weights. HIIT. You train hard—so stop guessing how many calories you're torching. This free tool delivers <em>hyper-accurate burn estimates</em> based on your weight, workout type, and duration. Built for clarity. Tuned for transformation.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Smart tracking across 100+ activities & intensities</li>
+    <li>Precise burn based on your stats—not averages</li>
+    <li>Supports fat loss, athletic training & recovery goals</li>
+    <li>Syncs perfectly with meal planners & macro calculators</li>
+    <li>No guesswork. No spreadsheets. Just results.</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🎯 Trusted by <strong>160+ users daily</strong> to optimize workouts.
+    <br /><br />
+    ✅ Want next-level progress? <em>Watch the quick video walkthrough</em> to see how pros combine workout burn insights with calorie intake planning for leaner, faster results.
+  </p>
+
+  <ExerciseCalorieBurnEstimator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Why Use Our AI Exercise Calorie Burn Estimator?</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Precision estimates for every type of training—walking to CrossFit</li>
+      <li>Tailored to your weight, intensity & duration</li>
+      <li>Helps balance diet with output for clean recomposition</li>
+      <li>Boosts accountability & fitness momentum</li>
+      <li>Pairs beautifully with your calorie calculator & diet planner</li>
+    </ul>
+  </div>
+
+  <ExerciseCalorieBurnEstimatorSnippet />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Enhanced Exercise Calorie Burn Estimator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-enhanced Exercise Calorie Burn Estimator for accurate calculations of calories burned during various activities. Ideal for optimizing workouts and achieving fitness goals.",
+    "featureList": [
+      "Precise calorie burn estimates",
+      "Personalized calculations",
+      "Workout optimization",
+      "Progress tracking",
+      "Calorie balance insights"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/exercise-calorie-burn-estimator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "160"
+    }
+  })}} />
+</section>
+
 
         <section id="workout-plan-generator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="AI Workout Plan Generator" icon={Zap} />
