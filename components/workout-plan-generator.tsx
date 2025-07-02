@@ -1,3 +1,5 @@
+import { Dumbbell, Zap, Sparkles, ArrowRight } from 'lucide-react'
+
 'use client'
 
 import React, { useState } from 'react'
