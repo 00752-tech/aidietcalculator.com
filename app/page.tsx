@@ -99,6 +99,10 @@ export default function Home() {
 ✅ Explore our AI-recommended supplements & boosters—<em>watch the quick video guide to see exactly how to combine them with your custom plan for the best results</em>. You’ll unlock affiliate-supported picks that real users swear by.
         </p>
       </header>
+<p className="text-sm text-blue-600 text-center font-medium mt-2">
+  🧠 Live Usage Across Our AI Health Tools
+</p>
+
 <ToolUsageTicker />
 
         <TableOfContents />
