@@ -38,7 +38,7 @@ export function ToolUsageTicker() {
 
   return (
     <div className="w-full bg-gradient-to-r from-blue-50 to-blue-100 border-y border-blue-200 py-2 overflow-hidden">
-      <div className="flex space-x-6 px-4 text-sm font-medium text-blue-800 animate-scroll whitespace-nowrap">
+      <div className="flex space-x-6 px-4 text-base md:text-lg font-semibold tracking-wide text-blue-800 animate-scroll whitespace-nowrap">
         {usageData.map(tool => (
           <span key={tool.label}>
             {tool.emoji} {tool.label}: <strong>{tool.count}</strong> users today
