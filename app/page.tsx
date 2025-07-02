@@ -1069,50 +1069,68 @@ export default function Home() {
 
 
         <section id="sleep-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Enhanced Sleep Calculator" icon={Moon} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Optimize your sleep schedule with our AI-enhanced Sleep Calculator. Get personalized bedtime recommendations based on your desired wake-up time and sleep cycles.
-          </p>
-          <SleepCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Why Use Our AI Sleep Calculator?</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Calculates optimal bedtime based on sleep cycles and wake-up time</li>
-              <li>Helps improve sleep quality and wake up feeling refreshed</li>
-              <li>Considers individual sleep patterns and preferences</li>
-              <li>Supports better overall health and cognitive function</li>
-              <li>Provides tips for maintaining a consistent sleep schedule</li>
-            </ul>
-          </div>
-          <SleepCalculatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Enhanced Sleep Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-enhanced Sleep Calculator for optimizing sleep schedules and improving sleep quality. Ideal for calculating bedtimes based on desired wake-up times and sleep cycles.",
-            "featureList": [
-              "Optimal bedtime calculations",
-              "Sleep cycle considerations",
-              "Personalized sleep recommendations",
-              "Sleep quality improvement",
-              "Consistent sleep schedule support"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/sleep-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.7",
-              "ratingCount": "140"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI-Enhanced Sleep Calculator" icon={Moon} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    😴 <strong>Your Perfect Bedtime—Calculated by AI</strong>
+    <br /><br />
+    Tossing, turning, waking up groggy? You’re not alone. Most people sleep off-schedule—wrecking recovery, focus, and mood.
+    <br /><br />
+    🧠 Our AI Sleep Calculator reverse-engineers your wake-up time to build ideal sleep cycles. No guesswork. Just science-backed bedtimes matched to your body clock.
+    <br /><br />
+    🎯 Trusted by <strong>140+ users every day</strong> to wake up energized, rested, and ready to crush the day.
+  </p>
+
+  <SleepCalculator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Why Use Our AI Sleep Calculator?</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Calculates optimal bedtime based on sleep cycles and wake-up time</li>
+      <li>Helps improve sleep quality and wake up feeling refreshed</li>
+      <li>Considers individual sleep patterns and preferences</li>
+      <li>Supports better overall health and cognitive function</li>
+      <li>Provides tips for maintaining a consistent sleep schedule</li>
+    </ul>
+  </div>
+
+  <SleepCalculatorSnippet />
+
+  <p className="text-sm text-center text-muted-foreground mt-2">
+    🔒 Last 3 sleep schedules generated <strong>in the past 90 seconds</strong>.
+    <br />
+    ➕ Build your optimal bedtime now—it's fast, free, and verified by AI.
+  </p>
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Enhanced Sleep Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-enhanced Sleep Calculator for optimizing sleep schedules and improving sleep quality. Ideal for calculating bedtimes based on desired wake-up times and sleep cycles.",
+    "featureList": [
+      "Optimal bedtime calculations",
+      "Sleep cycle considerations",
+      "Personalized sleep recommendations",
+      "Sleep quality improvement",
+      "Consistent sleep schedule support"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/sleep-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "ratingCount": "140"
+    }
+  })}} />
+</section>
+
 
         <section id="one-rep-max-calculator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="One Rep Max (1RM) Calculator" icon={BarChart} />
