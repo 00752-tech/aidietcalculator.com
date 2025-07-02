@@ -1133,49 +1133,65 @@ export default function Home() {
 
 
         <section id="one-rep-max-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="One Rep Max (1RM) Calculator" icon={BarChart} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Unlock your true strength potential with our AI-powered One Rep Max (1RM) Calculator. Whether you're a powerlifter, bodybuilder, or fitness enthusiast, knowing your 1RM is crucial for effective strength training and progressive overload.
-          </p>
-          <OneRepMaxCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Benefits of Using Our One Rep Max Calculator</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Accurately estimate your maximum strength for various exercises like bench press, squat, and deadlift</li>
-              <li>Calculate precise percentages for different training intensities to optimize your workout routine</li>
-              <li>Track your strength progress over time to ensure continuous improvement</li>
-              <li>Choose from multiple scientifically-backed formulas (Brzycki, Epley, Lander) for increased accuracy</li>
-              <li>Safely plan your strength training program without the risks associated with actual 1RM testing</li>
-            </ul>
-          </div>
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "One Rep Max (1RM) Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-powered One Rep Max (1RM) Calculator for accurately estimating maximum strength in exercises like bench press, squat, and deadlift. Essential for powerlifters, bodybuilders, and strength training enthusiasts.",
-            "featureList": [
-              "Estimate 1RM for various exercises",
-              "Calculate training percentages",
-              "Multiple calculation formulas (Brzycki, Epley, Lander)",
-              "Track strength progress",
-              "Optimize workout routines"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/one-rep-max-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "150"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="One Rep Max (1RM) Calculator" icon={BarChart} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    🏋️‍♂️ <strong>Test Your True Strength—Without Risk or Guesswork</strong>
+    <br /><br />
+    Want to lift heavier, build faster, and break plateaus? Then you need to know your <em>actual max</em>. Our AI-powered 1RM Calculator delivers <strong>spot-on strength estimates</strong>—bench, deadlift, squat and more—without ever needing to max out.
+    <br /><br />
+    🧠 Backed by scientific formulas (Brzycki, Epley, Lander), our tool calculates precise intensity ranges to guide every set. Whether you're powerlifting or chasing aesthetics, your reps just got smarter.
+    <br /><br />
+    🎯 Trusted by <strong>150+ lifters daily</strong> to upgrade their programs and track progress with surgical accuracy.
+  </p>
+
+  <OneRepMaxCalculator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Benefits of Using Our One Rep Max Calculator</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Estimate max strength for key lifts: bench press, squat, deadlift, overhead press</li>
+      <li>Generate precise intensity percentages for progressive overload</li>
+      <li>Choose from multiple proven formulas: Brzycki, Epley, Lander</li>
+      <li>Track your strength over time—without real max attempts</li>
+      <li>Train smart. Avoid injury. Build a strength blueprint that performs.</li>
+    </ul>
+  </div>
+
+  <p className="text-sm text-center text-muted-foreground mt-2">
+    🔒 Last 3 strength profiles generated <strong>in the past 90 seconds</strong>.
+    <br />
+    ➕ Build your personalized lift targets now—free, instant, and AI-backed.
+  </p>
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "One Rep Max (1RM) Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-powered One Rep Max (1RM) Calculator for accurately estimating maximum strength in exercises like bench press, squat, and deadlift. Essential for powerlifters, bodybuilders, and strength training enthusiasts.",
+    "featureList": [
+      "Estimate 1RM for various exercises",
+      "Calculate training percentages",
+      "Multiple calculation formulas (Brzycki, Epley, Lander)",
+      "Track strength progress",
+      "Optimize workout routines"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/one-rep-max-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "150"
+    }
+  })}} />
+</section>
 
         <section aria-label="How It Works" className="mt-20">
           <HowItWorksSection />
