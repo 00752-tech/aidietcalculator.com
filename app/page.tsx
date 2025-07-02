@@ -379,50 +379,72 @@ export default function Home() {
         </section>
         
         <section id="bmi-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Powered BMI Calculator" icon={Ruler} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Calculate your Body Mass Index (BMI) with our AI-powered BMI Calculator. Get instant insights into your weight status and understand how it relates to your overall health.
-          </p>
-          <BMICalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Benefits of Our AI BMI Calculator</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Quick and easy assessment of your weight status</li>
-              <li>Personalized BMI category (underweight, normal weight, overweight, obese)</li>
-              <li>Insights into potential health risks associated with your BMI</li>
-              <li>Recommendations for maintaining a healthy BMI</li>
-              <li>Easy tracking of BMI changes over time</li>
-            </ul>
-          </div>
-          <BMICalculatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Powered BMI Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-powered BMI Calculator for quick assessment of weight status and health insights. Ideal for understanding your body composition and potential health risks.",
-            "featureList": [
-              "Instant BMI calculation",
-              "BMI category classification",
-              "Health risk assessment",
-              "Personalized recommendations",
-              "BMI tracking over time"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/bmi-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.7",
-              "ratingCount": "150"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI-Powered BMI Calculator" icon={Ruler} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    📊 <strong>Unlock Your Health Score—Fast, Accurate & AI-Tuned</strong>
+    <br /><br />
+    Your BMI (Body Mass Index) is more than a number—it’s a window into your metabolic health, weight status, and potential risk zones. This free tool uses advanced AI to give you instant insight, with personalized recommendations and easy tracking.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Instant BMI calculation based on your height & weight</li>
+    <li>Get classified into underweight, normal, overweight, or obese</li>
+    <li>Understand potential health risks tied to your category</li>
+    <li>Track progress easily as you lose fat or gain muscle</li>
+    <li>Backed by science. Verified by AI.</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🎯 Used by <strong>150+ users daily</strong> for fast health insight.
+    <br /><br />
+    ✅ For best results: <em>watch the 60-second explainer</em> to see how smart users combine BMI tracking with calorie and fat calculators to build full-body strategies.
+  </p>
+
+  <BMICalculator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Benefits of Our AI BMI Calculator</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Quick, frictionless health status check</li>
+      <li>Personalized weight category breakdown</li>
+      <li>Insights into disease risk & metabolic patterns</li>
+      <li>Guidance for achieving & maintaining healthy BMI</li>
+      <li>Progress tracking that fits into any fitness routine</li>
+    </ul>
+  </div>
+
+  <BMICalculatorSnippet />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Powered BMI Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-powered BMI Calculator for quick assessment of weight status and health insights. Ideal for understanding your body composition and potential health risks.",
+    "featureList": [
+      "Instant BMI calculation",
+      "BMI category classification",
+      "Health risk assessment",
+      "Personalized recommendations",
+      "BMI tracking over time"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/bmi-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "ratingCount": "150"
+    }
+  })}} />
+</section>
+
         
         <section id="water-intake-calculator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="AI-Enhanced Water Intake Calculator" icon={Droplet} />
