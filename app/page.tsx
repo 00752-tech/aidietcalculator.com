@@ -110,66 +110,74 @@ export default function Home() {
         </div>
         
         <section id="calorie-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Powered Calorie Calculator" icon={Calculator} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Discover your personalized daily calorie needs with our advanced AI-powered Calorie Calculator. Whether your goal is weight loss, muscle gain, or maintaining a healthy weight, our tool provides accurate, tailored recommendations based on cutting-edge nutritional science.
-          </p>
-          <CalorieCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Calorie Calculator</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Personalized calorie recommendations based on your age, gender, height, weight, and activity level</li>
-              <li>Accurate calculations using the Mifflin-St Jeor equation, trusted by nutrition professionals</li>
-              <li>Customized goals for weight loss, gain, or maintenance</li>
-              <li>Adjustable activity levels to match your lifestyle</li>
-              <li>Instant results to help you start your nutrition plan immediately</li>
-            </ul>
-          </div>
-          <div className="mt-8 text-left max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Understanding Your Calorie Needs</h3>
-            <p className="mb-4">
-              Calories are units of energy that your body needs to function. The number of calories you need daily depends on various factors, including your age, gender, height, weight, and activity level. Our AI-powered calculator takes all these factors into account to provide you with a personalized recommendation.
-            </p>
-            <p className="mb-4">
-              The Mifflin-St Jeor equation, which our calculator uses, has been shown to be one of the most accurate methods for estimating calorie needs. It calculates your Basal Metabolic Rate (BMR), which is the number of calories your body burns at rest, and then adjusts this based on your activity level and goals.
-            </p>
-            <p className="mb-4">
-              Remember, while calorie counting can be an effective tool for weight management, it's important to focus on the quality of your calories as well. A balanced diet rich in whole foods, lean proteins, healthy fats, and complex carbohydrates is key to overall health and sustainable weight management.
-            </p>
-            <p className="text-sm text-gray-500 mt-4">
-              Last Updated: {format(new Date(), 'MMMM d, yyyy')}
-            </p>
-          </div>
-          <CalorieCalculatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Powered Calorie Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "Advanced AI-powered Calorie Calculator for personalized daily calorie needs. Ideal for weight loss, muscle gain, or maintaining a healthy weight with accurate, tailored recommendations.",
-            "featureList": [
-              "Personalized calorie recommendations",
-              "Mifflin-St Jeor equation for accuracy",
-              "Customized weight goals",
-              "Adjustable activity levels",
-              "Instant results"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/calorie-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "ratingCount": "200"
-            },
-            "dateModified": new Date().toISOString().split('T')[0]
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI-Powered Calorie Calculator" icon={Calculator} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    🔥 <strong>Crack Your Daily Calorie Code—Backed by AI, Built for Results</strong>
+    <br /><br />
+    No more guesswork. Our free AI-powered Calorie Calculator delivers <em>your exact daily energy needs</em> for fat loss, muscle gain, or maintenance. Enter your stats—get personalized results in seconds.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Custom calorie targets based on your body and goals</li>
+    <li>Built on the trusted Mifflin-St Jeor equation</li>
+    <li>Perfect for beginners and pros looking to dial in their diet</li>
+    <li>Instant, signup-free results</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🎯 Used by <strong>11,000+ people</strong> this week alone. Want even faster progress?
+    <br /><br />
+    ✅ Watch our quick video guide to see how to combine your calorie results with supplements and macros—real user-tested strategies recommended by AI.
+  </p>
+
+  <CalorieCalculator />
+
+  <div className="mt-8 text-left max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Why Calories Matter</h3>
+    <p className="mb-4">
+      Calories fuel your body. Getting the right number helps you burn fat, build lean muscle, and feel energized. Our calculator uses your personal metrics and the Mifflin-St Jeor formula to give you precise results without fluff.
+    </p>
+    <p className="mb-4">
+      Whether you're hitting the gym or tweaking your macros, this tool is your launchpad for a smarter nutrition strategy.
+    </p>
+    <p className="text-sm text-gray-500 mt-4">
+      Last Updated: {format(new Date(), 'MMMM d, yyyy')}
+    </p>
+  </div>
+
+  <CalorieCalculatorSnippet />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Powered Calorie Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Advanced AI-powered Calorie Calculator for personalized daily calorie needs. Ideal for weight loss, muscle gain, or maintaining a healthy weight with accurate, tailored recommendations.",
+    "featureList": [
+      "Personalized calorie recommendations",
+      "Mifflin-St Jeor equation for accuracy",
+      "Customized weight goals",
+      "Adjustable activity levels",
+      "Instant results"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/calorie-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "200"
+    },
+    "dateModified": new Date().toISOString().split('T')[0]
+  })}} />
+</section>
+
         
         <div id="ai-diet-planner" className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">AI Diet and Meal Planner</h2>
