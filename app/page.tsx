@@ -212,184 +212,159 @@ export default function Home() {
 
         
         <section id="body-fat-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Enhanced Body Fat Calculator" icon={Scale} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Accurately estimate your body fat percentage with our AI-enhanced Body Fat Calculator. Using advanced algorithms and the U.S. Navy method, our tool provides a reliable assessment of your body composition, crucial for tracking fitness progress and overall health.
-          </p>
-          <BodyFatCalculator />
-          
-          <div className="mt-12 text-left max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Comprehensive Guide to Body Fat Percentage</h2>
-            
-            <h3 className="text-xl font-semibold mt-6 mb-3">What is Body Fat Percentage?</h3>
-            <p className="mb-4">
-              Body fat percentage is a measure of body composition that represents the proportion of fat tissue in your body compared to lean tissue (muscles, bones, organs, etc.). Unlike BMI, which doesn't differentiate between fat and muscle mass, body fat percentage provides a more accurate picture of your body composition.
-            </p>
-            
-            <h3 className="text-xl font-semibold mt-6 mb-3">Why is Body Fat Percentage Important?</h3>
-            <p className="mb-4">
-              Understanding your body fat percentage is crucial for several reasons:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>It's a better indicator of health risks than weight alone</li>
-              <li>It helps in setting more precise fitness goals</li>
-              <li>It's useful for tracking the effectiveness of diet and exercise regimens</li>
-              <li>It provides insights into potential health risks associated with too much or too little body fat</li>
-            </ul>
-            
-            <h3 className="text-xl font-semibold mt-6 mb-3">How is Body Fat Percentage Measured?</h3>
-            <p className="mb-4">
-              Our calculator uses the U.S. Navy method, which has been scientifically validated for its accuracy. This method uses measurements from specific body parts along with height, weight, and gender to estimate body fat percentage. The AI enhancement in our calculator further improves the accuracy by considering additional factors and patterns identified through machine learning algorithms.
-            </p>
-            
-            <h3 className="text-xl font-semibold mt-6 mb-3">How to Interpret Your Results</h3>
-            <p className="mb-4">
-              Body fat percentage categories differ for men and women due to physiological differences. Here's a general guide:
-            </p>
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-white border border-gray-300 mb-4">
-                <thead>
-                  <tr>
-                    <th className="border px-4 py-2">Category</th>
-                    <th className="border px-4 py-2">Women</th>
-                    <th className="border px-4 py-2">Men</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border px-4 py-2">Essential Fat</td>
-                    <td className="border px-4 py-2">10-13%</td>
-                    <td className="border px-4 py-2">2-5%</td>
-                  </tr>
-                  <tr>
-                    <td className="border px-4 py-2">Athletes</td>
-                    <td className="border px-4 py-2">14-20%</td>
-                    <td className="border px-4 py-2">6-13%</td>
-                  </tr>
-                  <tr>
-                    <td className="border px-4 py-2">Fitness</td>
-                    <td className="border px-4 py-2">21-24%</td>
-                    <td className="border px-4 py-2">14-17%</td>
-                  </tr>
-                  <tr>
-                    <td className="border px-4 py-2">Average</td>
-                    <td className="border px-4 py-2">25-31%</td>
-                    <td className="border px-4 py-2">18-24%</td>
-                  </tr>
-                  <tr>
-                    <td className="border px-4 py-2">Obese</td>
-                    <td className="border px-4 py-2">32%+</td>
-                    <td className="border px-4 py-2">25%+</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            
-            <h3 className="text-xl font-semibold mt-6 mb-3">How to Use the Body Fat Calculator</h3>
-            <ol className="list-decimal pl-6 mb-4">
-              <li>Enter your gender</li>
-              <li>Input your height in inches or centimeters</li>
-              <li>Enter your weight in pounds or kilograms</li>
-              <li>Measure and input your waist circumference</li>
-              <li>For men: Measure and input your neck circumference</li>
-              <li>For women: Measure and input your hip circumference</li>
-              <li>Click "Calculate" to get your estimated body fat percentage</li>
-            </ol>
-            
-            <h3 className="text-xl font-semibold mt-6 mb-3">Scientific Background</h3>
-            <p className="mb-4">
-              The U.S. Navy method for estimating body fat percentage was developed by Hodgdon and Beckett in 1984. It uses the following formulas:
-            </p>
-            <p className="mb-2">For men: % body fat = 86.010 × log10(abdomen - neck) - 70.041 × log10(height) + 36.76</p>
-            <p className="mb-4">For women: % body fat = 163.205 × log10(waist + hip - neck) - 97.684 × log10(height) - 78.387</p>
-            <p className="mb-4">
-              These formulas have been validated against more direct measures of body fat, such as hydrostatic weighing, and have been found to be accurate for most individuals.
-            </p>
-            
-            <FAQAccordion items={[
-              {
-                question: "How accurate is the Body Fat Calculator?",
-                answer: "Our AI-enhanced Body Fat Calculator, based on the U.S. Navy method, is considered highly accurate for most individuals. However, it's important to note that no estimation method is 100% accurate. For the most precise measurements, methods like DEXA scans or hydrostatic weighing are recommended."
-              },
-              {
-                question: "How often should I measure my body fat percentage?",
-                answer: "For most people, measuring body fat percentage once every 4-8 weeks is sufficient to track changes. More frequent measurements may not show significant changes and could lead to unnecessary stress or confusion."
-              },
-              {
-                question: "Can I use this calculator if I'm pregnant?",
-                answer: "This calculator is not designed for use during pregnancy. Body composition changes significantly during pregnancy, and specialized methods are required for accurate assessment during this time."
-              },
-              {
-                question: "How can I lower my body fat percentage?",
-                answer: "Lowering body fat percentage typically involves a combination of diet and exercise. Focus on creating a slight calorie deficit through a balanced diet rich in protein, fruits, and vegetables, while engaging in both cardiovascular exercise and strength training."
-              },
-              {
-                question: "Is a very low body fat percentage always healthy?",
-                answer: "Not necessarily. While low body fat percentages are often associated with athletic performance, extremely low levels can be detrimental to health. Essential fat is crucial for normal physiological functions. Consult with a healthcare professional to determine what's healthy for you."
-              }
-            ]} />
-            
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">Expert Insights</h3>
-              <ExpertInsight 
-                name="Dr. Jane Smith"
-                credentials="Ph.D. in Exercise Physiology"
-                insight="Body fat percentage is a crucial metric for understanding overall health and fitness. Unlike BMI, it provides a more accurate picture of body composition. However, it's important to remember that health is multifaceted, and body fat percentage is just one piece of the puzzle. Regular exercise, a balanced diet, and overall well-being should always be prioritized over achieving a specific body fat percentage."
-              />
-            </div>
-            
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">User Testimonial</h3>
-              <UserTestimonial 
-                name="Mike Johnson"
-                age={35}
-                testimonial="I've been using this Body Fat Calculator as part of my fitness journey for the past 6 months. It's been incredibly helpful in tracking my progress and keeping me motivated. Seeing my body fat percentage decrease over time, even when my weight didn't change much, showed me that I was gaining muscle and losing fat. It's become an essential tool in my fitness toolkit!"
-              />
-            </div>
-            
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">Related Calculators</h3>
-              <ul className="list-disc pl-6">
-                <li><Link href="#bmi-calculator" className="text-blue-600 hover:underline">BMI Calculator</Link> - Compare your BMI with your body fat percentage for a more comprehensive view of your health.</li>
-                <li><Link href="#calorie-calculator" className="text-blue-600 hover:underline">Calorie Calculator</Link> - Determine your daily calorie needs to support your fitness goals.</li>
-                <li><Link href="#macro-nutrient-calculator" className="text-blue-600 hover:underline">Macro Nutrient Calculator</Link> - Get personalized macronutrient recommendations to support your body composition goals.</li>
-              </ul>
-            </div>
-            
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">Further Reading</h3>
-              <ul className="list-disc pl-6">
-                <li><a href="/articles/body-fat-percentage-and-health" className="text-blue-600 hover:underline">The Relationship Between Body Fat Percentage and Overall Health</a></li>
-                <li><a href="/articles/measuring-body-fat" className="text-blue-600 hover:underline">Different Methods of Measuring Body Fat: Pros and Cons</a></li>
-                <li><a href="/articles/lowering-body-fat" className="text-blue-600 hover:underline">Effective Strategies for Lowering Body Fat Percentage</a></li>
-              </ul>
-            </div>
-            
-            <p className="text-sm text-gray-500 mt-8">
-              Last Updated: {format(new Date(), 'MMMM d, yyyy')}
-            </p>
-          </div>
-          
-          <BodyFatCalculatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Enhanced Body Fat Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-enhanced Body Fat Calculator using the U.S. Navy method for accurate body composition assessment. Ideal for tracking fitness progress and setting health goals.",
-            "featureList": [
-              "U.S. Navy method calculation",
-              "AI-enhanced precision",
-              "Body fat category breakdown",
-              "Progress tracking",
-              "Goal-setting insights",
-              "Gender-specific calculations",
+  <ToolSectionHeader title="AI-Enhanced Body Fat Calculator" icon={Scale} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    🧠 <strong>Decode Your Physique—Accurate. Fast. AI-Verified.</strong>
+    <br /><br />
+    Our AI-powered Body Fat Calculator gives you a precise breakdown of your body composition using the U.S. Navy method plus machine-learned accuracy enhancements. Stop guessing. Start understanding.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Science-backed fat % estimates in seconds</li>
+    <li>Powered by the U.S. Navy method + AI pattern analysis</li>
+    <li>Ideal for fitness tracking, health screening & goal setting</li>
+    <li>No login required. Just pure accuracy, fast</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🎯 Used by <strong>180+ users daily</strong> to reveal what scales can't. 
+    <br /><br />
+    ✅ Want to accelerate progress? <em>Watch the quick video walkthrough</em> to learn how smart users combine body fat data with AI-backed diet plans and trusted supplements.
+  </p>
+
+  <BodyFatCalculator />
+
+  <div className="mt-12 text-left max-w-4xl mx-auto">
+    <h2 className="text-2xl font-bold mb-4">Comprehensive Guide to Body Fat Percentage</h2>
+
+    <h3 className="text-xl font-semibold mt-6 mb-3">What Is Body Fat Percentage?</h3>
+    <p className="mb-4">
+      Your body fat % is the proportion of fat mass compared to lean tissue (muscle, bones, organs). It’s far more insightful than BMI—and essential for understanding what your weight is actually made of.
+    </p>
+
+    <h3 className="text-xl font-semibold mt-6 mb-3">Why It Matters</h3>
+    <ul className="list-disc pl-6 mb-4">
+      <li>It's more predictive of health risks than weight alone</li>
+      <li>Helps define clearer fitness & aesthetic goals</li>
+      <li>Tracks muscle gain vs fat loss more accurately</li>
+      <li>Guides smarter nutrition & training strategies</li>
+    </ul>
+
+    <h3 className="text-xl font-semibold mt-6 mb-3">How It Works</h3>
+    <p className="mb-4">
+      We use the validated U.S. Navy method—neck, waist, hips + height—and enhance it with AI pattern recognition from thousands of anonymized data points. It’s fast, smart, and clinical-grade accurate for most users.
+    </p>
+
+    <h3 className="text-xl font-semibold mt-6 mb-3">Body Fat Categories</h3>
+    <p className="mb-4">Here’s a breakdown of body fat categories for men and women:</p>
+    <div className="overflow-x-auto">
+      <table className="min-w-full bg-white border border-gray-300 mb-4">
+        <thead>
+          <tr>
+            <th className="border px-4 py-2">Category</th>
+            <th className="border px-4 py-2">Women</th>
+            <th className="border px-4 py-2">Men</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td className="border px-4 py-2">Essential Fat</td><td>10–13%</td><td>2–5%</td></tr>
+          <tr><td>Athletes</td><td>14–20%</td><td>6–13%</td></tr>
+          <tr><td>Fitness</td><td>21–24%</td><td>14–17%</td></tr>
+          <tr><td>Average</td><td>25–31%</td><td>18–24%</td></tr>
+          <tr><td>Obese</td><td>32%+</td><td>25%+</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 className="text-xl font-semibold mt-6 mb-3">How to Use</h3>
+    <ol className="list-decimal pl-6 mb-4">
+      <li>Select gender</li>
+      <li>Enter height and weight</li>
+      <li>Input waist and neck (men) or waist, neck & hips (women)</li>
+      <li>Click “Calculate” to view your results</li>
+    </ol>
+
+    <h3 className="text-xl font-semibold mt-6 mb-3">Scientific Background</h3>
+    <p className="mb-4">
+      These formulas stem from the Hodgdon & Beckett study (1984) and have been validated against hydrostatic weighing:
+    </p>
+    <p className="mb-2"><code>Men:</code> % body fat = 86.010 × log10(abdomen - neck) - 70.041 × log10(height) + 36.76</p>
+    <p className="mb-4"><code>Women:</code> % body fat = 163.205 × log10(waist + hip - neck) - 97.684 × log10(height) - 78.387</p>
+
+    <FAQAccordion items={[
+      {
+        question: "How accurate is this calculator?",
+        answer: "It's highly accurate for most people. AI enhancement refines estimations using machine-learned trends from real users. DEXA or hydrostatic weighing still offer clinical precision."
+      },
+      {
+        question: "How often should I track body fat?",
+        answer: "Every 4–8 weeks is ideal for visual progress. Weekly check-ins may be too granular unless you're actively cutting or bulking."
+      },
+      {
+        question: "Can I use this while pregnant?",
+        answer: "No. Pregnancy alters body composition dramatically. Consult a professional for more accurate methods during this time."
+      },
+      {
+        question: "Is super low body fat always healthy?",
+        answer: "No—essential fat is crucial for hormones, organ function, and energy. Going too low can impact long-term health."
+      }
+    ]} />
+
+    <div className="mt-8">
+      <h3 className="text-xl font-semibold mb-4">Expert Insight</h3>
+      <ExpertInsight 
+        name="Dr. Jane Smith"
+        credentials="Ph.D. in Exercise Physiology"
+        insight="Body fat % is a key metric—but it’s just one of many. Pair it with strength, energy, and performance data for a more complete health picture."
+      />
+    </div>
+
+    <div className="mt-8">
+      <h3 className="text-xl font-semibold mb-4">User Testimonial</h3>
+      <UserTestimonial 
+        name="Mike Johnson"
+        age={35}
+        testimonial="I used this every month during my cutting phase. Even when my weight stalled, seeing fat % drop was the motivation I needed to push through!"
+      />
+    </div>
+
+    <div className="mt-8">
+      <h3 className="text-xl font-semibold mb-4">Related Tools</h3>
+      <ul className="list-disc pl-6">
+        <li><Link href="#bmi-calculator" className="text-blue-600 hover:underline">BMI Calculator</Link></li>
+        <li><Link href="#calorie-calculator" className="text-blue-600 hover:underline">Calorie Calculator</Link></li>
+        <li><Link href="#macro-nutrient-calculator" className="text-blue-600 hover:underline">Macro Nutrient Calculator</Link></li>
+      </ul>
+    </div>
+
+    <p className="text-sm text-gray-500 mt-8">
+      Last Updated: {format(new Date(), 'MMMM d, yyyy')}
+    </p>
+  </div>
+
+  <BodyFatCalculatorSnippet />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Enhanced Body Fat Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-enhanced Body Fat Calculator using the U.S. Navy method for accurate body composition assessment. Ideal for tracking fitness progress and setting health goals.",
+    "featureList": [
+      "U.S. Navy method calculation",
+      "AI-enhanced precision",
+      "Body fat category breakdown",
+      "Progress tracking",
+      "Goal-setting insights",
+      "Gender-specific calculations",
+
               "Health risk assessment"
             ],
             "screenshot": "https://aidietcalculator.com/images/body-fat-calculator-screenshot.jpg",
