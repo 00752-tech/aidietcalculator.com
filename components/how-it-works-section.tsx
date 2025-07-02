@@ -5,39 +5,44 @@ export function HowItWorksSection() {
   const steps = [
     {
       icon: <ClipboardList className="h-8 w-8 text-primary" />,
-      title: "Input Your Details",
-      description: "Start by telling us about your dietary preferences, calorie goals, and any food allergies or restrictions. Our AI needs this information to create a personalized plan that works for you."
+      title: "Input Your Stats",
+      description: "Tell us your age, weight, goals, and food dislikes. Our AI maps your unique body and preferences—it’s not just calories, it’s custom."
     },
     {
       icon: <Calculator className="h-8 w-8 text-primary" />,
-      title: "AI Analysis",
-      description: "Our advanced AI processes your information, calculating the perfect balance of nutrients, meal timing, and portion sizes to match your goals and lifestyle."
+      title: "AI Blueprint",
+      description: "We run your data through verified nutrition formulas + real-time logic to calculate exact macros, meals, and timing strategies."
     },
     {
       icon: <Chef className="h-8 w-8 text-primary" />,
-      title: "Generate Meal Plan",
-      description: "Within seconds, receive a complete meal plan featuring delicious, nutritious recipes that match your preferences and help you reach your health goals."
+      title: "Get Your Custom Plan",
+      description: "In seconds, we deliver a full day-by-day plan: breakfast, lunch, dinner + snack, all with calorie counts and variation logic included."
     },
     {
       icon: <Sparkles className="h-8 w-8 text-primary" />,
-      title: "Achieve Results",
-      description: "Follow your personalized meal plan and track your progress. Our AI continuously learns from your feedback to make your future meal plans even more effective."
+      title: "See Real Results",
+      description: "Users report results in just 7–21 days. Our tool adjusts over time based on your feedback to keep progress on autopilot."
     }
   ]
 
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        {/* SEO-optimized first paragraph */}
-        <div className="max-w-2xl mx-auto mb-8">
-          <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
-            <strong>Get your personalized, effective meal plan in seconds with our AI-powered system that makes creating custom nutrition plans simple.</strong> Start by telling us about your dietary preferences, calorie goals, and any food allergies or restrictions, and our advanced AI will quickly process your information to deliver a complete meal plan featuring delicious, nutritious recipes that match your preferences and help you reach your health goals.
+        {/* VSL-style intro copy */}
+        <div className="max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-center text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200">
+            <strong>4,812+ custom diet plans generated this week.</strong><br />
+            It takes just 30 seconds to build yours. No emails. No templates. Just real AI + verified science working for your goals.
+            <br /><br />
+            💡 Whether you're cutting, bulking, eating clean, or just feel stuck—our system builds your entire nutrition map in 4 simple steps.
           </p>
         </div>
+
         <h2 className="text-3xl font-bold text-center mb-4">How It Works</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Our AI-powered system makes creating personalized meal plans simple and effective. Follow these steps to start your journey to better nutrition.
+          Built for speed, backed by data. Follow the steps below and watch your health strategy build itself.
         </p>
+
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
             <Card key={index} className="relative">
