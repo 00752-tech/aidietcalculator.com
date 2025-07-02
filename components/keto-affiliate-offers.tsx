@@ -49,9 +49,10 @@ export function KetoAffiliateOffers() {
 
       {/* Disclaimer */}
       <div className="max-w-3xl mx-auto mb-8">
-        <p className="text-base md:text-lg text-gray-700 font-medium leading-relaxed bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
-          <strong>These tools may contain affiliate links—when you purchase, we may earn a small commission at no extra cost to you. This funds the free AI diet planning ecosystem you’re using 💙</strong>
-        </p>
+        <p className="text-sm italic text-muted-foreground text-center mt-2">
+  Some links may be affiliate links. We may earn a small commission if you make a purchase—at no extra cost to you. This helps keep our tools free 💙
+</p>
+
       </div>
 
       {/* Offer Grid */}
