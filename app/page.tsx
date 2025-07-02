@@ -515,50 +515,70 @@ export default function Home() {
 
         
         <section id="macro-nutrient-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Powered Macro Nutrient Calculator" icon={PieChart} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Optimize your diet with our AI-powered Macro Nutrient Calculator. Get personalized recommendations for protein, carbohydrates, and fats based on your goals, body composition, and activity level.
-          </p>
-          <MacroNutrientCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Macro Nutrient Calculator</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Tailored macronutrient ratios for your specific goals (weight loss, muscle gain, maintenance)</li>
-              <li>Adjusts recommendations based on your body composition and activity level</li>
-              <li>Helps optimize your diet for better performance and results</li>
-              <li>Simplifies meal planning and food choices</li>
-              <li>Supports long-term dietary success and health</li>
-            </ul>
-          </div>
-          <MacroNutrientCalculatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Powered Macro Nutrient Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-powered Macro Nutrient Calculator for personalized protein, carbohydrate, and fat recommendations. Ideal for optimizing diet based on individual goals and body composition.",
-            "featureList": [
-              "Personalized macronutrient ratios",
-              "Goal-specific recommendations",
-              "Activity level adjustments",
-              "Simplified meal planning",
-              "Long-term dietary support"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/macro-nutrient-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "ratingCount": "190"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI-Powered Macro Nutrient Calculator" icon={PieChart} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    🥩 <strong>Unlock Your Perfect Macro Split—Tailored by AI</strong>
+    <br /><br />
+    Whether you’re cutting, bulking, or just optimizing how you feel day-to-day, this free tool gives you <em>precise macronutrient targets</em>—protein, carbs, and fat—dialed in to your goals, body, and training style. No guesswork. No math. Just fast clarity.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Personalized macro breakdowns for fat loss, lean gains & performance</li>
+    <li>Smart adjustments for body composition, training level & lifestyle</li>
+    <li>Perfect for meal planning, grocery lists & nutrition tracking</li>
+    <li>Backed by clinical science—verified by 190+ daily users</li>
+    <li>No email needed. Just input → get results → fuel smart</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🧠 Want next-level results? <em>Watch our video walkthrough</em> to see how elite users combine macro targets with AI-crafted meal plans & supplements for transformation you can feel.
+  </p>
+
+  <MacroNutrientCalculator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Macro Nutrient Calculator</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Tailored macro splits for weight loss, muscle gain, or maintenance</li>
+      <li>Adapts to your unique metabolism, activity level & fitness goals</li>
+      <li>Makes meal planning simple and goal-aligned</li>
+      <li>Improves results across diet, energy & recovery</li>
+      <li>Supports sustainable nutrition strategies long-term</li>
+    </ul>
+  </div>
+
+  <MacroNutrientCalculatorSnippet />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Powered Macro Nutrient Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-powered Macro Nutrient Calculator for personalized protein, carbohydrate, and fat recommendations. Ideal for optimizing diet based on individual goals and body composition.",
+    "featureList": [
+      "Personalized macronutrient ratios",
+      "Goal-specific recommendations",
+      "Activity level adjustments",
+      "Simplified meal planning",
+      "Long-term dietary support"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/macro-nutrient-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "190"
+    }
+  })}} />
+</section>
+
 
         <section id="protein-intake-calculator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="AI-Powered Protein Intake Calculator" icon={Utensils} />
