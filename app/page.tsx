@@ -718,50 +718,72 @@ export default function Home() {
 
 
         <section id="workout-plan-generator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI Workout Plan Generator" icon={Zap} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Transform your fitness routine with our AI-powered Workout Plan Generator. Get personalized exercise plans tailored to your goals, fitness level, and available equipment.
-          </p>
-          <WorkoutPlanGenerator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Workout Plan Generator</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Customized workout plans based on your fitness goals and experience level</li>
-              <li>Adapts to your available equipment and time constraints</li>
-              <li>Progressive overload to ensure continuous improvement</li>
-              <li>Balanced routines targeting all major muscle groups</li>
-              <li>Regular updates to keep your workouts challenging and effective</li>
-            </ul>
-          </div>
-          <WorkoutPlanGeneratorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI Workout Plan Generator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-powered Workout Plan Generator for personalized exercise routines. Ideal for creating effective, goal-oriented fitness plans adaptable to individual needs and equipment availability.",
-            "featureList": [
-              "Customized workout plans",
-              "Goal-specific routines",
-              "Equipment-based adaptations",
-              "Progressive overload implementation",
-              "Regular plan updates"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/workout-plan-generator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "ratingCount": "200"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI Workout Plan Generator" icon={Zap} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    🏋️‍♂️ <strong>Get Your Custom Workout Plan—Fast, Smart, Built for YOU</strong>
+    <br /><br />
+    Your goals are unique. So why settle for cookie-cutter workouts? Our AI-powered plan generator creates <em>personalized training routines</em>—designed around your fitness level, goals, available equipment, and time. No fluff. Just science-based progress.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Tailored training plans for fat loss, muscle growth, or endurance</li>
+    <li>Adapts to home workouts, gym access, or minimal gear setups</li>
+    <li>Includes progressive overload to drive real improvement</li>
+    <li>Targets all major muscle groups—built with balance & intent</li>
+    <li>Updated regularly so your workouts never get stale</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🎯 Trusted by <strong>200+ users daily</strong> to stay on track and get strong.
+    <br /><br />
+    ✅ Want to maximize results? <em>Watch the quick video walkthrough</em> to learn how smart users pair workouts with AI-calculated nutrition and recovery strategies for elite performance.
+  </p>
+
+  <WorkoutPlanGenerator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Workout Plan Generator</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Custom workouts matched to your goals, experience, and limitations</li>
+      <li>Adaptable to your equipment—gym, home, or hybrid</li>
+      <li>Programmed progression to keep gains coming</li>
+      <li>Full-body splits for strength, aesthetics, or conditioning</li>
+      <li>New challenges every phase to eliminate plateaus</li>
+    </ul>
+  </div>
+
+  <WorkoutPlanGeneratorSnippet />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI Workout Plan Generator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-powered Workout Plan Generator for personalized exercise routines. Ideal for creating effective, goal-oriented fitness plans adaptable to individual needs and equipment availability.",
+    "featureList": [
+      "Customized workout plans",
+      "Goal-specific routines",
+      "Equipment-based adaptations",
+      "Progressive overload implementation",
+      "Regular plan updates"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/workout-plan-generator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "200"
+    }
+  })}} />
+</section>
+
 
         <section id="recommended-fitness-products" className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">Recommended Fitness Products</h2>
