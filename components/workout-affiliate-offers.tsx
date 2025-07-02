@@ -1,63 +1,85 @@
+'use client'
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Dumbbell, Zap, Sparkles } from 'lucide-react'
+import { Dumbbell, Zap, Sparkles, ArrowRight } from 'lucide-react'
 
 const offers = [
   {
-    title: "The 21-day Smoothie Diet",
-    description: "21 day rapid weight loss program.",
+    title: "🍓 Smoothie Diet: Drop Inches in 21 Days",
+    description: "A rapid fat-loss blueprint using nutrient-rich smoothies, optimized for satiety and metabolism.",
     link: "https://tinyurl.com/21-day-diet-drink",
     icon: Dumbbell,
-    color: "bg-gradient-to-br from-blue-400 to-cyan-300",
+    activation: "✅ Over 12,400 activations this month",
+    badge: "🍓 3-Phase Detox Protocol",
+    cta: "Start My Smoothie Plan",
+    gradient: "from-blue-50 to-cyan-100"
   },
   {
-    title: "Gluco Extend",
-    description: "Support healthy blood sugar naturally.",
+    title: "🩺 Gluco Extend: Blood Sugar Balance Support",
+    description: "Clinically-informed formula supporting insulin sensitivity, metabolism, and energy regulation.",
     link: "https://tinyurl.com/gluco-extend-now",
     icon: Zap,
-    color: "bg-gradient-to-br from-purple-400 to-pink-300",
+    activation: "✅ Trusted by 8,921 users",
+    badge: "🩺 Doctor-Inspired Stack",
+    cta: "View Formula",
+    gradient: "from-purple-50 to-pink-100"
   },
   {
-    title: "HepatoBurn",
-    description: "Detox your body, boost your metabolism naturally.",
+    title: "🔥 HepatoBurn: Burn Fat + Detox Naturally",
+    description: "Supports liver health and fat metabolism using plant-based actives like turmeric and milk thistle.",
     link: "https://tinyurl.com/hepatoburn-now",
     icon: Sparkles,
-    color: "bg-gradient-to-br from-yellow-400 to-orange-300",
+    activation: "✅ Featured in Top 5 Natural Burners",
+    badge: "🔥 Clean Fat Flush",
+    cta: "Activate My Burn",
+    gradient: "from-yellow-50 to-orange-100"
   },
 ]
 
 export function WorkoutAffiliateOffers() {
   return (
-    <div className="mt-12 p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg text-gray-800">
-      <h2 className="mb-6 text-3xl font-bold text-center text-gray-800">Enhance Your Fitness Journey</h2>
-      {/* SEO-optimized subheadline and affiliate disclaimer */}
-      <div className="max-w-2xl mx-auto mb-8">
-        <p className="text-base text-gray-700 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
-          <strong>Supercharge your workout results with these premium, scientifically-formulated supplements designed to support your fitness goals.</strong>
-          <br />
-          <span className="text-blue-600 font-semibold">
-            Please note: Some links below are affiliate links. We may earn a small commission if you make a purchase through them-at no extra cost to you. This helps support our site and allows us to continue providing helpful fitness content. Thank you for your support!
-          </span>
+    <div className="mt-20 px-4">
+      {/* Section Heading */}
+      <section className="text-center max-w-3xl mx-auto mb-8">
+        <h2 className="text-4xl font-bold text-gray-900 mb-3">Optimize Your Fitness Journey 🏋️</h2>
+        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          Metabolism boosters. Detox pathways. Blood sugar harmony. These affiliate-backed stacks fuel results.
+        </p>
+      </section>
+
+      {/* Disclaimer */}
+      <div className="max-w-3xl mx-auto mb-8">
+        <p className="text-base md:text-lg text-gray-700 font-medium leading-relaxed bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
+          <strong>Some links may be affiliate links—when you buy, we earn a small commission at no extra cost. That keeps our fitness tools free 💙</strong>
         </p>
       </div>
+
+      {/* Offer Grid */}
       <div className="grid gap-6 md:grid-cols-3">
         {offers.map((offer, index) => (
-          <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <CardHeader className={`${offer.color} text-white p-6`}>
-              <offer.icon className="w-12 h-12 mb-4" />
-              <CardTitle className="text-2xl font-bold">{offer.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <p className="mb-4 text-gray-600">{offer.description}</p>
-              <Button 
-                className="w-full bg-[#3B82F6] hover:bg-[#2563EB] text-white transition-colors duration-300" 
-                asChild
+          <Card key={index} className={`bg-gradient-to-br ${offer.gradient} overflow-hidden flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-transform duration-200 ease-in-out border border-gray-200 rounded-lg p-6`}>
+            
+            {/* Badge */}
+            <div className="absolute top-2 right-2 text-xs font-semibold bg-yellow-100 text-yellow-800 px-2 py-1 rounded shadow-sm">
+              {offer.badge}
+            </div>
+
+            <div className="mb-4">
+              <offer.icon className="w-6 h-6 text-gray-600 mb-2" />
+              <CardTitle className="text-xl font-bold text-gray-900 leading-snug">{offer.title}</CardTitle>
+              <p className="text-sm text-muted-foreground mt-2">{offer.description}</p>
+            </div>
+
+            <div className="mt-4">
+              <p className="text-xs text-muted-foreground text-center mb-3">{offer.activation}</p>
+              <button
+                onClick={() => window.open(offer.link, "_blank")}
+                className="group w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md flex items-center justify-center gap-2 transition-colors duration-300"
               >
-                <a href={offer.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                  Learn More
-                </a>
-              </Button>
-            </CardContent>
+                {offer.cta}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+              </button>
+            </div>
           </Card>
         ))}
       </div>
