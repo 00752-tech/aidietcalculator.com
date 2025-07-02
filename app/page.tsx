@@ -85,15 +85,18 @@ export default function Home() {
     free, fast, and tailored to you. Drop fat, build lean muscle, and feel incredible with science-backed personalization.
     <br /><br />
     🚀 Just enter your goals. We do the math.
-    <ul className="list-disc pl-6 text-left mt-4 mb-4">
-      <li>AI-generated diet plans, workouts & macros</li>
-      <li>No fluff, no signup, just results</li>
-    </ul>
+  </p>
+  <ul className="list-disc pl-6 text-left mt-4 mb-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+    <li>AI-generated diet plans, workouts & macros</li>
+    <li>No fluff, no signup, just results</li>
+  </ul>
+  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
     🎯 Already over <strong>11,000 plans created</strong> this week. Want even faster progress?
     <br /><br />
-    ✅ Check out our AI-recommended supplements & weight loss boosters—these affiliate-supported picks are what smart users add to their plans for next-level results.
+    ✅ Explore our AI-recommended supplements & boosters—<em>watch the quick video guide to see exactly how to combine them with your custom plan for the best results</em>. You’ll unlock affiliate-supported picks that real users swear by.
   </p>
 </header>
+
 
         <TableOfContents />
         
