@@ -1,9 +1,9 @@
-import { Dumbbell, Zap, Sparkles, ArrowRight } from 'lucide-react'
-
 'use client'
-
 import React, { useState } from 'react'
+import { Dumbbell, Zap, Sparkles, ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+// ...rest of component
+
 // ...rest of your component
 
 
