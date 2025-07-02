@@ -1,54 +1,59 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Dumbbell, Zap, Sparkles, ArrowRight } from 'lucide-react'
-import { Button } from "./ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Sparkles, ArrowRight } from 'lucide-react'
 
-interface WorkoutPlan {
-  warmUp: string;
-  mainWorkout: string;
-  coolDown: string;
-}
-
-// Blue-Themed Affiliate Ad Component
 const OldSchoolNewBodyAd = () => {
+  const handleCTAClick = () => {
+    window.open("https://67982p5ys98p0y9k38kqgv4s1v.hop.clickbank.net/?&traffic_source=aidietcalc", "_blank")
+  }
+
   return (
-    <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 shadow-lg my-8">
-      <CardHeader className="flex items-center gap-3">
+    <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 shadow-lg my-12 relative p-6 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      
+      {/* CTA Badge */}
+      <div className="absolute top-2 right-2 text-xs font-semibold bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
+        🔵 Age-Defying Protocol
+      </div>
+
+      <CardHeader className="flex items-center gap-3 mb-4">
         <Sparkles className="h-8 w-8 text-blue-600" />
-        <h3 className="text-2xl font-bold text-blue-800">
-          Age-Defying Fitness System
-        </h3>
+        <CardTitle className="text-2xl font-bold text-blue-800">
+          Old School New Body Program
+        </CardTitle>
       </CardHeader>
-      <CardContent>
-        <p className="mb-4 text-gray-700">
-          <strong>For men and women over 35:</strong> Discover the <span className="text-blue-700 font-semibold">Old School New Body</span> program—a science-backed approach to looking younger, burning fat, and regaining energy.
+
+      <CardContent className="text-gray-700 space-y-4">
+        <p>
+          <strong>For men and women 35+:</strong> Unlock the age-defying blueprint used by Hollywood trainers to tighten, energize, and rejuvenate—with minimal time and zero guesswork.
         </p>
-        <ul className="mb-4 list-disc pl-6 text-gray-700">
-          <li><strong>5 proven principles</strong> to slow aging naturally</li>
-          <li>Works at any age—40s, 50s, 60s and beyond</li>
-          <li>No extreme diets or marathon workouts</li>
-          <li>Created by top fitness experts</li>
+        <ul className="list-disc pl-6">
+          <li>✅ 5 science-backed principles for fat-loss & longevity</li>
+          <li>🏋️‍♀️ Works at any age—40s, 50s, 60s and beyond</li>
+          <li>🚫 No fad diets or long workouts</li>
+          <li>📣 Featured by top fitness experts</li>
         </ul>
-        <a
-          href="https://67982p5ys98p0y9k38kqgv4s1v.hop.clickbank.net/?&traffic_source=aidietcalc"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-md transition-colors duration-200 shadow-md"
+
+        {/* CTA Button Without Hover Link Preview */}
+        <button
+          onClick={handleCTAClick}
+          className="group w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-md flex items-center justify-center gap-2 transition-colors duration-300"
         >
-          Discover the Program <ArrowRight className="ml-2 w-5 h-5" />
-        </a>
-        <p className="mt-3 text-xs text-gray-500">
-          <em>Affiliate Disclosure: We may earn a commission if you purchase through this link, at no extra cost to you.</em>
+          Discover the Program
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+        </button>
+
+        {/* Compliant Affiliate Disclaimer */}
+        <p className="text-xs italic text-gray-500 text-center mt-4">
+          Affiliate Disclosure: We may earn a small commission if you purchase through this link—at no extra cost to you.
         </p>
       </CardContent>
     </Card>
-  );
-};
+  )
+}
+
+export default OldSchoolNewBodyAd
+;
 
 export function WorkoutPlanGenerator() {
   const [fitnessLevel, setFitnessLevel] = useState<string>("beginner")
