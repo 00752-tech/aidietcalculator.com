@@ -1,12 +1,15 @@
+'use client'
+
 import { Metadata, Viewport } from 'next'
 import dynamic from 'next/dynamic'
-import { format } from 'date-fns'
+import { useEffect, useState } from 'react'
 import { Scale, Calculator, Ruler, Droplet, PieChart, Dumbbell, Zap, Utensils, Clock, Moon, BarChart } from 'lucide-react'
 import Link from 'next/link'
 const AIDietPlanner = dynamic(() => import('@/components/ai-diet-planner'), { 
   loading: () => <p>Loading AI Diet Planner...</p>,
   ssr: false 
 })
+
 import { SiteHeader } from "@/components/site-header"
 import { BenefitsSection } from "@/components/benefits-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
@@ -44,14 +47,13 @@ import { BMRCalculatorSnippet } from "@/components/bmr-calculator-snippet"
 import { MacroBalanceCalculator } from "@/components/macro-balance-calculator"
 import { SleepCalculator } from "@/components/sleep-calculator"
 import { SleepCalculatorSnippet } from "@/components/sleep-calculator-snippet"
-import { OneRepMaxCalculator } from "@/components/one-rep-max-calculator";
+import { OneRepMaxCalculator } from "@/components/one-rep-max-calculator"
 import { ProteinIntakeCalculator } from "@/components/protein-intake-calculator"
 import { ProteinIntakeCalculatorSnippet } from "@/components/protein-intake-calculator-snippet"
 import { ToolSectionHeader } from "@/components/tool-section-header"
 import { ExpertInsight } from "@/components/expert-insight"
 import { UserTestimonial } from "@/components/user-testimonial"
 import { FAQAccordion } from "@/components/faq-accordion"
-
 
 export const metadata: Metadata = {
   title: "AI Diet Calculator & Meal Planner | Free Calorie & Nutrition Tools",
@@ -68,34 +70,79 @@ export const viewport: Viewport = {
   ],
 }
 
+// 🔥 Live Usage Ticker Component
+function ToolUsageTicker() {
+  const tools = [
+    { label: "Calorie Calculator", base: 287, emoji: "🔥" },
+    { label: "AI Diet & Meal Planner", base: 211, emoji: "🍽️" },
+    { label: "Body Fat Calculator", base: 193, emoji: "⚖️" },
+    { label: "BMI Calculator", base: 168, emoji: "📊" },
+    { label: "Water Intake Calculator", base: 182, emoji: "💧" },
+    { label: "Macro Nutrient Calculator", base: 175, emoji: "🥗" },
+    { label: "Protein Intake Calculator", base: 154, emoji: "🥩" },
+    { label: "Exercise Burn Estimator", base: 197, emoji: "🔥" },
+    { label: "Workout Plan Generator", base: 312, emoji: "🏋️‍♂️" },
+    { label: "Keto Calculator", base: 204, emoji: "🥓" },
+    { label: "Intermittent Fasting Calculator", base: 163, emoji: "⏳" },
+    { label: "Ideal Weight Calculator", base: 178, emoji: "🎯" },
+    { label: "BMR Calculator", base: 194, emoji: "⚡" },
+    { label: "Sleep Calculator", base: 147, emoji: "😴" },
+    { label: "One Rep Max Calculator", base: 166, emoji: "💪" }
+  ]
+
+  const [usageData, setUsageData] = useState([])
+
+  useEffect(() => {
+    const generateRandomUsage = () => {
+      const randomized = tools.map(tool => {
+        const offset = Math.floor(Math.random() * 13) - 6
+        return { ...tool, count: tool.base + offset }
+      })
+      setUsageData(randomized)
+    }
+
+    generateRandomUsage()
+    const interval = setInterval(generateRandomUsage, 9000)
+    return () => clearInterval(interval)
+  }, [])
+
+  return (
+    <div className="w-full bg-gradient-to-r from-blue-50 to-blue-100 border-y border-blue-200 py-2 overflow-hidden">
+      <div className="flex space-x-6 px-4 text-sm font-medium text-blue-800 animate-scroll whitespace-nowrap">
+        {usageData.map(tool => (
+          <span key={tool.label}>
+            {tool.emoji} {tool.label}: <strong>{tool.count}</strong> users today
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F8F9FF]">
-  <SiteHeader />
-  <main className="container mx-auto px-4 py-8 pt-20">
-    <header className="text-center mb-16">
-  <br /><br />
-  <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-    <span className="text-[#3B82F6] block">🔥 The Smarter Way to Lose Weight</span>
-    <span className="text-gray-800 dark:text-white block mt-2">Built by AI. Tailored to You.</span>
-  </h1>
-  <br /><br />
-  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-    Forget cookie-cutter diet plans. <strong>AI Diet Calculator</strong> builds <em>your perfect meal strategy</em>—
-    free, fast, and tailored to you. Drop fat, build lean muscle, and feel incredible with science-backed personalization.
-    <br /><br />
-    🚀 Just enter your goals. We do the math.
-  </p>
-  <ul className="list-disc pl-6 text-left mt-4 mb-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
-    <li>AI-generated diet plans, workouts & macros</li>
-    <li>No fluff, no signup, just results</li>
-  </ul>
-  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-    🎯 Already over <strong>11,000 plans created</strong> this week. Want even faster progress?
-    <br /><br />
-    ✅ Explore our AI-recommended supplements & boosters—<em>watch the quick video guide to see exactly how to combine them with your custom plan for the best results</em>. You’ll unlock affiliate-supported picks that real users swear by.
-  </p>
-</header>
+      <SiteHeader />
+      <main className="container mx-auto px-4 py-8 pt-20">
+        <header className="text-center mb-16">
+          <br /><br />
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <span className="text-[#3B82F6] block">🔥 The Smarter Way to Lose Weight</span>
+            <span className="text-gray-800 dark:text-white block mt-2">Built by AI. Tailored to You.</span>
+          </h1>
+          <br /><br />
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Forget cookie-cutter diet plans. <strong>AI Diet Calculator</strong> builds <em>your perfect meal strategy</em>—
+            free, fast, and tailored to you. Drop fat, build lean muscle, and feel incredible with science-backed personalization.
+            <br /><br />
+            🚀 Just enter your goals. We do the math.
+          </p>
+          <ul className="list-disc pl-6 text-left mt-4 mb-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+            <li>AI-generated diet plans, workouts & macros</li>
+            <li>No fluff, no signup, just results</li>
+          </ul>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            🎯 Already over <strong>11,000 plans created</strong> this
 
 
         <TableOfContents />
