@@ -1004,68 +1004,69 @@ export default function Home() {
 </section>
 
 
-        <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-  ⚡ <strong>How Many Calories Does Your Body Burn... Doing Nothing?</strong>
-  <br /><br />
-  Most people totally ignore this—yet your Basal Metabolic Rate (BMR) is the <em>foundation</em> of fat loss, lean muscle, and lasting energy. 
-  <br /><br />
-  🧠 Our AI-enhanced BMR Calculator cuts through the guesswork using advanced metabolic formulas—instantly personalized to your age, body type, and goals.
-  <br /><br />
-  🎯 Already trusted by <strong>190+ users daily</strong> to build smarter nutrition strategies and reverse plateaus. Whether you’re cutting, bulking, or fine-tuning recovery—this tool gives you the baseline.
-</p>
+                <section id="macro-balance-calculator" className="mb-16 flex flex-col items-center">
+  <ToolSectionHeader title="AI-Powered Macro Balance Calculator" icon={PieChart} />
 
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    🥗 <strong>Dial In Your Daily Macros—Perfectly Tuned for YOUR Goals</strong>
+    <br /><br />
+    Stop playing macro roulette. Whether you’re cutting fat, bulking clean, or eating smarter—this tool builds your <em>ideal protein, carb, and fat breakdown</em> in seconds using real data.
+    <br /><br />
+    🧠 Powered by nutrition science + advanced AI logic, our calculator adapts to your body type, training style, and dietary preferences. It’s your shortcut to real results.
+    <br /><br />
+    🎯 Already used by <strong>160+ users daily</strong> to simplify meal planning and hit their targets with confidence.
+  </p>
 
-        <section id="macro-balance-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Powered Macro Balance Calculator" icon={PieChart} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Fine-tune your macronutrient balance with our AI-powered Macro Balance Calculator. Get personalized recommendations to optimize your protein, carbohydrate, and fat intake for your specific goals.
-          </p>
-          <MacroBalanceCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Macro Balance Calculator</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Customized macronutrient ratios based on your goals and body type</li>
-              <li>Flexible adjustments for different dietary approaches (e.g., low-carb, high-protein)</li>
-              <li>Helps optimize nutrient intake for better performance and results</li>
-              <li>Supports meal planning and food selection for balanced nutrition</li>
-              <li>Adapts to your changing needs and progress over time</li>
-            </ul>
-          </div>
-          <MacroNutrientCalculatorSnippet />
-<p className="text-sm text-center text-muted-foreground mt-2">
-  🔒 Last 3 custom macro plans generated <strong>in the past 90 seconds</strong>. 
-  <br />
-  ➕ Start yours now—it's free, fast, and verified by AI.
-</p>
+  <MacroBalanceCalculator />
 
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Powered Macro Balance Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-powered Macro Balance Calculator for personalized macronutrient recommendations. Ideal for optimizing protein, carbohydrate, and fat intake based on individual goals and body types.",
-            "featureList": [
-              "Customized macronutrient ratios",
-              "Flexible dietary adjustments",
-              "Nutrient intake optimization",
-              "Meal planning support",
-              "Adaptive recommendations"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/macro-balance-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "160"
-            }
-          })}} />
-        </section>
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Macro Balance Calculator</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Customized macronutrient ratios based on your goals and body type</li>
+      <li>Flexible adjustments for different dietary approaches (e.g., low-carb, high-protein)</li>
+      <li>Helps optimize nutrient intake for better performance and results</li>
+      <li>Supports meal planning and food selection for balanced nutrition</li>
+      <li>Adapts to your changing needs and progress over time</li>
+    </ul>
+  </div>
+
+  <MacroNutrientCalculatorSnippet />
+
+  <p className="text-sm text-center text-muted-foreground mt-2">
+    🔒 Last 3 custom macro plans generated <strong>in the past 90 seconds</strong>. 
+    <br />
+    ➕ Start yours now—it's free, fast, and verified by AI.
+  </p>
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Powered Macro Balance Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-powered Macro Balance Calculator for personalized macronutrient recommendations. Ideal for optimizing protein, carbohydrate, and fat intake based on individual goals and body types.",
+    "featureList": [
+      "Customized macronutrient ratios",
+      "Flexible dietary adjustments",
+      "Nutrient intake optimization",
+      "Meal planning support",
+      "Adaptive recommendations"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/macro-balance-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "160"
+    }
+  })}} />
+</section>
+
 
         <section id="sleep-calculator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="AI-Enhanced Sleep Calculator" icon={Moon} />
