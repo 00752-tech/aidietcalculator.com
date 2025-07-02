@@ -794,51 +794,73 @@ export default function Home() {
         </section>
 
         <section id="keto-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Powered Keto Calculator" icon={PieChart} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Optimize your ketogenic diet with our AI-powered Keto Calculator. Get personalized macro recommendations for maximum results and sustainable ketosis.
-          </p>
-          <KetoCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Keto Calculator</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Personalized macronutrient ratios optimized for ketosis</li>
-              <li>Adjusts recommendations based on your goals (weight loss, maintenance, or gain)</li>
-              <li>Considers your activity level for more accurate calculations</li>
-              <li>Helps maintain a state of nutritional ketosis</li>
-              <li>Simplifies meal planning for a ketogenic lifestyle</li>
-            </ul>
-          </div>
-          <KetoCalculatorSnippet />
-          <KetoAffiliateOffers />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Powered Keto Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-powered Keto Calculator for personalized macronutrient recommendations on a ketogenic diet. Ideal for optimizing ketosis and achieving weight management goals.",
-            "featureList": [
-              "Personalized keto macro ratios",
-              "Goal-specific adjustments",
-              "Activity level considerations",
-              "Ketosis optimization",
-              "Keto meal planning support"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/keto-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "180"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI-Powered Keto Calculator" icon={PieChart} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    🥓 <strong>Hit Ketosis Smarter—Powered by Precision AI</strong>
+    <br /><br />
+    Going keto can feel like guesswork. But this free tool flips the script—delivering <em>personalized macros tuned for fat burn, muscle protection, and metabolic stability</em>. Designed for simplicity. Backed by science.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Smart macro ratios calibrated for deep ketosis</li>
+    <li>Built for fat loss, clean maintenance, or keto bulking</li>
+    <li>Adapts to lifestyle, intensity & carb tolerance</li>
+    <li>Perfect for meal planning & weekly prep tracking</li>
+    <li>Free, frictionless, and faster than spreadsheets</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🎯 Trusted by <strong>180+ keto users daily</strong> for results they can feel.
+    <br /><br />
+    ✅ Want to stay in ketosis longer and feel better faster? <em>Watch our short video walkthrough</em> to see how pros use AI macros plus curated keto supplements to turbocharge fat adaptation.
+  </p>
+
+  <KetoCalculator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Keto Calculator</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Custom macro ratios to fuel sustainable ketosis</li>
+      <li>Adjustable goal profiles—burn fat, maintain, or gain</li>
+      <li>Built-in logic for training level & carb sensitivity</li>
+      <li>Daily & per-meal guidance for simplified execution</li>
+      <li>Pairs perfectly with keto-friendly product recommendations</li>
+    </ul>
+  </div>
+
+  <KetoCalculatorSnippet />
+  <KetoAffiliateOffers />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Powered Keto Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-powered Keto Calculator for personalized macronutrient recommendations on a ketogenic diet. Ideal for optimizing ketosis and achieving weight management goals.",
+    "featureList": [
+      "Personalized keto macro ratios",
+      "Goal-specific adjustments",
+      "Activity level considerations",
+      "Ketosis optimization",
+      "Keto meal planning support"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/keto-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "180"
+    }
+  })}} />
+</section>
+
 
         <section id="intermittent-fasting-calculator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="AI-Enhanced Intermittent Fasting Calculator" icon={Clock} />
