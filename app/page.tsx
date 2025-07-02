@@ -863,50 +863,71 @@ export default function Home() {
 
 
         <section id="intermittent-fasting-calculator" className="mb-16 flex flex-col items-center">
-          <ToolSectionHeader title="AI-Enhanced Intermittent Fasting Calculator" icon={Clock} />
-          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-            Discover your optimal fasting schedule with our AI-enhanced Intermittent Fasting Calculator. Get personalized recommendations based on your preferred fasting method and daily routine.
-          </p>
-          <IntermittentFastingCalculator />
-          <div className="mt-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Why Use Our AI Intermittent Fasting Calculator?</h3>
-            <ul className="list-disc text-left pl-6 space-y-2">
-              <li>Personalized fasting schedules tailored to your lifestyle</li>
-              <li>Supports various fasting methods (16/8, 5:2, Eat-Stop-Eat, etc.)</li>
-              <li>Optimizes fasting windows for maximum health benefits</li>
-              <li>Helps maintain consistency in your fasting routine</li>
-              <li>Provides tips for successful fasting and breaking your fast</li>
-            </ul>
-          </div>
-          <IntermittentFastingCalculatorSnippet />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI-Enhanced Intermittent Fasting Calculator",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "AI-enhanced Intermittent Fasting Calculator for personalized fasting schedules. Ideal for optimizing fasting routines and maximizing health benefits.",
-            "featureList": [
-              "Personalized fasting schedules",
-              "Multiple fasting method support",
-              "Lifestyle-adapted recommendations",
-              "Fasting consistency aid",
-              "Fasting tips and guidance"
-            ],
-            "screenshot": "https://aidietcalculator.com/images/intermittent-fasting-calculator-screenshot.jpg",
-            "softwareVersion": "1.0",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.7",
-              "ratingCount": "150"
-            }
-          })}} />
-        </section>
+  <ToolSectionHeader title="AI-Enhanced Intermittent Fasting Calculator" icon={Clock} />
+
+  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+    ⏳ <strong>Find Your Perfect Fasting Window—AI-Tuned for Results</strong>
+    <br /><br />
+    Whether you're trying 16:8, 5:2, OMAD, or just dabbling—this free tool analyzes your lifestyle, schedule, and goals to create <em>personalized fasting plans</em> backed by metabolism science. Get the timing right, and the results get easier.
+  </p>
+
+  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+    <li>Custom fasting schedules based on your routine & preferences</li>
+    <li>Supports 16:8, Warrior Diet, Eat-Stop-Eat & more</li>
+    <li>Optimizes window timing for fat burning and recovery</li>
+    <li>Helps build consistency and reduce hunger crashes</li>
+    <li>Free daily structure + bonus tips for breaking your fast</li>
+  </ul>
+
+  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+    🎯 Trusted by <strong>150+ users daily</strong> to dial in timing and boost energy. 
+    <br /><br />
+    ✅ Want faster fat loss? <em>Watch the quick explainer video</em> to learn how top users combine AI fasting with custom diet and macro tracking.
+  </p>
+
+  <IntermittentFastingCalculator />
+
+  <div className="mt-8 text-center max-w-2xl mx-auto">
+    <h3 className="text-xl font-semibold mb-4">Why Use Our AI Intermittent Fasting Calculator?</h3>
+    <ul className="list-disc text-left pl-6 space-y-2">
+      <li>Personalized schedules based on lifestyle, sleep, and goals</li>
+      <li>Supports every major fasting method—customized to you</li>
+      <li>Helps maintain consistency and avoid burnout</li>
+      <li>Provides actionable tips for breaking your fast smartly</li>
+      <li>Pairs beautifully with meal planning and calorie calculators</li>
+    </ul>
+  </div>
+
+  <IntermittentFastingCalculatorSnippet />
+
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI-Enhanced Intermittent Fasting Calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AI-enhanced Intermittent Fasting Calculator for personalized fasting schedules. Ideal for optimizing fasting routines and maximizing health benefits.",
+    "featureList": [
+      "Personalized fasting schedules",
+      "Multiple fasting method support",
+      "Lifestyle-adapted recommendations",
+      "Fasting consistency aid",
+      "Fasting tips and guidance"
+    ],
+    "screenshot": "https://aidietcalculator.com/images/intermittent-fasting-calculator-screenshot.jpg",
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "ratingCount": "150"
+    }
+  })}} />
+</section>
 
         <section id="ideal-weight-calculator" className="mb-16 flex flex-col items-center">
           <ToolSectionHeader title="AI-Powered Ideal Weight Calculator" icon={Scale} />
