@@ -6,42 +6,44 @@ export function BenefitsSection() {
     {
       icon: <Brain className="h-8 w-8 text-primary" />,
       title: "AI-Powered Precision",
-      description: "Our advanced artificial intelligence analyzes thousands of nutritional data points to create perfectly balanced meal plans tailored to your specific needs and goals."
+      description: "Smarter than guesswork. Our nutrition engine adapts to your stats, preferences, and goals using machine-learned logic—not templates."
     },
     {
       icon: <Scale className="h-8 w-8 text-primary" />,
-      title: "Scientific Weight Management",
-      description: "Achieve your ideal weight through scientifically proven nutrition principles, with meal plans that maintain optimal caloric balance and macro-nutrient distribution."
+      title: "Scientific Weight Control",
+      description: "Rooted in verified metabolic science, your daily calorie needs and macros are calculated with clinical-grade accuracy."
     },
     {
       icon: <Clock className="h-8 w-8 text-primary" />,
-      title: "Time-Saving Efficiency",
-      description: "Save hours of meal planning time with instantly generated, personalized meal plans that take into account your preferences and dietary restrictions."
+      title: "Built for Busy People",
+      description: "Get custom plans in seconds. No spreadsheets. No wasted time. Just fast, personalized nutrition made effortless."
     },
     {
       icon: <Heart className="h-8 w-8 text-primary" />,
-      title: "Health-Focused Approach",
-      description: "Every meal plan is designed to support your overall health, incorporating a balanced mix of nutrients essential for your well-being."
+      title: "Wellness First",
+      description: "Beyond aesthetics. Our tools promote sustainable energy, hormonal balance, recovery, and cognitive clarity—starting with better meals."
     },
     {
       icon: <Trophy className="h-8 w-8 text-primary" />,
-      title: "Goal Achievement",
-      description: "Whether you're aiming for weight loss, muscle gain, or maintaining a healthy lifestyle, our AI adapts your meal plans to help you reach your specific goals."
+      title: "Goal-Dialed Plans",
+      description: "Whether you're shredding, bulking, fasting or maintaining—every tool adjusts to your phase for optimal results."
     },
     {
       icon: <Shield className="h-8 w-8 text-primary" />,
-      title: "Evidence-Based Results",
-      description: "Our meal plans are based on peer-reviewed nutritional science and continuously updated with the latest research in diet and health."
+      title: "Data-Verified Confidence",
+      description: "No hallucinations here. Our results are backed by peer-reviewed formulas and USDA databases. You get the math."
     }
   ]
 
   return (
     <section className="py-16 bg-muted/50">
       <div className="container mx-auto px-4">
-        {/* SEO-optimized first paragraph for Goal Completion */}
-        <div className="max-w-2xl mx-auto mb-10">
-          <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200 text-center">
-            <strong>Discover AI Diet Calculator, the AI-powered tool designed to help you achieve your health and weight goals with perfectly balanced, personalized meal plans.</strong> Leveraging advanced artificial intelligence and scientifically proven nutrition principles, it analyzes thousands of nutritional data points to tailor plans for weight loss, muscle gain, or a healthy lifestyle. Save valuable time while ensuring your meals are based on evidence-based, peer-reviewed nutritional science for optimal well-being.
+        {/* VSL-style intro paragraph for congruency */}
+        <div className="max-w-3xl mx-auto mb-10">
+          <p className="text-lg text-center text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200">
+            <strong>Ready to optimize every part of your health strategy?</strong> These 15 calculators don’t just spit numbers—they build smarter routines. From calorie tracking to macro splits, workout plans to sleep cycles, your AI tools work together to craft results that last.
+            <br /><br />
+            🎯 Already trusted by <strong>11,000+ users this week</strong> to level up their body, energy, and performance with zero fluff.
           </p>
         </div>
         <h2 className="text-3xl font-bold text-center mb-12">Why Choose AI Diet Calculator?</h2>
