@@ -1,6 +1,7 @@
 import { format } from "date-fns"
 
 import { Metadata, Viewport } from 'next'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import { Scale, Calculator, Ruler, Droplet, PieChart, Dumbbell, Zap, Utensils, Clock, Moon, BarChart } from 'lucide-react'
