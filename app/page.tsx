@@ -59,7 +59,26 @@ import { FAQAccordion } from "@/components/faq-accordion"
 export const metadata: Metadata = {
   title: "AI Diet Calculator & Meal Planner | Free Calorie & Nutrition Tools",
   description: "Get personalized AI diet plans, calorie tracking & meal prep. Free nutrition calculator for weight loss, macros & fitness goals. Try our AI-powered tools now!",
-  keywords: ["AI macro calculator, AI diet and workout plan, AI fasting, AI macro calculator app, workout and meal plan calculator, best AI weight loss calculator, AI diet calculator, personalized AI meal plan, AI meal planner free, AI diet plan generator, macro calculator free, protein intake calculator, BMR calculator free, ideal weight calculator, calorie calculator online, artificial intelligence nutrition, diet recommendation system, machine learning nutrition"],
+  keywords: [
+    "AI macro calculator",
+    "AI diet and workout plan",
+    "AI fasting",
+    "AI macro calculator app",
+    "workout and meal plan calculator",
+    "best AI weight loss calculator",
+    "AI diet calculator",
+    "personalized AI meal plan",
+    "AI meal planner free",
+    "AI diet plan generator",
+    "macro calculator free",
+    "protein intake calculator",
+    "BMR calculator free",
+    "ideal weight calculator",
+    "calorie calculator online",
+    "artificial intelligence nutrition",
+    "diet recommendation system",
+    "machine learning nutrition"
+  ],
 }
 
 export const viewport: Viewport = {
@@ -67,19 +86,9 @@ export const viewport: Viewport = {
   initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-          "Consistent sleep schedule support"
-      ],
-      "screenshot": "https://aidietcalculator.com/images/sleep-calculator-screenshot.jpg",
-      "softwareVersion": "1.0",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "ratingCount": "140"
-},
-})
-  }}
-/>
+    { media: "(prefers-color-scheme: dark)", color: "black" }
+  ]
+}
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F8F9FF]">
@@ -87,6 +96,7 @@ export default function Home() {
 
 export default function Home() {
   return (
+    <>
     <div className="min-h-screen bg-[#F8F9FF]">
       <SiteHeader />
       <main className="container mx-auto px-4 py-8 pt-20">
