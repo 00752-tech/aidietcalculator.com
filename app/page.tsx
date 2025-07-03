@@ -255,6 +255,12 @@ export default function Home() {
   </p>
 
   <BodyFatCalculator />
+<StackIntro
+  title="Your Body Fat Reduction Stack 💥"
+  subtitle="Three precision-targeted formulas. Designed to support detox, hormonal balance, and fat loss by addressing root causes—naturally."
+  disclaimer="Some links may be affiliate links. We may earn a small commission if you make a purchase—at no extra cost to you. This helps keep our tools free 💙"
+/>
+
 <BodyFatAffiliateCards />
 <BodyFatCalculatorSnippet />
 
