@@ -1235,6 +1235,7 @@ export default function Home() {
     })
   }}
 />
+
 </section>
 
         <section id="one-rep-max-calculator" className="mb-16 flex flex-col items-center">
