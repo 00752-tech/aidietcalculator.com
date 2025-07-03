@@ -1201,41 +1201,38 @@ export default function Home() {
   </p>
 
   <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        name: "AI-Enhanced Sleep Calculator",
-        applicationCategory: "HealthApplication",
-        operatingSystem: "Web",
-        offers: {
-          "@type": "Offer",
-          price: "0",
-          priceCurrency: "USD",
-        },
-        description:
-          "AI-enhanced Sleep Calculator for optimizing sleep schedules and improving sleep quality. Ideal for calculating bedtimes based on desired wake-up times and sleep cycles.",
-        featureList: [
-          "Optimal bedtime calculations",
-          "Sleep cycle considerations",
-          "Personalized sleep recommendations",
-          "Sleep quality improvement",
-                    "Consistent sleep schedule support"
-        ],
-        "screenshot": "https://aidietcalculator.com/images/sleep-calculator-screenshot.jpg",
-        "softwareVersion": "1.0",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "ratingCount": "140"
-        }
-      })
-    }}
-  />
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "AI-Enhanced Sleep Calculator",
+      applicationCategory: "HealthApplication",
+      operatingSystem: "Web",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD"
+      },
+      description: "AI-enhanced Sleep Calculator for optimizing sleep schedules and improving sleep quality.",
+      featureList: [
+        "Optimal bedtime calculations",
+        "Sleep cycle considerations",
+        "Personalized sleep recommendations",
+        "Sleep quality improvement",
+        "Consistent sleep schedule support"
+      ],
+      screenshot: "https://aidietcalculator.com/images/sleep-calculator-screenshot.jpg",
+      softwareVersion: "1.0",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
+        ratingCount: "140"
+      }
+    })
+  }}
+/>
 </section>
-
-
 
         <section id="one-rep-max-calculator" className="mb-16 flex flex-col items-center">
   <ToolSectionHeader title="One Rep Max (1RM) Calculator" icon={BarChart} />
