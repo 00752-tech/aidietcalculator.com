@@ -1,5 +1,6 @@
 import { format } from "date-fns"
 
+import SleepAffiliateCards from '@/components/SleepAffiliateCards'
 import { Metadata, Viewport } from 'next'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
