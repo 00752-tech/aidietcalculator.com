@@ -1105,6 +1105,12 @@ export default function Home() {
   </p>
 
   <SleepCalculator />
+<StackIntro
+  title="Your Deep Sleep Recovery Stack 😴"
+  subtitle="Three user-verified protocols. Curated to enhance rest, regulate sleep cycles, and unlock recovery through science-backed solutions."
+  disclaimer="Some links may be affiliate links. We may earn a small commission if you make a purchase—at no extra cost to you. This helps keep our tools free 💙"
+/>
+
   <SleepAffiliateCards />
   <SleepCalculatorSnippet />
 
