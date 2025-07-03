@@ -1202,7 +1202,7 @@ export default function Home() {
     ➕ Build your optimal bedtime now—it's fast, free, and verified by AI.
   </p>
 
-  <script
+ <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
@@ -1235,6 +1235,7 @@ export default function Home() {
     })
   }}
 />
+
 
 </section>
 
