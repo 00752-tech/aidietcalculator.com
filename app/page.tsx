@@ -75,8 +75,8 @@ export const viewport: Viewport = {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.7",
-        "ratingCount": "140",
-}
+        "ratingCount": "140"
+},
 })
   }}
 />
