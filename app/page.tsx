@@ -89,10 +89,6 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "black" }
   ]
 }
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-[#F8F9FF]">
-
 
 export default function Home() {
   return (
