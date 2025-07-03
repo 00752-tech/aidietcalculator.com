@@ -2,6 +2,7 @@ import { format } from "date-fns"
 
 import SleepAffiliateCards from '@/components/SleepAffiliateCards'
 import BodyFatAffiliateCards from '@/components/BodyFatAffiliateCards'
+import CalorieAffiliateCards from '@/components/CalorieAffiliateCards'
 import { Metadata, Viewport } from 'next'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
@@ -142,6 +143,8 @@ export default function Home() {
   </p>
 
   <CalorieCalculator />
+<CalorieAffiliateCards />
+<CalorieCalculatorSnippet />
 
   <div className="mt-8 text-left max-w-2xl mx-auto">
     <h3 className="text-xl font-semibold mb-4">Why Calories Matter</h3>
