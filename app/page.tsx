@@ -68,8 +68,23 @@ export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-}
+          "Consistent sleep schedule support"
+      ],
+      "screenshot": "https://aidietcalculator.com/images/sleep-calculator-screenshot.jpg",
+      "softwareVersion": "1.0",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "ratingCount": "140"
+      }
+    })
+  }}
+/>
+</section>
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-[#F8F9FF]">
+
 
 export default function Home() {
   return (
