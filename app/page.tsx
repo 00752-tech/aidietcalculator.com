@@ -1232,8 +1232,8 @@ export default function Home() {
     })
   }}
 />
-
 </section>
+
 
         <section id="one-rep-max-calculator" className="mb-16 flex flex-col items-center">
   <ToolSectionHeader title="One Rep Max (1RM) Calculator" icon={BarChart} />
