@@ -11,12 +11,11 @@ type StackIntroProps = {
 export default function StackIntro({ title, subtitle, disclaimer }: StackIntroProps) {
   return (
     <div className="w-full max-w-3xl mx-auto text-center mt-20 mb-6 px-4">
-  <StackIntro
-    title="Your Calorie Optimization Stack 🔥"
-    subtitle="Three high-performance picks. Curated to balance blood sugar, accelerate fat burn, and restore healthy metabolism—naturally."
-    disclaimer="Some links may be affiliate links. We may earn a small commission if you make a purchase—at no extra cost to you. This helps keep our tools free 💙"
-  />
-</div>
-
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{title}</h2>
+      <p className="text-[17px] text-gray-700 leading-relaxed">{subtitle}</p>
+      {disclaimer && (
+        <p className="text-xs italic text-gray-500 mt-4">{disclaimer}</p>
+      )}
+    </div>
   )
 }
