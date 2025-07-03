@@ -1,14 +1,8 @@
 'use client'
 
-import { Button } from "@/components/ui/button"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Label } from '@/components/ui/label'
-import { Input } from '@/components/ui/input'
-import React, { useState } from 'react'
-import { Dumbbell, Zap, Sparkles, ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Sparkles, ArrowRight } from 'lucide-react'
 
-// ...rest of your component
 const OldSchoolNewBodyAd = () => {
   const handleCTAClick = () => {
     window.open("https://67982p5ys98p0y9k38kqgv4s1v.hop.clickbank.net/?&traffic_source=aidietcalc", "_blank")
@@ -18,18 +12,18 @@ const OldSchoolNewBodyAd = () => {
     <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 shadow-lg my-12 relative p-6 overflow-hidden hover:shadow-xl transition-shadow duration-300">
       
       {/* CTA Badge */}
-      <div className="absolute top-2 right-2 text-xs font-semibold bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
+      <div className="absolute top-2 right-2 text-xs font-semibold bg-yellow-100 text-yellow-800 px-2 py-1 rounded shadow-sm">
         🔵 Age-Defying Protocol
       </div>
 
-      <CardHeader className="flex items-center gap-3 mb-4">
-        <Sparkles className="h-8 w-8 text-blue-600" />
-        <CardTitle className="text-2xl font-bold text-blue-800">
+      <CardHeader className="flex items-center gap-3 mb-3">
+        <Sparkles className="h-7 w-7 text-blue-600" />
+        <CardTitle className="text-3xl font-bold text-blue-800">
           Old School New Body Program
         </CardTitle>
       </CardHeader>
 
-      <CardContent className="text-gray-700 space-y-4">
+      <CardContent className="text-gray-800 space-y-5 text-[17px] leading-relaxed max-w-prose">
         <p>
           <strong>For men and women 35+:</strong> Unlock the age-defying blueprint used by Hollywood trainers to tighten, energize, and rejuvenate—with minimal time and zero guesswork.
         </p>
@@ -40,17 +34,18 @@ const OldSchoolNewBodyAd = () => {
           <li>📣 Featured by top fitness experts</li>
         </ul>
 
-        {/* CTA Button Without Hover Link Preview */}
+        {/* CTA Button */}
         <button
           onClick={handleCTAClick}
-          className="group w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-md flex items-center justify-center gap-2 transition-colors duration-300"
+          className="group px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md inline-flex items-center justify-center gap-2 transition-colors duration-300 shadow-md"
+          aria-label="Learn more about the Old School New Body Program"
         >
           Discover the Program
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
         </button>
 
-        {/* Compliant Affiliate Disclaimer */}
-        <p className="text-xs italic text-gray-500 text-center mt-4">
+        {/* Disclaimer */}
+        <p className="text-sm italic text-gray-500 text-center mt-5">
           Affiliate Disclosure: We may earn a small commission if you purchase through this link—at no extra cost to you.
         </p>
       </CardContent>
@@ -59,6 +54,7 @@ const OldSchoolNewBodyAd = () => {
 }
 
 export default OldSchoolNewBodyAd
+
 ;
 
 export function WorkoutPlanGenerator() {
