@@ -1,7 +1,9 @@
 'use client'
 
-import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card'
+import React from 'react'
 import { Sparkles, Zap, ArrowRight, ShieldCheck } from 'lucide-react'
+import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card'
+
 
 export default function SleepAffiliateCards() {
   return (
