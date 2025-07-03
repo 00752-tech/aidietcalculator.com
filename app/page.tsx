@@ -636,6 +636,13 @@ export default function Home() {
   </p>
 
   <ProteinIntakeCalculator />
+<StackIntro
+  title="Your Protein Optimization Stack 💪"
+  subtitle="Four clean, science-backed formulas. Curated to support lean muscle, recovery, and radiant health—naturally."
+  disclaimer="Some links may be affiliate links. We may earn a small commission if you make a purchase—at no extra cost to you. This helps keep our tools free 💙"
+/>
+<ProteinAffiliateCards />
+<ProteinCalculatorSnippet />
 
   <div className="mt-8 text-center max-w-2xl mx-auto">
     <h3 className="text-xl font-semibold mb-4">Benefits of Our AI Protein Intake Calculator</h3>
