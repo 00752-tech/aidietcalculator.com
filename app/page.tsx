@@ -1,5 +1,6 @@
 import { format } from "date-fns"
 
+import ProteinAffiliateCards from '@/components/ProteinAffiliateCards'
 import StackIntro from '@/components/StackIntro'
 import SleepAffiliateCards from '@/components/SleepAffiliateCards'
 import BodyFatAffiliateCards from '@/components/BodyFatAffiliateCards'
