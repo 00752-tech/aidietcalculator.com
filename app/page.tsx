@@ -3,7 +3,7 @@ import { format } from "date-fns"
 import { Metadata, Viewport } from 'next'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
-import { Scale, Calculator, Ruler, Droplet, PieChart, Dumbbell, Zap, Utensils, Clock, Moon, BarChart } from 'lucide-react'
+import { Scale, Calculator, Ruler, Droplet, PieChart, Dumbbell, Zap, Utensils, Clock, Moon, BarChart, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react'
 import Link from 'next/link'
 const AIDietPlanner = dynamic(() => import('@/components/ai-diet-planner'), { 
   loading: () => <p>Loading AI Diet Planner...</p>,
