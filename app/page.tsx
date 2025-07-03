@@ -142,7 +142,14 @@ export default function Home() {
     ✅ Watch our quick video guide to see how to combine your calorie results with supplements and macros—real user-tested strategies recommended by AI.
   </p>
 
-  <CalorieCalculator />
+ <CalorieCalculator />
+
+<StackIntro
+  title="Your Calorie Optimization Stack 🔥"
+  subtitle="Three high-performance picks. Curated to balance blood sugar, accelerate fat burn, and restore healthy metabolism—naturally."
+  disclaimer="Some links may be affiliate links. We may earn a small commission if you make a purchase—at no extra cost to you. This helps keep our tools free 💙"
+/>
+
 <CalorieAffiliateCards />
 <CalorieCalculatorSnippet />
 
