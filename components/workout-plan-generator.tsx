@@ -1,5 +1,5 @@
 'use client'
-
+import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dumbbell, Zap, Sparkles, ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
