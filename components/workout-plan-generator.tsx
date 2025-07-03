@@ -111,14 +111,15 @@ export function WorkoutPlanGenerator() {
 
       <Card className="w-full max-w-2xl mx-auto bg-white shadow-sm border-blue-100">
         <CardHeader className="border-b border-blue-100">
-          <CardTitle className="text-2xl flex items-center gap-2 text-blue-800">
-            <Dumbbell className="h-6 w-6 text-blue-600" />
-            AI-Powered Workout Plan Generator
-          </CardTitle>
-          <CardDescription className="text-blue-600">
-            Create a personalized workout plan tailored to your fitness level and goals
-          </CardDescription>
-        </CardHeader>
+  <CardTitle className="text-2xl flex items-center gap-2 text-blue-800">
+    <Dumbbell className="h-6 w-6 text-blue-600" />
+    AI-Powered Workout Plan Generator
+  </CardTitle>
+  <p className="text-sm text-blue-600">
+    Create a personalized workout plan tailored to your fitness level and goals
+  </p>
+</CardHeader>
+
         <CardContent>
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
