@@ -10,7 +10,7 @@ type StackIntroProps = {
 
 export default function StackIntro({ title, subtitle, disclaimer }: StackIntroProps) {
   return (
-    <div className="w-full max-w-3xl mx-auto text-center mb-8 px-4">
+    <div className="mt-10 w-full">
       <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{title}</h2>
       <p className="text-[17px] text-gray-700 leading-relaxed">{subtitle}</p>
       {disclaimer && (
