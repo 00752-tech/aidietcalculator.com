@@ -6,7 +6,7 @@ import { Sparkles, Zap, ArrowRight, ShieldCheck } from 'lucide-react'
 
 export default function SleepAffiliateCards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
       {/* Each Card goes inside here */}
       {/* YūSleep */}
       <Card className="bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 shadow-lg p-6 relative hover:shadow-xl transition duration-300">
