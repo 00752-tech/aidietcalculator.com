@@ -1,14 +1,10 @@
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 'use client'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Label } from '@/components/ui/label'
 import React, { useState } from 'react'
 import { Dumbbell, Zap, Sparkles, ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-// ...rest of component
-
 // ...rest of your component
-
-
 const OldSchoolNewBodyAd = () => {
   const handleCTAClick = () => {
     window.open("https://67982p5ys98p0y9k38kqgv4s1v.hop.clickbank.net/?&traffic_source=aidietcalc", "_blank")
