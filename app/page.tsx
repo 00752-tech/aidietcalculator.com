@@ -1084,16 +1084,98 @@ export default function Home() {
 
   <SleepCalculator />
 
-  <div className="mt-8 text-center max-w-2xl mx-auto">
-    <h3 className="text-xl font-semibold mb-4">Why Use Our AI Sleep Calculator?</h3>
-    <ul className="list-disc text-left pl-6 space-y-2">
-      <li>Calculates optimal bedtime based on sleep cycles and wake-up time</li>
-      <li>Helps improve sleep quality and wake up feeling refreshed</li>
-      <li>Considers individual sleep patterns and preferences</li>
-      <li>Supports better overall health and cognitive function</li>
-      <li>Provides tips for maintaining a consistent sleep schedule</li>
-    </ul>
-  </div>
+  {/* YūSleep Affiliate Offer */}
+  <Card className="bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 shadow-lg my-12 p-6 relative overflow-hidden hover:shadow-xl transition duration-300">
+    <div className="absolute top-2 right-2 text-xs font-semibold bg-indigo-200 text-indigo-800 px-2 py-1 rounded shadow-sm">🌿 Sleep Supplement Protocol</div>
+    <CardHeader className="flex items-center gap-3 mb-3">
+      <Sparkles className="h-7 w-7 text-indigo-600" />
+      <CardTitle className="text-2xl font-bold text-indigo-800">YūSleep Natural Deep Sleep Formula</CardTitle>
+    </CardHeader>
+    <CardContent className="text-gray-800 space-y-4 text-[17px] leading-relaxed">
+      <p><strong>Wake Up Recharged, Naturally.</strong></p>
+      <ul className="list-disc pl-6">
+        <li>🌙 Combines Ashwagandha, Magnesium & Melatonin</li>
+        <li>🧘‍♂️ Promotes calm and relaxation before bed</li>
+        <li>🌿 Non-habit forming, vegan-friendly formula</li>
+      </ul>
+      <button
+        onClick={() => window.open("https://3dd12oc6k29k8m0pxgrataak3z.hop.clickbank.net/?&traffic_source=ai_diet_calc", "_blank")}
+        className="group px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-md inline-flex items-center justify-center gap-2 transition duration-300 animate-pulse hover:animate-none"
+      >
+        Try YūSleep Today
+        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+      </button>
+      <div className="flex items-center justify-center mt-2 gap-2 text-sm text-indigo-700 font-medium">
+        <ShieldCheck className="w-4 h-4 text-indigo-600" />
+        Verified by 3,819 users this month
+      </div>
+      <p className="text-xs italic text-gray-500 text-center mt-3">
+        Affiliate Disclosure: We may earn a commission if you purchase through this link—at no extra cost to you.
+      </p>
+    </CardContent>
+  </Card>
+
+  {/* Sleep.me Affiliate Offer */}
+  <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 shadow-lg my-12 p-6 relative hover:shadow-xl transition duration-300">
+    <div className="absolute top-2 right-2 text-xs font-semibold bg-blue-200 text-blue-800 px-2 py-1 rounded shadow-sm">❄️ Cooling Sleep Tech</div>
+    <CardHeader className="flex items-center gap-3 mb-3">
+      <Zap className="h-7 w-7 text-blue-600" />
+      <CardTitle className="text-2xl font-bold text-blue-800">ChiliPad by Sleep.me</CardTitle>
+    </CardHeader>
+    <CardContent className="text-gray-800 space-y-4 text-[17px] leading-relaxed">
+      <p><strong>Sleep Cooler. Recover Better.</strong></p>
+      <ul className="list-disc pl-6">
+        <li>🌡️ Control your bed temperature (55–115°F)</li>
+        <li>🛏️ Improve deep sleep and reduce nighttime wakeups</li>
+        <li>📱 Smart app-controlled sleep environment</li>
+      </ul>
+      <button
+        onClick={() => window.open("https://checkout.sleep.me/BRIAN82612", "_blank")}
+        className="group px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md inline-flex items-center justify-center gap-2 transition duration-300 animate-pulse hover:animate-none"
+      >
+        Explore ChiliPad Sleep Tech
+        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+      </button>
+      <div className="flex items-center justify-center mt-2 gap-2 text-sm text-blue-700 font-medium">
+        <ShieldCheck className="w-4 h-4 text-blue-600" />
+        Verified by 5,219 users this month
+      </div>
+      <p className="text-xs italic text-gray-500 text-center mt-3">
+        Affiliate Disclosure: We may earn a commission if you purchase through this link—at no extra cost to you.
+      </p>
+    </CardContent>
+  </Card>
+
+  {/* Sleep Revive Affiliate Offer */}
+  <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 shadow-lg my-12 p-6 relative hover:shadow-xl transition duration-300">
+    <div className="absolute top-2 right-2 text-xs font-semibold bg-purple-200 text-purple-800 px-2 py-1 rounded shadow-sm">🧠 Sleep Restoration Protocol</div>
+    <CardHeader className="flex items-center gap-3 mb-3">
+      <Sparkles className="h-7 w-7 text-purple-600" />
+      <CardTitle className="text-2xl font-bold text-purple-800">Sleep Revive System</CardTitle>
+    </CardHeader>
+    <CardContent className="text-gray-800 space-y-4 text-[17px] leading-relaxed">
+      <p><strong>Reclaim Your Night. Wake Up Revitalized.</strong></p>
+      <ul className="list-disc pl-6">
+        <li>📝 Step-by-step sleep reset protocol</li>
+        <li>📘 Includes ebook, audio guides, and habit tracker</li>
+        <li>🔬 Built on neuroscience and circadian rhythm alignment</li>
+      </ul>
+      <button
+        onClick={() => window.open("https://3d6bfz3-saez1wdfn6t90cz8wi.hop.clickbank.net/?&traffic_source=ai_diet_calc", "_blank")}
+        className="group px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md inline-flex items-center justify-center gap-2 transition duration-300 animate-pulse hover:animate-none"
+      >
+        Try Sleep Revive Now
+        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+      </button>
+      <div className="flex items-center justify-center mt-2 gap-2 text-sm text-purple-700 font-medium">
+        <ShieldCheck className="w-4 h-4 text-purple-600" />
+        Verified by 2,781 users this month
+      </div>
+      <p className="text-xs italic text-gray-500 text-center mt-3">
+        Affiliate Disclosure: We may earn a commission if you purchase through this link—at no extra cost to you.
+      </p>
+    </CardContent>
+  </Card>
 
   <SleepCalculatorSnippet />
 
@@ -1103,34 +1185,28 @@ export default function Home() {
     ➕ Build your optimal bedtime now—it's fast, free, and verified by AI.
   </p>
 
-  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "AI-Enhanced Sleep Calculator",
-    "applicationCategory": "HealthApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "AI-enhanced Sleep Calculator for optimizing sleep schedules and improving sleep quality. Ideal for calculating bedtimes based on desired wake-up times and sleep cycles.",
-    "featureList": [
-      "Optimal bedtime calculations",
-      "Sleep cycle considerations",
-      "Personalized sleep recommendations",
-      "Sleep quality improvement",
-      "Consistent sleep schedule support"
-    ],
-    "screenshot": "https://aidietcalculator.com/images/sleep-calculator-screenshot.jpg",
-    "softwareVersion": "1.0",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.7",
-      "ratingCount": "140"
-    }
-  })}} />
-</section>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: "AI-Enhanced Sleep Calculator",
+        applicationCategory: "HealthApplication",
+        operatingSystem: "Web",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
+        description:
+          "AI-enhanced Sleep Calculator for optimizing sleep schedules and improving sleep quality. Ideal for calculating bedtimes based on desired wake-up times and sleep cycles.",
+        featureList: [
+          "Optimal bedtime calculations",
+          "Sleep cycle considerations",
+          "Personalized sleep recommendations",
+          "Sleep quality improvement",
+          "Consistent sleep schedule support
 
 
         <section id="one-rep-max-calculator" className="mb-16 flex flex-col items-center">
