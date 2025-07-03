@@ -244,6 +244,8 @@ export default function Home() {
   </p>
 
   <BodyFatCalculator />
+<BodyFatAffiliateCards />
+<BodyFatCalculatorSnippet />
 
   <div className="mt-12 text-left max-w-4xl mx-auto">
     <h2 className="text-2xl font-bold mb-4">Comprehensive Guide to Body Fat Percentage</h2>
