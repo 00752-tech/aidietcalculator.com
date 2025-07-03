@@ -1099,7 +1099,7 @@ export default function Home() {
 
   <SleepCalculator />
 
-  {/* YūSleep Affiliate Offer */}
+  {/* Affiliate Card: YūSleep */}
   <Card className="bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 shadow-lg my-12 p-6 relative overflow-hidden hover:shadow-xl transition duration-300">
     <div className="absolute top-2 right-2 text-xs font-semibold bg-indigo-200 text-indigo-800 px-2 py-1 rounded shadow-sm">🌿 Sleep Supplement Protocol</div>
     <CardHeader className="flex items-center gap-3 mb-3">
@@ -1130,7 +1130,7 @@ export default function Home() {
     </CardContent>
   </Card>
 
-  {/* Sleep.me Affiliate Offer */}
+  {/* Affiliate Card: ChiliPad by Sleep.me */}
   <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 shadow-lg my-12 p-6 relative hover:shadow-xl transition duration-300">
     <div className="absolute top-2 right-2 text-xs font-semibold bg-blue-200 text-blue-800 px-2 py-1 rounded shadow-sm">❄️ Cooling Sleep Tech</div>
     <CardHeader className="flex items-center gap-3 mb-3">
@@ -1161,7 +1161,7 @@ export default function Home() {
     </CardContent>
   </Card>
 
-  {/* Sleep Revive Affiliate Offer */}
+  {/* Affiliate Card: Sleep Revive */}
   <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 shadow-lg my-12 p-6 relative hover:shadow-xl transition duration-300">
     <div className="absolute top-2 right-2 text-xs font-semibold bg-purple-200 text-purple-800 px-2 py-1 rounded shadow-sm">🧠 Sleep Restoration Protocol</div>
     <CardHeader className="flex items-center gap-3 mb-3">
@@ -1200,39 +1200,43 @@ export default function Home() {
     ➕ Build your optimal bedtime now—it's fast, free, and verified by AI.
   </p>
 
+  {/* Structured Data Block — Fully Valid JSX */}
   <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      name: "AI-Enhanced Sleep Calculator",
-      applicationCategory: "HealthApplication",
-      operatingSystem: "Web",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD"
-      },
-      description: "AI-enhanced Sleep Calculator for optimizing sleep schedules and improving sleep quality.",
-      featureList: [
-        "Optimal bedtime calculations",
-        "Sleep cycle considerations",
-        "Personalized sleep recommendations",
-        "Sleep quality improvement",
-        "Consistent sleep schedule support"
-      ],
-      screenshot: "https://aidietcalculator.com/images/sleep-calculator-screenshot.jpg",
-      softwareVersion: "1.0",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: 4.7,
-        ratingCount: 140
-      }
-    })
-  }}
-/>
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: "AI-Enhanced Sleep Calculator",
+        applicationCategory: "HealthApplication",
+        operatingSystem: "Web",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+                    priceCurrency: "USD"
+        },
+        description:
+          "AI-enhanced Sleep Calculator for optimizing sleep schedules and improving sleep quality.",
+        featureList: [
+          "Optimal bedtime calculations",
+          "Sleep cycle considerations",
+          "Personalized sleep recommendations",
+          "Sleep quality improvement",
+          "Consistent sleep schedule support"
+        ],
+        screenshot:
+          "https://aidietcalculator.com/images/sleep-calculator-screenshot.jpg",
+        softwareVersion: "1.0",
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: 4.7,
+          ratingCount: 140
+        }
+      })
+    }}
+  />
 </section>
+
 
 
         <section id="one-rep-max-calculator" className="mb-16 flex flex-col items-center">
