@@ -77,11 +77,11 @@ export default function Home() {
       <SiteHeader />
       <main className="container mx-auto px-4 py-8 pt-20">
         <header className="text-center mb-16">
-          <br /><br />
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            <span className="text-[#3B82F6] block">🔥 The Smarter Way to Lose Weight</span>
+            <span className="text-[#3B82F6] block">The Smarter Way to Lose Weight 🧠</span>
             <span className="text-gray-800 dark:text-white block mt-2">Built by AI. Tailored to You.</span>
           </h1>
+        </header>
           <br /><br />
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Forget cookie-cutter diet plans. <strong>AI Diet Calculator</strong> builds <em>your perfect meal strategy</em>—
@@ -1206,7 +1206,20 @@ export default function Home() {
           "Sleep cycle considerations",
           "Personalized sleep recommendations",
           "Sleep quality improvement",
-          "Consistent sleep schedule support
+                    "Consistent sleep schedule support"
+        ],
+        "screenshot": "https://aidietcalculator.com/images/sleep-calculator-screenshot.jpg",
+        "softwareVersion": "1.0",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "ratingCount": "140"
+        }
+      })
+    }}
+  />
+</section>
+
 
 
         <section id="one-rep-max-calculator" className="mb-16 flex flex-col items-center">
