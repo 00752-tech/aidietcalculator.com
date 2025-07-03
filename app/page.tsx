@@ -93,117 +93,136 @@ export const viewport: Viewport = {
 export default function Home() {
   return (
     <>
-    <div className="min-h-screen bg-[#F8F9FF]">
-      <SiteHeader />
-      <main className="container mx-auto px-4 py-8 pt-20">
-        <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            <span className="text-[#3B82F6] block">The Smarter Way to Lose Weight 🧠</span>
-            <span className="text-gray-800 dark:text-white block mt-2">Built by AI. Tailored to You.</span>
-          </h1>
-        </header>
-          <br /><br />
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Forget cookie-cutter diet plans. <strong>AI Diet Calculator</strong> builds <em>your perfect meal strategy</em>—
-            free, fast, and tailored to you. Drop fat, build lean muscle, and feel incredible with science-backed personalization.
+      <div className="min-h-screen bg-[#F8F9FF]">
+        <SiteHeader />
+        <main className="container mx-auto px-4 py-8 pt-20">
+          <header className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              <span className="text-[#3B82F6] block">The Smarter Way to Lose Weight 🧠</span>
+              <span className="text-gray-800 dark:text-white block mt-2">Built by AI. Tailored to You.</span>
+            </h1>
             <br /><br />
-            🚀 Just enter your goals. We do the math.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              Forget cookie-cutter diet plans. <strong>AI Diet Calculator</strong> builds <em>your perfect meal strategy</em>—
+              free, fast, and tailored to you. Drop fat, build lean muscle, and feel incredible with science-backed personalization.
+              <br /><br />
+              🚀 Just enter your goals. We do the math.
+            </p>
+            <ul className="list-disc pl-6 text-left mt-4 mb-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+              <li>AI-generated diet plans, workouts & macros</li>
+              <li>No fluff, no signup, just results</li>
+            </ul>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              🎯 Already over <strong>11,000 plans created</strong> this week. Want even faster progress?
+              <br /><br />
+              ✅ Explore our AI-recommended supplements & boosters—<em>watch the quick video guide to see exactly how to combine them with your custom plan for the best results</em>. You’ll unlock affiliate-supported picks that real users swear by.
+            </p>
+          </header>
+
+          <p className="text-sm text-blue-600 text-center font-medium mt-2">
+            🧠 Live Usage Across Our AI Health Tools
           </p>
-          <ul className="list-disc pl-6 text-left mt-4 mb-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
-            <li>AI-generated diet plans, workouts & macros</li>
-            <li>No fluff, no signup, just results</li>
-          </ul>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            🎯 Already over <strong>11,000 plans created</strong> this week. Want even faster progress?
-<br /><br />
-✅ Explore our AI-recommended supplements & boosters—<em>watch the quick video guide to see exactly how to combine them with your custom plan for the best results</em>. You’ll unlock affiliate-supported picks that real users swear by.
-        </p>
-      </header>
-<p className="text-sm text-blue-600 text-center font-medium mt-2">
-  🧠 Live Usage Across Our AI Health Tools
-</p>
 
-<ToolUsageTicker />
+          <ToolUsageTicker />
 
-        <TableOfContents />
-        
-        <div className="flex justify-center mb-8">
-          <SocialShare url="https://aidietcalculator.com" title="Free AI-Powered Health & Fitness Calculators | Personalized Insights" />
-        </div>
-        <div className="text-center mb-12">
-          <ClientButton size="lg" className="bg-[#3B82F6] hover:bg-[#2563EB] text-white px-8 py-3 rounded-md">
-            Try AI Diet Planner Now
-          </ClientButton>
-        </div>
-        
-        <section id="calorie-calculator" className="mb-16 flex flex-col items-center">
-  <ToolSectionHeader title="AI-Powered Calorie Calculator" icon={Calculator} />
+          <TableOfContents />
 
-  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-    🔥 <strong>Crack Your Daily Calorie Code—Backed by AI, Built for Results</strong>
-    <br /><br />
-    No more guesswork. Our free AI-powered Calorie Calculator delivers <em>your exact daily energy needs</em> for fat loss, muscle gain, or maintenance. Enter your stats—get personalized results in seconds.
-  </p>
+          <div className="flex justify-center mb-8">
+            <SocialShare
+              url="https://aidietcalculator.com"
+              title="Free AI-Powered Health & Fitness Calculators | Personalized Insights"
+            />
+          </div>
 
-  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
-    <li>Custom calorie targets based on your body and goals</li>
-    <li>Built on the trusted Mifflin-St Jeor equation</li>
-    <li>Perfect for beginners and pros looking to dial in their diet</li>
-    <li>Instant, signup-free results</li>
-  </ul>
+          <div className="text-center mb-12">
+            <ClientButton
+              size="lg"
+              className="bg-[#3B82F6] hover:bg-[#2563EB] text-white px-8 py-3 rounded-md"
+            >
+              Try AI Diet Planner Now
+            </ClientButton>
+          </div>
 
-  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
-    🎯 Used by <strong>11,000+ people</strong> this week alone. Want even faster progress?
-    <br /><br />
-    ✅ Watch our quick video guide to see how to combine your calorie results with supplements and macros—real user-tested strategies recommended by AI.
-  </p>
+          {/* Calorie Calculator Section */}
+          <section id="calorie-calculator" className="mb-16 flex flex-col items-center">
+            <ToolSectionHeader title="AI-Powered Calorie Calculator" icon={Calculator} />
 
-  <CalorieCalculator />
+            <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+              🔥 <strong>Crack Your Daily Calorie Code—Backed by AI, Built for Results</strong>
+              <br /><br />
+              No more guesswork. Our free AI-powered Calorie Calculator delivers <em>your exact daily energy needs</em> for fat loss, muscle gain, or maintenance. Enter your stats—get personalized results in seconds.
+            </p>
 
-  <div className="mt-8 text-left max-w-2xl mx-auto">
-    <h3 className="text-xl font-semibold mb-4">Why Calories Matter</h3>
-    <p className="mb-4">
-      Calories fuel your body. Getting the right number helps you burn fat, build lean muscle, and feel energized. Our calculator uses your personal metrics and the Mifflin-St Jeor formula to give you precise results without fluff.
-    </p>
-    <p className="mb-4">
-      Whether you're hitting the gym or tweaking your macros, this tool is your launchpad for a smarter nutrition strategy.
-    </p>
-    <p className="text-sm text-gray-500 mt-4">
-      Last Updated: {format(new Date(), 'MMMM d, yyyy')}
-    </p>
-  </div>
+            <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+              <li>Custom calorie targets based on your body and goals</li>
+              <li>Built on the trusted Mifflin-St Jeor equation</li>
+              <li>Perfect for beginners and pros looking to dial in their diet</li>
+              <li>Instant, signup-free results</li>
+            </ul>
 
-  <CalorieCalculatorSnippet />
+            <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+              🎯 Used by <strong>11,000+ people</strong> this week alone. Want even faster progress?
+              <br /><br />
+              ✅ Watch our quick video guide to see how to combine your calorie results with supplements and macros—real user-tested strategies recommended by AI.
+            </p>
 
-  <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "AI-Powered Calorie Calculator",
-    "applicationCategory": "HealthApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "Advanced AI-powered Calorie Calculator for personalized daily calorie needs. Ideal for weight loss, muscle gain, or maintaining a healthy weight with accurate, tailored recommendations.",
-    "featureList": [
-      "Personalized calorie recommendations",
-      "Mifflin-St Jeor equation for accuracy",
-      "Customized weight goals",
-      "Adjustable activity levels",
-      "Instant results"
-    ],
-    "screenshot": "https://aidietcalculator.com/images/calorie-calculator-screenshot.jpg",
-    "softwareVersion": "1.0",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "200"
-    },
-    "dateModified": new Date().toISOString().split('T')[0]
-  })}} />
-</section>
+            <CalorieCalculator />
+
+            <div className="mt-8 text-left max-w-2xl mx-auto">
+              <h3 className="text-xl font-semibold mb-4">Why Calories Matter</h3>
+              <p className="mb-4">
+                Calories fuel your body. Getting the right number helps you burn fat, build lean muscle, and feel energized. Our calculator uses your personal metrics and the Mifflin-St Jeor formula to give you precise results without fluff.
+              </p>
+              <p className="mb-4">
+                Whether you're hitting the gym or tweaking your macros, this tool is your launchpad for a smarter nutrition strategy.
+              </p>
+              <p className="text-sm text-gray-500 mt-4">
+                Last Updated: {format(new Date(), 'MMMM d, yyyy')}
+              </p>
+            </div>
+
+            <CalorieCalculatorSnippet />
+
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "SoftwareApplication",
+                  name: "AI-Powered Calorie Calculator",
+                  applicationCategory: "HealthApplication",
+                  operatingSystem: "Web",
+                  offers: {
+                    "@type": "Offer",
+                    price: "0",
+                    priceCurrency: "USD"
+                  },
+                  description:
+                    "Advanced AI-powered Calorie Calculator for personalized daily calorie needs. Ideal for weight loss, muscle gain, or maintaining a healthy weight with accurate, tailored recommendations.",
+                  featureList: [
+                    "Personalized calorie recommendations",
+                    "Mifflin-St Jeor equation for accuracy",
+                    "Customized weight goals",
+                    "Adjustable activity levels",
+                    "Instant results"
+                  ],
+                  screenshot: "https://aidietcalculator.com/images/calorie-calculator-screenshot.jpg",
+                  softwareVersion: "1.0",
+                  aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: "4.9",
+                    ratingCount: "200"
+                  },
+                  dateModified: new Date().toISOString().split('T')[0]
+                })
+              }}
+            />
+          </section>
+        </main>
+      </div>
+    </>
+  )
+}
 
         
         <div id="ai-diet-planner" className="mb-16">
