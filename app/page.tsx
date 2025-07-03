@@ -1084,6 +1084,10 @@ export default function Home() {
   </p>
 
   <SleepCalculator />
+  <SleepAffiliateCards />
+  <SleepCalculatorSnippet />
+
+  <SleepCalculator />
 <Card className="bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 shadow-lg my-12 p-6 relative overflow-hidden hover:shadow-xl transition duration-300">
   <div className="absolute top-2 right-2 text-xs font-semibold bg-indigo-200 text-indigo-800 px-2 py-1 rounded shadow-sm">🌿 Sleep Supplement Protocol</div>
   <CardHeader className="flex items-center gap-3 mb-3">
