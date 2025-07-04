@@ -6,46 +6,55 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ----- UTILITIES ----- */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 
   @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-scroll {
-  animation: scroll 10s linear infinite;
-}
-
-.animate-scroll:hover {
-  animation-play-state: paused;
-}
-
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 
   .animate-scroll {
     animation: scroll 70s linear infinite;
   }
+
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+
+  /* Enhanced spacing + text scaling utility */
+  .prose-lg {
+    @apply text-base md:text-lg leading-relaxed md:leading-loose;
+  }
 }
 
+/* ----- BASE VARIABLES ----- */
 @layer base {
   :root {
-    /* ... your existing variables ... */
+    /* Place your theme variables here */
   }
 
   .dark {
-    /* ... your existing dark variables ... */
+    /* Dark mode variables */
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Default text improvements */
+  p, ul, ol {
+    @apply text-base md:text-lg leading-relaxed md:leading-loose;
+  }
+
+  section {
+    @apply py-6 md:py-10;
   }
 }
