@@ -242,6 +242,7 @@ export default function Home() {
 </div>
 
 
+
   <BodyFatCalculator />
 <StackIntro
   title="Your Body Fat Reduction Stack 💥"
