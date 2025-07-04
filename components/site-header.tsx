@@ -28,6 +28,12 @@ export function SiteHeader() {
           >
             Blog
           </Link>
+          <Link
+            href="/resources"
+            className="text-sm font-medium text-gray-600 hover:text-[#3B82F6]"
+          >
+            Resources
+          </Link>
         </nav>
       </div>
     </header>
