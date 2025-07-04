@@ -209,8 +209,9 @@ export default function Home() {
     🍽️ <strong>Get Your Custom Meal Plan—Crafted in Seconds by AI</strong>
     <br /><br />
     Ditch the templates. Our AI-powered Meal Planner builds <em>your perfect nutrition strategy</em>—
-    based on your calorie needs, food preferences, and fitness goals. Whether you're keto-curious,
-    bulking clean, or just trying to eat smarter, you’ll get meals that match your lifestyle—not force you to change it.
+    based on your calorie needs, food preferences, and fitness goals.
+    Whether you're keto-curious, bulking clean, or just trying to eat smarter,
+    you’ll get meals that match your lifestyle—not force you to change it.
   </p>
 
   <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
@@ -223,7 +224,7 @@ export default function Home() {
   <p className="text-center text-lg max-w-2xl mx-auto mb-6">
     🚀 Trained on 27,000+ nutritional datasets. Powered by GPT-4. Get your full plan instantly—no signup, no cost, no fluff.
     <br /><br />
-    🎥 Want to maximize results? <em>Watch the short video walkthrough</em> and see how smart users pair their AI plan with diet boosters for 2x faster progress.
+    🎥 Want to maximize results? <em>Watch the short video walkthrough</em> to learn how users combine their AI plan with diet boosters for 2x faster progress.
   </p>
 
   <AIDietPlanner />
