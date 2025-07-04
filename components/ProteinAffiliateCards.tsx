@@ -33,7 +33,7 @@ const products = [
     title: 'Collagen + Greens Combo',
     tagline: '🧪 All-in-One',
     color: 'indigo',
-    benefits: ['💚 Beauty + energy synergy', '🌸 Perfect for daily wellness'],
+    benefits: ['💚 Beauty + energy synergy', '🌸 Daily morning wellness support'],
     url: 'https://greenifyshop.com/products/collagen-greens',
     users: '3,421',
   },
@@ -45,7 +45,7 @@ export default function ProteinAffiliateCards() {
       {products.map((product) => (
         <Card
           key={product.title}
-          className={`flex flex-col justify-between rounded-md shadow-md border border-${product.color}-200 bg-white p-6 relative`}
+          className={`flex flex-col justify-between h-[500px] rounded-md shadow-md border border-${product.color}-100 bg-white p-6 relative`}
         >
           {/* Badge */}
           <div className={`absolute top-2 right-2 text-[13px] font-semibold bg-${product.color}-100 text-${product.color}-700 px-2 py-1 rounded`}>
@@ -60,15 +60,14 @@ export default function ProteinAffiliateCards() {
             </CardTitle>
           </CardHeader>
 
-          {/* Content */}
+          {/* Benefits + CTA */}
           <CardContent className="flex flex-col justify-between flex-grow text-[15px] text-gray-800">
             <ul className="list-disc pl-5 space-y-1 mb-4">
-              {product.benefits.map((benefit, index) => (
-                <li key={index}>{benefit}</li>
+              {product.benefits.map((benefit, i) => (
+                <li key={i}>{benefit}</li>
               ))}
             </ul>
 
-            {/* CTA + Social Proof */}
             <div className="mt-auto flex flex-col items-center gap-2">
               <a
                 href={product.url}
