@@ -249,6 +249,14 @@ export default function Home() {
     <li>Ideal for fitness tracking, health screening & goal setting</li>
     <li>No login required. Just pure accuracy, fast</li>
   </ul>
+<p className="text-center text-sm text-gray-600 mt-4">
+  🧠 Looking to go deeper? Visit our{' '}
+  <Link href="/resources" className="text-blue-600 hover:underline font-medium">
+    Trusted Resource Hub
+  </Link>{' '}
+  for scientific articles from Mayo Clinic, NCBI, and more.
+</p>
+
 
   <p className="text-center text-lg max-w-2xl mx-auto mb-6">
     🎯 Used by <strong>180+ users daily</strong> to reveal what scales can't. 
