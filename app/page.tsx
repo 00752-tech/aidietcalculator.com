@@ -113,13 +113,14 @@ export default function Home() {
 <ToolUsageTicker />
 
         <TableOfContents />
-        <p className="text-sm text-center text-gray-600 mt-4">
+        <p className="text-sm text-center text-gray-600 mt-6 md:text-base md:leading-relaxed">
   🧠 Looking for evidence-based content? Explore our{' '}
   <Link href="/resources" className="text-blue-600 hover:underline font-medium">
     Trusted Resource Hub
   </Link>{' '}
   for science-backed articles and guides.
 </p>
+
 
         <div className="flex justify-center mb-8">
           <SocialShare url="https://aidietcalculator.com" title="Free AI-Powered Health & Fitness Calculators | Personalized Insights" />
