@@ -9,11 +9,10 @@ export default function EeatResourceLinks() {
         📚 Trusted Health & Wellness Resources
       </h2>
 
-      <div id="nutrition">...</div>
-<div id="recovery">...</div>
-<div id="sleep">...</div>
-<div id="supplements">...</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
+        {/* Nutrition */}
+        <div id="nutrition">
           <h3 className="text-xl font-semibold text-blue-800 mb-3">
             🥦 Nutrition & Protein Science
           </h3>
@@ -42,7 +41,7 @@ export default function EeatResourceLinks() {
         </div>
 
         {/* Fitness & Recovery */}
-        <div>
+        <div id="recovery">
           <h3 className="text-xl font-semibold text-blue-800 mb-3">
             🏋️‍♂️ Fitness & Recovery
           </h3>
@@ -71,7 +70,7 @@ export default function EeatResourceLinks() {
         </div>
 
         {/* Sleep & Cognitive Health */}
-        <div>
+        <div id="sleep">
           <h3 className="text-xl font-semibold text-blue-800 mb-3">
             😴 Sleep & Cognitive Health
           </h3>
@@ -100,7 +99,7 @@ export default function EeatResourceLinks() {
         </div>
 
         {/* Supplement Research */}
-        <div>
+        <div id="supplements">
           <h3 className="text-xl font-semibold text-blue-800 mb-3">
             🧬 Supplement & Longevity Science
           </h3>
@@ -127,6 +126,7 @@ export default function EeatResourceLinks() {
             </li>
           </ul>
         </div>
+
       </div>
     </section>
   )
