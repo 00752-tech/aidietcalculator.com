@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Metadata, Viewport } from 'next'
 import { SiteHeader } from "@/components/site-header"
 import Link from "next/link"
@@ -21,9 +22,48 @@ export const viewport: Viewport = {
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Blog",
+              "name": "AI Diet Calculator Blog",
+              "url": "https://aidietcalculator.com/blog",
+              "description": "Explore science-backed articles curated by AI experts across nutrition, sleep, metabolism and goal tracking.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "AI Diet Calculator",
+                "url": "https://aidietcalculator.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://aidietcalculator.com/images/logo.png"
+                }
+              },
+              "author": {
+                "@type": "Organization",
+                "name": "AI Diet Calculator Editorial Team"
+              },
+              "mainEntityOfPage": "https://aidietcalculator.com/blog"
+            })
+          }}
+        />
+      </Head>
+
       <SiteHeader />
       <main className="container mx-auto px-4 py-8 pt-24">
-        <h1 className="mb-8 text-4xl font-bold text-center text-gray-800">AI Diet Calculator Blog</h1>
+        <h1 className="mb-4 text-4xl font-bold text-center text-gray-800">AI Diet Calculator Blog</h1>
+
+        {/* ✅ EEAT-style Intro */}
+        <p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-4 mb-10 max-w-2xl mx-auto">
+          🔍 Vetted by our editorial team and powered by AI, every post in this blog explores practical strategies for smarter eating, metabolic flexibility, habit change, and wellness optimization. For deeper reference material and supporting data, check out our{' '}
+          <Link href="/resources" className="text-blue-600 hover:underline font-medium">
+            Trusted Resource Hub
+          </Link>.
+        </p>
+
+        {/* 🧱 Card Grid Remains Untouched */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (
             <article key={post.slug} className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl">
