@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import EeatResourceLinks from '@/components/EeatResourceLinks'
+
 export default function EeatResourceLinks() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-12">
@@ -40,7 +40,7 @@ export default function EeatResourceLinks() {
           </ul>
         </div>
 
-        {/* Fitness & Recovery */}
+        {/* Recovery */}
         <div id="recovery">
           <h3 className="text-xl font-semibold text-blue-800 mb-3">
             🏋️‍♂️ Fitness & Recovery
@@ -69,7 +69,7 @@ export default function EeatResourceLinks() {
           </ul>
         </div>
 
-        {/* Sleep & Cognitive Health */}
+        {/* Sleep */}
         <div id="sleep">
           <h3 className="text-xl font-semibold text-blue-800 mb-3">
             😴 Sleep & Cognitive Health
@@ -98,7 +98,7 @@ export default function EeatResourceLinks() {
           </ul>
         </div>
 
-        {/* Supplement Research */}
+        {/* Supplements */}
         <div id="supplements">
           <h3 className="text-xl font-semibold text-blue-800 mb-3">
             🧬 Supplement & Longevity Science
