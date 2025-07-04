@@ -9,9 +9,11 @@ export default function EeatResourceLinks() {
         📚 Trusted Health & Wellness Resources
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Nutrition */}
-        <div>
+      <div id="nutrition">...</div>
+<div id="recovery">...</div>
+<div id="sleep">...</div>
+<div id="supplements">...</div>
+
           <h3 className="text-xl font-semibold text-blue-800 mb-3">
             🥦 Nutrition & Protein Science
           </h3>
