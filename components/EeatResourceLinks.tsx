@@ -1,133 +1,94 @@
 'use client'
 
 import React from 'react'
+import ResourceCard from '@/components/ResourceCard'
 
 export default function EeatResourceLinks() {
+  const resources = [
+    {
+      category: '🥦 Nutrition',
+      links: [
+        {
+          title: 'How Much Protein Do You Really Need?',
+          source: 'Healthline',
+          url: 'https://www.healthline.com/nutrition/protein-intake-how-much',
+        },
+        {
+          title: 'Protein Requirements & Active Adults',
+          source: 'NCBI Review',
+          url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7551460/',
+        },
+      ],
+    },
+    {
+      category: '🏋️ Recovery',
+      links: [
+        {
+          title: 'Why Recovery Is Essential in Fitness',
+          source: 'ACE Fitness',
+          url: 'https://www.acefitness.org/education-and-resources/lifestyle/blog/7437/the-importance-of-recovery-in-fitness/',
+        },
+        {
+          title: 'Recovery Tips for Men Over 35',
+          source: 'Men’s Health',
+          url: 'https://www.menshealth.com/fitness/a19546766/workout-recovery-tips/',
+        },
+      ],
+    },
+    {
+      category: '😴 Sleep',
+      links: [
+        {
+          title: 'How Sleep Works',
+          source: 'Sleep Foundation',
+          url: 'https://www.sleepfoundation.org/how-sleep-works',
+        },
+        {
+          title: 'Sleep & Aging',
+          source: 'Mayo Clinic',
+          url: 'https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379',
+        },
+      ],
+    },
+    {
+      category: '🧬 Supplements',
+      links: [
+        {
+          title: 'Scientific Protein Guide',
+          source: 'Examine.com',
+          url: 'https://examine.com/supplements/protein/',
+        },
+        {
+          title: 'Collagen & Aging Effects',
+          source: 'NCBI Clinical Review',
+          url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520897/',
+        },
+      ],
+    },
+  ]
+
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-blue-900 mb-6">
+    <section className="max-w-7xl mx-auto px-4 py-12">
+      <h2 className="text-3xl font-bold text-blue-900 mb-10 text-center">
         📚 Trusted Health & Wellness Resources
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        {/* Nutrition */}
-        <div id="nutrition">
-          <h3 className="text-xl font-semibold text-blue-800 mb-3">
-            🥦 Nutrition & Protein Science
-          </h3>
-          <ul className="space-y-2 text-gray-700 text-[15px] list-disc pl-5">
-            <li>
-              <a
-                href="https://www.healthline.com/nutrition/protein-intake-how-much"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 underline"
-              >
-                How Much Protein Do You Really Need? – Healthline
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7551460/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 underline"
-              >
-                Protein Requirements & Active Adults – NCBI Review
-              </a>
-            </li>
-          </ul>
+      {resources.map((section) => (
+        <div key={section.category} id={section.category.toLowerCase().split(' ')[1]} className="mb-12">
+          <h3 className="text-2xl font-semibold text-blue-800 mb-4">{section.category}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {section.links.map((link) => (
+              <ResourceCard
+                key={link.url}
+                title={link.title}
+                source={link.source}
+                url={link.url}
+                category={section.category}
+              />
+            ))}
+          </div>
         </div>
-
-        {/* Recovery */}
-        <div id="recovery">
-          <h3 className="text-xl font-semibold text-blue-800 mb-3">
-            🏋️‍♂️ Fitness & Recovery
-          </h3>
-          <ul className="space-y-2 text-gray-700 text-[15px] list-disc pl-5">
-            <li>
-              <a
-                href="https://www.acefitness.org/education-and-resources/lifestyle/blog/7437/the-importance-of-recovery-in-fitness/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 underline"
-              >
-                Why Recovery Is Essential in Fitness – ACE Fitness
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.menshealth.com/fitness/a19546766/workout-recovery-tips/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 underline"
-              >
-                Recovery Tips for Men Over 35 – Men’s Health
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Sleep */}
-        <div id="sleep">
-          <h3 className="text-xl font-semibold text-blue-800 mb-3">
-            😴 Sleep & Cognitive Health
-          </h3>
-          <ul className="space-y-2 text-gray-700 text-[15px] list-disc pl-5">
-            <li>
-              <a
-                href="https://www.sleepfoundation.org/how-sleep-works"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 underline"
-              >
-                How Sleep Works – Sleep Foundation
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 underline"
-              >
-                Sleep & Aging – Mayo Clinic
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Supplements */}
-        <div id="supplements">
-          <h3 className="text-xl font-semibold text-blue-800 mb-3">
-            🧬 Supplement & Longevity Science
-          </h3>
-          <ul className="space-y-2 text-gray-700 text-[15px] list-disc pl-5">
-            <li>
-              <a
-                href="https://examine.com/supplements/protein/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 underline"
-              >
-                Examine.com: Scientific Protein Guide
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520897/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 underline"
-              >
-                Collagen & Aging Effects – NCBI Clinical Review
-              </a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
+      ))}
     </section>
   )
 }
