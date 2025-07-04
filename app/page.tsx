@@ -231,38 +231,16 @@ export default function Home() {
 
   <AIDietPlanner />
   <FeaturedSnippetContent />
+
+  <p className="text-center text-sm text-gray-600 mt-4">
+    🧠 Want deeper science-backed content? Visit our{' '}
+    <Link href="/resources" className="text-blue-600 hover:underline font-medium">
+      Trusted Resource Hub
+    </Link>{' '}
+    to browse curated articles from Mayo Clinic, NCBI, and other high-authority sources.
+  </p>
 </div>
 
-        
-        <section id="body-fat-calculator" className="mb-16 flex flex-col items-center">
-  <ToolSectionHeader title="AI-Enhanced Body Fat Calculator" icon={Scale} />
-
-  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-    🧠 <strong>Decode Your Physique—Accurate. Fast. AI-Verified.</strong>
-    <br /><br />
-    Our AI-powered Body Fat Calculator gives you a precise breakdown of your body composition using the U.S. Navy method plus machine-learned accuracy enhancements. Stop guessing. Start understanding.
-  </p>
-
-  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
-    <li>Science-backed fat % estimates in seconds</li>
-    <li>Powered by the U.S. Navy method + AI pattern analysis</li>
-    <li>Ideal for fitness tracking, health screening & goal setting</li>
-    <li>No login required. Just pure accuracy, fast</li>
-  </ul>
-<p className="text-center text-sm text-gray-600 mt-4">
-  🧠 Looking to go deeper? Visit our{' '}
-  <Link href="/resources" className="text-blue-600 hover:underline font-medium">
-    Trusted Resource Hub
-  </Link>{' '}
-  for scientific articles from Mayo Clinic, NCBI, and more.
-</p>
-
-
-  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
-    🎯 Used by <strong>180+ users daily</strong> to reveal what scales can't. 
-    <br /><br />
-    ✅ Want to accelerate progress? <em>Watch the quick video walkthrough</em> to learn how smart users combine body fat data with AI-backed diet plans and trusted supplements.
-  </p>
 
   <BodyFatCalculator />
 <StackIntro
