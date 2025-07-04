@@ -274,6 +274,14 @@ export default function Home() {
   </p>
 
   <BodyFatCalculator />
+<p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-8 mb-6 max-w-2xl mx-auto">
+  📚 Want deeper analysis on body composition? Explore our{' '}
+  <Link href="/resources" className="text-blue-600 hover:underline font-medium">
+    Trusted Resource Hub
+  </Link>{' '}
+  for expert-backed breakdowns and scientific references.
+</p>
+
 <StackIntro
   title="Your Body Fat Reduction Stack 💥"
   subtitle="Three precision-targeted formulas. Designed to support detox, hormonal balance, and fat loss by addressing root causes—naturally."
@@ -598,7 +606,13 @@ export default function Home() {
   </div>
 
   <MacroNutrientCalculatorSnippet />
-
+<p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-8 mb-6 max-w-2xl mx-auto">
+  🧠 Curious how macros affect metabolism and performance? Visit our{' '}
+  <Link href="/resources" className="text-blue-600 hover:underline font-medium">
+    Resource Hub
+  </Link>{' '}
+  for evidence-based insights into protein, carbs, and fat.
+</p>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -1139,6 +1153,12 @@ export default function Home() {
 
   <SleepAffiliateCards />
   <SleepCalculatorSnippet />
+<p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-8 mb-6 max-w-2xl mx-auto">
+  🌙 Learn more about sleep cycles, recovery, and hormonal impact in our{' '}
+  <Link href="/resources" className="text-blue-600 hover:underline font-medium">
+    Trusted Resource Hub
+  </Link>. It’s curated for users optimizing health with clinical-grade clarity.
+</p>
 
   <p className="text-sm text-center text-muted-foreground mt-2">
     🔒 Last 3 sleep schedules generated <strong>in the past 90 seconds</strong>.
