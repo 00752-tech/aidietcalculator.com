@@ -206,25 +206,22 @@ export default function Home() {
   <h2 className="text-3xl font-bold text-center mb-8">AI Diet and Meal Planner</h2>
 
   <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-    🍽️ <strong>Get Your Custom Meal Plan—Crafted in Seconds by AI</strong>
-    <br /><br />
-    Ditch the templates. Our AI-powered Meal Planner builds <em>your perfect nutrition strategy</em>—
-    based on your calorie needs, food preferences, and fitness goals.
-    Whether you're keto-curious, bulking clean, or just trying to eat smarter,
-    you’ll get meals that match your lifestyle—not force you to change it.
+    🍽️ <strong>Get Your Custom Meal Plan—Crafted in Seconds by AI</strong><br /><br />
+    Ditch the templates. Our planner builds your ideal nutrition strategy based on your calorie needs, food preferences, and fitness goals.
+    Whether you're keto-curious, bulking clean, or just eating smarter—you’ll get meals that match your lifestyle, not force you to change it.
   </p>
 
   <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
-    <li>Personalized meal plans for fat loss, muscle gain, or maintenance</li>
+    <li>Meal plans for fat loss, muscle gain, or maintenance</li>
     <li>Filters out foods you don’t like (fish haters, rejoice 🐟❌)</li>
     <li>Smart macros & calorie targets baked into every day</li>
     <li>Fresh suggestions daily to keep progress exciting</li>
   </ul>
 
   <p className="text-center text-lg max-w-2xl mx-auto mb-6">
-    🚀 Trained on 27,000+ nutritional datasets. Powered by GPT-4. Get your full plan instantly—no signup, no cost, no fluff.
+    🚀 Powered by GPT-4 and trained on 27,000+ nutrition datasets. No fluff. No signup. Just results.
     <br /><br />
-    🎥 Want to maximize results? <em>Watch the short video walkthrough</em> to learn how users combine their AI plan with diet boosters for 2x faster progress.
+    🎥 Watch our short video walkthrough to see how users pair AI plans with boosters for 2x progress.
   </p>
 
   <AIDietPlanner />
@@ -235,9 +232,10 @@ export default function Home() {
     <Link href="/resources" className="text-blue-600 hover:underline font-medium">
       Trusted Resource Hub
     </Link>{' '}
-    to browse curated articles from Mayo Clinic, NCBI, and other high-authority sources.
+    for curated articles from Mayo Clinic, NCBI, and more.
   </p>
 </section>
+
 
   <BodyFatCalculator />
 <StackIntro
