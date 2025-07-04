@@ -17,32 +17,37 @@ export const viewport: Viewport = {
   ],
 }
 
-// ✍️ Resource content
+// ✅ Final mapped article list with valid links
 const resourceArticles = [
   {
-    slug: "sleep-optimization",
-    title: "The Science of Sleep for Fat Loss",
-    excerpt: "How REM depth, circadian syncing, and melatonin rhythms drive metabolism and recovery—beyond just rest.",
-  },
-  {
-    slug: "macro-nutrient-strategy",
+    slug: "understanding-macronutrients",
     title: "Macronutrients Made Smarter",
     excerpt: "Break down protein, carbs, and fat by function, satiety, and metabolic impact—not outdated ratios.",
   },
   {
-    slug: "hydration-biology",
-    title: "Hydration, Electrolytes & Performance",
-    excerpt: "Learn how fluid balance affects cellular health, fat metabolism, appetite, and training output.",
-  },
-  {
-    slug: "fasting-and-metabolic-flexibility",
+    slug: "intermittent-fasting-ai-optimization",
     title: "Intermittent Fasting Without the Hype",
-    excerpt: "Explore feeding windows, AMPK activation, autophagy, and how to cycle fasting around real goals.",
+    excerpt: "Explore feeding windows, autophagy, AMPK activation, and how to cycle fasting around real goals.",
   },
   {
-    slug: "ai-nutrition-engine",
-    title: "How the AI Calorie Engine Works",
-    excerpt: "Get under the hood: datasets, personalization layers, GPT-4 tuning, and logic behind your meal plan outputs.",
+    slug: "ai-personalized-meal-planning-weight-loss",
+    title: "Personalized Meal Planning with AI",
+    excerpt: "How GPT-4, datasets, and goal targeting create adaptive nutrition plans that evolve with you.",
+  },
+  {
+    slug: "weight-loss-machine-learning",
+    title: "Machine Learning & Fat Loss Strategy",
+    excerpt: "Discover how AI models learn dietary behavior and optimize long-term results based on real-time inputs.",
+  },
+  {
+    slug: "emotional-eating-ai-solutions",
+    title: "Emotional Eating & AI-Backed Behavior Change",
+    excerpt: "Understand the psychology of hunger cues, reward loops, and how AI helps you regain control.",
+  },
+  {
+    slug: "ai-powered-grocery-shopping-weight-loss",
+    title: "AI Grocery Planning for Smart Nutrition",
+    excerpt: "See how smart food selection algorithms minimize decision fatigue and budget creep while optimizing micronutrient intake.",
   },
 ]
 
@@ -85,16 +90,17 @@ export default function ResourcesPage() {
           Trusted Resource Hub
         </h1>
 
-        {/* 🧠 EEAT-Intro Block */}
         <p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-6 mb-8 max-w-2xl mx-auto">
           📚 This hub is built for humans—not just crawlers. Every guide here is backed by clinical studies, peer-reviewed sources, and nutrition datasets. Want to understand the “why” behind the calculators? You’re in the right place.
         </p>
 
-        {/* 📘 Resource Cards */}
         <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {resourceArticles.map((item) => (
-            <article key={item.slug} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6">
-              <Link href={`/resources/${item.slug}`}>
+            <article
+              key={item.slug}
+              className="bg-blue-50 dark:bg-teal-950 rounded-lg shadow-md hover:shadow-xl transition-shadow p-6"
+            >
+              <Link href={`/blog/${item.slug}`}>
                 <h2 className="text-xl font-semibold text-gray-800 hover:text-blue-600 mb-2">
                   {item.title}
                 </h2>
