@@ -54,9 +54,9 @@ export default function EeatResourceLinks() {
       category: '🧬 Supplements',
       links: [
         {
-          title: 'Protein Supplements vs. Food',
-          source: 'Mayo Clinic',
-          url: 'https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/protein-supplements/faq-20058342',
+          title: 'Ingredients to Look for in a Protein Powder',
+          source: 'Mayo Clinic Health Press',
+          url: 'https://mcpress.mayoclinic.org/healthy-aging/ingredients-to-look-for-in-a-protein-powder/',
         },
         {
           title: 'Collagen & Aging Effects',
