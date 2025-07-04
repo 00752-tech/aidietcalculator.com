@@ -17,6 +17,35 @@ export const viewport: Viewport = {
   ],
 }
 
+// ✍️ Resource content
+const resourceArticles = [
+  {
+    slug: "sleep-optimization",
+    title: "The Science of Sleep for Fat Loss",
+    excerpt: "How REM depth, circadian syncing, and melatonin rhythms drive metabolism and recovery—beyond just rest.",
+  },
+  {
+    slug: "macro-nutrient-strategy",
+    title: "Macronutrients Made Smarter",
+    excerpt: "Break down protein, carbs, and fat by function, satiety, and metabolic impact—not outdated ratios.",
+  },
+  {
+    slug: "hydration-biology",
+    title: "Hydration, Electrolytes & Performance",
+    excerpt: "Learn how fluid balance affects cellular health, fat metabolism, appetite, and training output.",
+  },
+  {
+    slug: "fasting-and-metabolic-flexibility",
+    title: "Intermittent Fasting Without the Hype",
+    excerpt: "Explore feeding windows, AMPK activation, autophagy, and how to cycle fasting around real goals.",
+  },
+  {
+    slug: "ai-nutrition-engine",
+    title: "How the AI Calorie Engine Works",
+    excerpt: "Get under the hood: datasets, personalization layers, GPT-4 tuning, and logic behind your meal plan outputs.",
+  },
+]
+
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -56,13 +85,27 @@ export default function ResourcesPage() {
           Trusted Resource Hub
         </h1>
 
-        {/* ✅ EEAT Intro Block */}
+        {/* 🧠 EEAT-Intro Block */}
         <p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-6 mb-8 max-w-2xl mx-auto">
           📚 This hub is built for humans—not just crawlers. Every guide here is backed by clinical studies, peer-reviewed sources, and nutrition datasets. Want to understand the “why” behind the calculators? You’re in the right place.
         </p>
 
-        {/* 🔗 Insert your resource modules or content grid below */}
-        {/* Example: <ResourceCardGrid /> or <ArticleList /> */}
+        {/* 📘 Resource Cards */}
+        <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {resourceArticles.map((item) => (
+            <article key={item.slug} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6">
+              <Link href={`/resources/${item.slug}`}>
+                <h2 className="text-xl font-semibold text-gray-800 hover:text-blue-600 mb-2">
+                  {item.title}
+                </h2>
+                <p className="text-gray-600 text-sm leading-snug mb-4">{item.excerpt}</p>
+                <span className="text-primary font-semibold text-sm hover:underline">
+                  Read More
+                </span>
+              </Link>
+            </article>
+          ))}
+        </section>
       </main>
     </div>
   )
