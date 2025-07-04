@@ -30,6 +30,11 @@ export function Footer() {
               Privacy Policy
             </Link>
           </p>
+          <p className="mt-2">
+            <Link href="/resources" className="text-blue-500 hover:underline">
+              Explore our Trusted Resource Hub →
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
