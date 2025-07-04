@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { Metadata, Viewport } from 'next'
 import { SiteHeader } from "@/components/site-header"
 import Link from 'next/link'
-import BlogCardGrid from "@/components/blog-card-grid" // Keep your blog card grid import
 
 export const metadata: Metadata = {
   title: "Blog | AI Diet Calculator",
@@ -28,9 +27,9 @@ export default function BlogPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Blog",
-              "name": "AI Diet Blog",
+              "name": "Blog | AI Diet Calculator",
               "url": "https://aidietcalculator.com/blog",
-              "description": "Explore science-backed insights curated by AI experts across nutrition, sleep, metabolism and goal tracking.",
+              "description": "Explore science-backed articles curated by AI experts across nutrition, sleep, metabolism and goal tracking.",
               "publisher": {
                 "@type": "Organization",
                 "name": "AI Diet Calculator",
@@ -56,24 +55,21 @@ export default function BlogPage() {
         <h1 className="mb-8 text-4xl font-extrabold text-teal-900 dark:text-teal-300 drop-shadow-md">
           AI Diet Blog
         </h1>
-        <div className="space-y-6 bg-white dark:bg-teal-900/70 rounded-2xl p-8 shadow-lg ring-1 ring-teal-200 dark:ring-teal-700">
+        <div className="space-y-8 bg-white dark:bg-teal-900/70 rounded-2xl p-8 shadow-lg ring-1 ring-teal-200 dark:ring-teal-700">
           <p className="text-base md:text-lg leading-relaxed text-gray-800 dark:text-gray-200">
-            🔍 Nutrition isn’t just macros—it’s timing, sleep, recovery, and behavior. That’s why our blog explores metabolic flexibility, nutrient strategy, goal tracking, and habit psychology in depth.
+            🔍 Real nutrition isn’t just macros and numbers—it’s context, timing, sleep, training, and habit psychology. That’s why our blog dives deeper than most calculators ever will.
           </p>
           <p className="text-base md:text-lg leading-relaxed text-gray-800 dark:text-gray-200">
-            You’ll find concise, curated insights that answer one essential question: <strong>what actually moves the needle?</strong> Every article is vetted for clarity, evidence, and practical takeaways.
+            You’ll find breakdowns on metabolic flexibility, circadian nutrition, nutrient timing, AI-driven goal tracking, and more. Each article is designed to answer one core question: <strong>what actually moves the needle?</strong>
           </p>
-          <p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-8 mb-6 max-w-2xl mx-auto">
-            🧠 Want to dive deeper into the science? Visit our{' '}
+          <p className="text-base md:text-lg leading-relaxed text-gray-800 dark:text-gray-200">
+            🧠 Want deeper clinical and research-backed references? Check out our{' '}
             <Link href="/resources" className="text-blue-600 hover:underline font-medium">
               Trusted Resource Hub
             </Link>{' '}
-            for clinical references, datasets, and source materials behind our tools.
+            for source material, citations, and curated learning paths.
           </p>
         </div>
-
-        {/* 🔗 Your blog cards still render below */}
-        <BlogCardGrid />
       </main>
     </div>
   )
