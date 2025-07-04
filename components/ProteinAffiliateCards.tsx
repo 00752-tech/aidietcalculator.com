@@ -5,6 +5,10 @@ import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card'
 import { Sparkles, ArrowRight, ShieldCheck } from 'lucide-react'
 
 export default function ProteinAffiliateCards() {
+  const handleClick = () => {
+    window.open('https://e408atc-o-6ofqe104ojm-8e75.hop.clickbank.net/?&traffic_source=ai_diet_calc', '_blank')
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 mt-10">
       {/* Beautify Collagen */}
@@ -21,7 +25,7 @@ export default function ProteinAffiliateCards() {
           </ul>
           <div className="mt-6 flex flex-col items-center gap-2">
             <button
-              onClick={() => window.open('https://greenifyshop.com/products/beautify-collagen', '_blank')}
+              onClick={handleClick}
               className="group w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-5 rounded-md flex items-center justify-center gap-2 transition-colors duration-300 whitespace-nowrap"
             >
               Try Beautify Collagen
@@ -49,7 +53,7 @@ export default function ProteinAffiliateCards() {
           </ul>
           <div className="mt-6 flex flex-col items-center gap-2">
             <button
-              onClick={() => window.open('https://greenifyshop.com/products/daily-greens-juice', '_blank')}
+              onClick={handleClick}
               className="group w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-5 rounded-md flex items-center justify-center gap-2 transition-colors duration-300 whitespace-nowrap"
             >
               Try Daily Greens Juice
@@ -77,7 +81,7 @@ export default function ProteinAffiliateCards() {
           </ul>
           <div className="mt-6 flex flex-col items-center gap-2">
             <button
-              onClick={() => window.open('https://greenifyshop.com/products/plant-based-protein', '_blank')}
+              onClick={handleClick}
               className="group w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-5 rounded-md flex items-center justify-center gap-2 transition-colors duration-300 whitespace-nowrap"
             >
               Try Plant-Based Protein
