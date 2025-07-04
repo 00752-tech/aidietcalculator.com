@@ -20,15 +20,13 @@ export default function ProteinAffiliateCards() {
             <li>💪 Supports joints, hair & nails</li>
           </ul>
           <div className="mt-6 flex flex-col items-center gap-2">
-            <a
-              href="https://greenifyshop.com/products/beautify-collagen"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => window.open('https://greenifyshop.com/products/beautify-collagen', '_blank')}
               className="group w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-5 rounded-md flex items-center justify-center gap-2 transition-colors duration-300 whitespace-nowrap"
             >
               Try Beautify Collagen
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
+            </button>
             <div className="flex items-center gap-1 text-xs text-pink-700">
               <ShieldCheck className="w-4 h-4 text-pink-600" />
               2,903 users this month
@@ -50,15 +48,13 @@ export default function ProteinAffiliateCards() {
             <li>⚡ Boosts clean energy & metabolism</li>
           </ul>
           <div className="mt-6 flex flex-col items-center gap-2">
-            <a
-              href="https://greenifyshop.com/products/daily-greens-juice"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => window.open('https://greenifyshop.com/products/daily-greens-juice', '_blank')}
               className="group w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-5 rounded-md flex items-center justify-center gap-2 transition-colors duration-300 whitespace-nowrap"
             >
               Try Daily Greens Juice
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
+            </button>
             <div className="flex items-center gap-1 text-xs text-green-700">
               <ShieldCheck className="w-4 h-4 text-green-600" />
               3,218 users this month
@@ -80,15 +76,13 @@ export default function ProteinAffiliateCards() {
             <li>🧘 Vegan & gut-friendly</li>
           </ul>
           <div className="mt-6 flex flex-col items-center gap-2">
-            <a
-              href="https://greenifyshop.com/products/plant-based-protein"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => window.open('https://greenifyshop.com/products/plant-based-protein', '_blank')}
               className="group w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-5 rounded-md flex items-center justify-center gap-2 transition-colors duration-300 whitespace-nowrap"
             >
               Try Plant-Based Protein
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
+            </button>
             <div className="flex items-center gap-1 text-xs text-purple-700">
               <ShieldCheck className="w-4 h-4 text-purple-600" />
               2,876 users this month
