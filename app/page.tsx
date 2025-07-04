@@ -200,9 +200,7 @@ export default function Home() {
     "dateModified": new Date().toISOString().split('T')[0]
   })}} />
 </section>
-
-        
-        <section id="ai-diet-planner" className="mb-16">
+<section id="ai-diet-planner" className="mb-16">
   <h2 className="text-3xl font-bold text-center mb-8">AI Diet and Meal Planner</h2>
 
   <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
@@ -235,7 +233,6 @@ export default function Home() {
     for curated articles from Mayo Clinic, NCBI, and more.
   </p>
 </section>
-
 
   <BodyFatCalculator />
 <StackIntro
