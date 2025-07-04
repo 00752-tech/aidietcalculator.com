@@ -161,6 +161,12 @@ export default function Home() {
   subtitle="Three high-performance picks. Curated to balance blood sugar, accelerate fat burn, and restore healthy metabolism—naturally."
   disclaimer="Some links may be affiliate links. We may earn a small commission if you make a purchase—at no extra cost to you. This helps keep our tools free 💙"
 />
+<p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-6 mb-6 max-w-2xl mx-auto">
+  🧬 These picks are carefully selected to support metabolism, appetite regulation, and fat-burning pathways. For deeper nutritional science, see our{' '}
+  <Link href="/resources" className="text-blue-600 hover:underline font-medium">
+    Trusted Resource Hub
+  </Link>.
+</p>
 
 <CalorieAffiliateCards />
 <CalorieCalculatorSnippet />
