@@ -200,39 +200,49 @@ export default function Home() {
     "dateModified": new Date().toISOString().split('T')[0]
   })}} />
 </section>
-<section id="ai-diet-planner" className="mb-16">
-  <h2 className="text-3xl font-bold text-center mb-8">AI Diet and Meal Planner</h2>
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-[#F8F9FF]">
+      <SiteHeader />
 
-  <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
-    🍽️ <strong>Get Your Custom Meal Plan—Crafted in Seconds by AI</strong><br /><br />
-    Ditch the templates. Our planner builds your ideal nutrition strategy based on your calorie needs, food preferences, and fitness goals.
-    Whether you're keto-curious, bulking clean, or just eating smarter—you’ll get meals that match your lifestyle, not force you to change it.
-  </p>
+      <main className="container mx-auto px-4 py-8 pt-20">
+        <section id="ai-diet-planner" className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8">AI Diet and Meal Planner</h2>
 
-  <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
-    <li>Meal plans for fat loss, muscle gain, or maintenance</li>
-    <li>Filters out foods you don’t like (fish haters, rejoice 🐟❌)</li>
-    <li>Smart macros & calorie targets baked into every day</li>
-    <li>Fresh suggestions daily to keep progress exciting</li>
-  </ul>
+          <p className="text-center text-lg mb-6 max-w-2xl mx-auto">
+            🍽️ <strong>Get Your Custom Meal Plan—Crafted in Seconds by AI</strong><br /><br />
+            Ditch the templates. Our planner builds your ideal nutrition strategy based on your calorie needs, food preferences, and fitness goals.
+            Whether you're keto-curious, bulking clean, or just eating smarter—you’ll get meals that match your lifestyle, not force you to change it.
+          </p>
 
-  <p className="text-center text-lg max-w-2xl mx-auto mb-6">
-    🚀 Powered by GPT-4 and trained on 27,000+ nutrition datasets. No fluff. No signup. Just results.
-    <br /><br />
-    🎥 Watch our short video walkthrough to see how users pair AI plans with boosters for 2x progress.
-  </p>
+          <ul className="list-disc pl-6 text-left text-lg max-w-2xl mx-auto mb-6">
+            <li>Meal plans for fat loss, muscle gain, or maintenance</li>
+            <li>Filters out foods you don’t like (fish haters, rejoice 🐟❌)</li>
+            <li>Smart macros & calorie targets baked into every day</li>
+            <li>Fresh suggestions daily to keep progress exciting</li>
+          </ul>
 
-  <AIDietPlanner />
-  <FeaturedSnippetContent />
+          <p className="text-center text-lg max-w-2xl mx-auto mb-6">
+            🚀 Powered by GPT-4 and trained on 27,000+ nutrition datasets. No fluff. No signup. Just results.
+            <br /><br />
+            🎥 Watch our short video walkthrough to see how users pair AI plans with boosters for 2x progress.
+          </p>
 
-  <p className="text-center text-sm text-gray-600 mt-4">
-    🧠 Want deeper science-backed content? Visit our{' '}
-    <Link href="/resources" className="text-blue-600 hover:underline font-medium">
-      Trusted Resource Hub
-    </Link>{' '}
-    for curated articles from Mayo Clinic, NCBI, and more.
-  </p>
-</section>
+          <AIDietPlanner />
+          <FeaturedSnippetContent />
+
+          <p className="text-center text-sm text-gray-600 mt-4">
+            🧠 Want deeper science-backed content? Visit our{' '}
+            <Link href="/resources" className="text-blue-600 hover:underline font-medium">
+              Trusted Resource Hub
+            </Link>{' '}
+            for curated articles from Mayo Clinic, NCBI, and more.
+          </p>
+        </section>
+      </main>
+    </div>
+  )
+}
 
   <BodyFatCalculator />
 <StackIntro
