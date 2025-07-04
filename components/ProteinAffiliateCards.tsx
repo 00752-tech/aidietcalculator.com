@@ -55,9 +55,9 @@ export default function ProteinAffiliateCards() {
       ].map((product) => (
         <Card
           key={product.title}
-          className={`w-[340px] h-[500px] bg-gradient-to-br from-gray-50 to-${product.color}-50 border border-${product.color}-100 shadow-md p-6 relative flex flex-col justify-between transition hover:shadow-lg`}
+          className={`w-[340px] h-[520px] bg-gradient-to-br from-gray-50 to-${product.color}-50 border border-${product.color}-100 shadow-md p-6 relative flex flex-col justify-between hover:shadow-lg transition`}
         >
-          <div className={`absolute top-2 right-2 text-sm font-semibold bg-${product.color}-100 text-${product.color}-700 px-2 py-1 rounded shadow-sm`}>
+          <div className={`absolute top-2 right-2 text-sm font-semibold bg-${product.color}-100 text-${product.color}-700 px-2 py-1 rounded`}>
             {product.tagline}
           </div>
           <CardHeader className="flex items-center gap-3 mb-3">
@@ -72,12 +72,12 @@ export default function ProteinAffiliateCards() {
                 <li key={i}>{b}</li>
               ))}
             </ul>
-            <div className="mt-auto flex flex-col items-center space-y-2">
+            <div className="mt-auto flex flex-col items-center space-y-2 min-h-[70px]">
               <a
                 href={product.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group w-full whitespace-nowrap bg-${product.color}-600 hover:bg-${product.color}-700 text-white font-semibold py-2 px-4 rounded flex items-center justify-center gap-2 transition`}
+                className={`group w-full whitespace-nowrap bg-${product.color}-600 hover:bg-${product.color}-700 text-white font-semibold text-[15px] py-2 px-4 rounded flex items-center justify-center gap-2 transition`}
               >
                 Try {product.title}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
