@@ -679,6 +679,13 @@ export default function Home() {
   subtitle="Four clean, science-backed formulas. Curated to support lean muscle, recovery, and radiant health—naturally."
   disclaimer="Some links may be affiliate links. We may earn a small commission if you make a purchase—at no extra cost to you. This helps keep our tools free 💙"
 />
+<p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-6 mb-6 max-w-2xl mx-auto">
+  🧠 All supplements are chosen for bioavailability, recovery support, and lean mass retention. Backed by clinical studies—you can explore references inside our{' '}
+  <Link href="/resources" className="text-blue-600 hover:underline font-medium">
+    Trusted Resource Hub
+  </Link>.
+</p>
+
 <ProteinAffiliateCards />
 <ProteinCalculatorSnippet />
 
@@ -1156,6 +1163,12 @@ export default function Home() {
   subtitle="Three user-verified protocols. Curated to enhance rest, regulate sleep cycles, and unlock recovery through science-backed solutions."
   disclaimer="Some links may be affiliate links. We may earn a small commission if you make a purchase—at no extra cost to you. This helps keep our tools free 💙"
 />
+<p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-6 mb-6 max-w-2xl mx-auto">
+  💤 Each protocol is selected to enhance sleep onset, cycle depth, and circadian harmony. Learn more about mechanisms like melatonin and sleep architecture in our{' '}
+  <Link href="/resources" className="text-blue-600 hover:underline font-medium">
+    Trusted Resource Hub
+  </Link>.
+</p>
 
   <SleepAffiliateCards />
   <SleepCalculatorSnippet />
