@@ -113,13 +113,14 @@ export default function Home() {
 <ToolUsageTicker />
 
         <TableOfContents />
-        <p className="text-sm text-center text-gray-600 mt-6 md:text-base md:leading-relaxed">
-  🧠 Looking for evidence-based content? Explore our{' '}
+        <p className="text-base md:text-lg leading-relaxed text-center text-muted-foreground mt-8 mb-6 max-w-2xl mx-auto">
+  🧠 Looking for evidence-based insights? Explore our{' '}
   <Link href="/resources" className="text-blue-600 hover:underline font-medium">
     Trusted Resource Hub
   </Link>{' '}
-  for science-backed articles and guides.
+  for science-backed articles and expert-backed guides.
 </p>
+
 
 
         <div className="flex justify-center mb-8">
