@@ -9,9 +9,9 @@ export default function EeatResourceLinks() {
       category: '🥦 Nutrition',
       links: [
         {
-          title: 'How Much Protein Do You Really Need?',
-          source: 'Healthline',
-          url: 'https://www.healthline.com/nutrition/protein-intake-how-much',
+          title: 'You’ve Probably Hit Your Protein Goal',
+          source: 'CNET Health',
+          url: 'https://www.cnet.com/health/nutrition/youve-probably-hit-your-protein-goal-heres-what-experts-think-you-need-instead/',
         },
         {
           title: 'Protein Requirements & Active Adults',
@@ -54,9 +54,9 @@ export default function EeatResourceLinks() {
       category: '🧬 Supplements',
       links: [
         {
-          title: 'Scientific Protein Guide',
-          source: 'Examine.com',
-          url: 'https://examine.com/supplements/protein/',
+          title: 'Protein Supplements vs. Food',
+          source: 'Mayo Clinic',
+          url: 'https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/protein-supplements/faq-20058342',
         },
         {
           title: 'Collagen & Aging Effects',
