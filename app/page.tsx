@@ -103,11 +103,16 @@ export default function Home() {
     <li>No fluff, no signup, just results</li>
   </ul>
 
-  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-    🎯 Already over <strong>11,000 plans created</strong> this week. Want even faster progress?
-    <br /><br />
-    ✅ Explore our AI-recommended supplements & boosters—<em>watch the quick video guide to see exactly how to combine them with your custom plan for the best results</em>. You’ll unlock affiliate-supported picks that real users swear by.
-  </p>
+  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto prose-lg font-display">
+  🎯 Already over <strong>11,000 plans created</strong> this week.
+  Want even faster progress?
+  <br />
+  <br />
+  ✅ Explore our <strong>AI-recommended supplements & boosters</strong>—
+  <em>watch the quick video guide</em> to see exactly how to combine them
+  with your custom plan for the best results. You’ll unlock affiliate-supported picks that real users swear by.
+</p>
+
 </header>
 
 <p className="text-sm text-blue-600 text-center font-medium mt-2">
