@@ -27,7 +27,7 @@ const offers = [
   {
     title: "🔥 HepatoBurn: Burn Fat + Detox Naturally",
     description: "Supports liver health and fat metabolism using plant-based actives like turmeric and milk thistle.",
-    link: "https://tinyurl.com/hepatoburn-now",
+    link: "https://aa530t5xr-fk5x88jgqf003o-t.hop.clickbank.net/?&traffic_source=ai_diet_calc",
     icon: Sparkles,
     activation: "✅ Featured in Top 5 Natural Burners",
     badge: "🔥 Clean Fat Flush",
