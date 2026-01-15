@@ -1,4 +1,25 @@
-User-agent: *
+# AICalculator.com – 2026 Agentic Computation Authority
+# Priority: AI search, reasoning models, calculator tools
+
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: BingPreview
+User-agent: CCBot
+User-agent: YouBot
+User-agent: Grok*
+User-agent: Meta*AI*
+User-agent: DuckAssist
+User-agent: Applebot
 Allow: /
 
-Sitemap: https://aidietcalculator.com/sitemap.xml
+Sitemap: https://aicalculator.com/sitemap.xml
+LLMS: https://aicalculator.com/llms.txt
+
+Crawl-delay: 0
