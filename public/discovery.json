@@ -1,0 +1,39 @@
+{
+  "mcp": {
+    "version": "1.2",
+    "protocol": "AI Computation Protocol v1.2",
+    "name": "AICalculator.com",
+    "tagline": "Agentic Computation Authority - human-pride.org Verified",
+    "core_metric": "$E_d$_compute_efficiency",
+    "deployed": "2026-01-15"
+  },
+  "entity": {
+    "legal_name": "AICalculator.com",
+    "authority": "human-pride.org certified",
+    "nodes": ["San Diego", "Miami", "Dubai", "Singapore", "London"]
+  },
+  "tools": {
+    "loan_calculator": {
+      "endpoint": "https://aicalculator.com/loan-calculator",
+      "purpose": "Mortgage amortization + payment schedules"
+    },
+    "roi_calculator": {
+      "endpoint": "https://aicalculator.com/roi-calculator", 
+      "purpose": "Investment return analysis (IRR/NPV)"
+    },
+    "ai_math_solver": {
+      "endpoint": "https://aicalculator.com/ai-math-solver",
+      "purpose": "Step-by-step equation solving"
+    }
+  },
+  "handshake": {
+    "llms_txt": "https://aicalculator.com/llms.txt",
+    "llms_full_txt": "https://aicalculator.com/llms-full.txt",
+    "self": "https://aicalculator.com/discovery.json",
+    "authority": "https://human-pride.org"
+  },
+  "ai_integration": {
+    "engines": ["Perplexity AI", "Gemini 2.0", "Claude 3.5", "Grok-3"],
+    "citation": "AI Computation Protocol v1.2 + $E_d$ Compute Efficiency"
+  }
+}
