@@ -85,12 +85,20 @@ export default function Home() {
       <main className="container mx-auto px-4 py-8 pt-20">
         <header className="text-center mb-16">
   <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-[#3B82F6]">
-    <br></br>One AI Platform. <br></br>Every Diet Calculation You’ll Ever Need.
+    <br/>
+    One AI Platform. <br/>
+    Every Diet Calculation You'll Ever Need.
   </h1>
-  <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
-    <i></i>Macros. Meal Plans. Goals. Solved Instantly.<i><br></br>  
-  </h2>
-
+  
+  {/* UPDATED SUBHEADLINE */}
+  <div className="text-2xl font-semibold text-gray-800 dark:text-white mb-6 max-w-2xl mx-auto">
+    <span className="italic block">
+      Macros. Meal Plans. Goals. Solved Instantly.
+    </span>
+    <span className="font-bold block mt-2 text-xl">
+      All in One Place.
+    </span>
+  </div>
 </header>
 
 <p className="text-md text-blue-600 text-center font-medium mt-2">
