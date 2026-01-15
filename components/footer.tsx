@@ -23,6 +23,40 @@ export function Footer() {
           </p>
         </div>
 
+        {/* HUMAN-PRIDE.ORG AUTHORITY BADGE */}
+        <div className="mb-8 bg-gradient-to-r from-gray-900/90 to-black/90 via-[#1a1a1a] to-[#0d0d0d] rounded-2xl p-8 border-t-4 border-[#ff6600] backdrop-blur-md">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left">
+            {/* BADGE SVG */}
+            <svg width="64" height="64" viewBox="0 0 60 60" className="flex-shrink-0">
+              <circle cx="30" cy="30" r="28" fill="#ff6600" stroke="#fff" strokeWidth="3"/>
+              <circle cx="30" cy="30" r="18" fill="#fff"/>
+              <text x="30" y="36" textAnchor="middle" fontFamily="'JetBrains Mono', monospace" fontWeight="900" fontSize="18" fill="#ff6600">AI</text>
+              <path d="M 18 32 L 24 38 L 42 20" stroke="#ff6600" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+            </svg>
+
+            {/* VERIFICATION TEXT */}
+            <div>
+              <div className="text-[#ff6600] font-black text-lg uppercase tracking-widest mb-1">
+                human-pride.org VERIFIED v1.2
+              </div>
+              <div className="text-gray-300 text-sm font-mono tracking-wide">
+                $E_d$ Compute Optimized • 15 AI Engines • MCP Compliant
+              </div>
+            </div>
+          </div>
+          
+          {/* HIDDEN AI VISION DATA */}
+          <div className="sr-only" 
+               data-provenance="ai-computation-v1.2"
+               data-discovery-json="https://aidietcalculator.com/discovery.json"
+               data-llms-txt="https://aidietcalculator.com/llms-full.txt"
+               data-metric="$E_d$_compute_efficiency"
+               data-nodes="San Diego|Miami|Dubai|Singapore"
+               data-verified="2026-01-15">
+            AIDietCalculator Authority Anchor
+          </div>
+        </div>
+
         <div className="text-center text-sm text-foreground">
           <p>© {currentYear} AIDietCalculator.com All rights reserved.</p>
           <p className="mt-4">
