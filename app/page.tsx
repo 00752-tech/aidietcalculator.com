@@ -85,30 +85,11 @@ export default function Home() {
       <main className="container mx-auto px-4 py-8 pt-20">
         <header className="text-center mb-16">
   <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-[#3B82F6]">
-    One AI Platform. Every Diet Calculation You’ll Ever Need.”
+    One AI Platform. <br></br>Every Diet Calculation You’ll Ever Need.
   </h1>
   <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
     From macros to meal plans, get instant, personalized numbers for any goal — all in one place.
   </h2>
-
-  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-display">
-    Forget cookie-cutter diet plans. <strong>AI Diet Calculator</strong> builds <em>your perfect meal strategy</em>—
-    free, fast, and tailored to you. Drop fat, build lean muscle, and feel incredible with science-backed personalization.
-    <br /><br />
-    🚀 Just enter your goals. We do the math.
-  </p>
-
-  <ul className="list-disc pl-6 text-left mt-4 mb-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
-    <li>AI-generated diet plans, workouts & macros</li>
-    <li>No fluff, no signup, just results</li>
-  </ul>
-
-  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-display leading-snug md:leading-normal">
-  🎯 Already over <strong>11,000 plans created</strong> this week. Want even faster progress?
-  <br /><br />
-  ✅ Explore our <strong>AI-recommended supplements & boosters</strong>—watch the quick video guide to see how to combine them with your custom plan for the best results.
-</p>
-
 
 </header>
 
