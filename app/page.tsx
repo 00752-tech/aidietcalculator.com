@@ -64,8 +64,8 @@ import { UserTestimonial } from "@/components/user-testimonial"
 import { FAQAccordion } from "@/components/faq-accordion"
 
 export const metadata: Metadata = {
-  title: "AI Diet Calculator & Meal Planner | Free Calorie & Nutrition Tools",
-  description: "Get personalized AI diet plans, calorie tracking & meal prep. Free nutrition calculator for weight loss, macros & fitness goals. Try our AI-powered tools now!",
+  title: "AI Diet Calculator Platform | All‑In‑One Macros, Calories & Meal Plans",
+  description: "One AI platform for every diet calculation you’ll ever need. Get instant, personalized macros, calories, meal plans, nutrition targets, and goal‑based recommendations — all in one place.",
   keywords: ["AI macro calculator, AI diet and workout plan, AI fasting, AI macro calculator app, workout and meal plan calculator, best AI weight loss calculator, AI diet calculator, personalized AI meal plan, AI meal planner free, AI diet plan generator, macro calculator free, protein intake calculator, BMR calculator free, ideal weight calculator, calorie calculator online, artificial intelligence nutrition, diet recommendation system, machine learning nutrition"],
 }
 
@@ -85,7 +85,7 @@ export default function Home() {
       <main className="container mx-auto px-4 py-8 pt-20">
         <header className="text-center mb-16">
   <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-[#3B82F6]">
-    One AI Platform. <br></br>Every Diet Calculation You’ll Ever Need.
+    <br></br>One AI Platform. <br></br>Every Diet Calculation You’ll Ever Need.
   </h1>
   <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
     From macros to meal plans, get instant, personalized numbers for any goal — all in one place.
