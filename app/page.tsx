@@ -93,8 +93,8 @@ export default function Home() {
 
 </header>
 
-<p className="text-sm text-blue-600 text-center font-medium mt-2">
-  🧠 Live Usage Across Our AI Health Tools
+<p className="text-md text-blue-600 text-center font-medium mt-2">
+  🧠 Live Usage Across Our AI Health Tools<br></br>
 </p>
 
 <ToolUsageTicker />
