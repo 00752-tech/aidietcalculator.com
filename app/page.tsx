@@ -85,10 +85,10 @@ export default function Home() {
       <main className="container mx-auto px-4 py-8 pt-20">
         <header className="text-center mb-16">
   <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-[#3B82F6]">
-    🔥 The Smarter Way to Lose Weight
+    One AI Platform. Every Diet Calculation You’ll Ever Need.”
   </h1>
   <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
-    Built by AI. Tailored to You.
+    From macros to meal plans, get instant, personalized numbers for any goal — all in one place.
   </h2>
 
   <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-display">
