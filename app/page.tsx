@@ -88,7 +88,7 @@ export default function Home() {
     <br></br>One AI Platform. <br></br>Every Diet Calculation You’ll Ever Need.
   </h1>
   <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
-    From macros to meal plans, get instant, personalized numbers for any goal — all in one place.
+    <i></i>Macros. Meal Plans. Goals. Solved Instantly.</h2><i><br></br>  
   </h2>
 
 </header>
