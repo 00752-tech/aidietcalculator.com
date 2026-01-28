@@ -18,7 +18,7 @@ body {
   }
 
   .animate-scroll {
-    animation: scroll 22s linear infinite;
+    animation: scroll 18s linear infinite;
   }
 
   .animate-scroll:hover {
