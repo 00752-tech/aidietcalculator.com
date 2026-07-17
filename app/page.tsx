@@ -6,7 +6,7 @@ import { Scale, Calculator, Ruler, Zap } from 'lucide-react'
 
 // Components
 import { SiteHeader } from "@/components/site-header"
-import { PersuasionTicker } from "@/components/persuasion-ticker" 
+import { ToolUsageTicker } from "@/components/tool-usage-ticker" // Corrected import
 import { ClientButton } from "@/components/client-button"
 import { TableOfContents } from "@/components/table-of-contents"
 import { BenefitsSection } from "@/components/benefits-section"
@@ -56,7 +56,7 @@ export default function Home() {
         </section>
 
         {/* PERSUASION TICKER */}
-        <PersuasionTicker />
+        <ToolUsageTicker />
 
         {/* PRIMARY FUNNEL: CUSTOM NUTRITION BLUEPRINT */}
         <section id="ai-diet-planner" className="mt-24 mb-20 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
