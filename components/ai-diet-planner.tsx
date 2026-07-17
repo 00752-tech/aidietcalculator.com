@@ -252,7 +252,7 @@ export default function AIDietPlanner() {
                   This plan provides the science, but you need the <strong>spark</strong>. Thousands of users combine this nutrition plan with the 7-second morning ritual to accelerate their metabolism.
                 </p>
                 <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-6 text-lg w-full md:w-auto shadow-lg transition-transform hover:scale-105">
-                  <Link href="/go/nagano">
+                  <Link href="https://5e2adpgvl25m7o5jndpbrz9w04.hop.clickbank.net/?&traffic_source=aidietcalc" target="_blank" rel="nofollow">
                     See The 7-Second Ritual →
                   </Link>
                 </Button>
