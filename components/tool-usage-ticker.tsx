@@ -30,7 +30,8 @@ export function ToolUsageTicker() {
         }
         .animate-marquee {
           display: flex;
-          animation: marquee 40s linear infinite;
+          /* Adjusted to 20s for snappier pacing */
+          animation: marquee 20s linear infinite;
         }
         /* Pause on hover to allow reading */
         .animate-marquee:hover {
