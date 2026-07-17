@@ -7,7 +7,6 @@ import { ClientButton } from "@/components/client-button"
 import { BenefitsSection } from "@/components/benefits-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { Testimonials } from "@/components/testimonials"
-import { Footer } from "@/components/footer"
 
 // Lazy load the planner to keep initial page load snappy
 const AIDietPlanner = dynamic(() => import('@/components/ai-diet-planner'), { 
@@ -18,19 +17,15 @@ const AIDietPlanner = dynamic(() => import('@/components/ai-diet-planner'), {
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F8F9FF]">
-      {/* 
-         UX NOTE: Consider simplifying SiteHeader in the future 
-         to remove 'Blog'/'Resources' to prevent exit ramps.
-      */}
       <SiteHeader />
       
       <main className="container mx-auto px-4 py-8 pt-20">
         
-        {/* HERO: The Transformation Promise */}
+        {/* HERO: Optimized for SEO & Conversion */}
         <section className="py-12 md:py-20 bg-white rounded-2xl shadow-sm mb-12 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
-              Get Your Personalized <span className="text-orange-600">Metabolism Blueprint</span> in 60 Seconds.
+              Get Your AI-Powered <span className="text-orange-600">Personalized Diet & Metabolism Blueprint</span> in 60 Seconds.
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-8">
               No generic templates. No guesswork. Just a precision-engineered nutrition strategy, calibrated to your unique metabolic signature.
@@ -46,7 +41,7 @@ export default function Home() {
 
         <ToolUsageTicker />
 
-        {/* PRIMARY FUNNEL: Diagnostic Suite */}
+        {/* PRIMARY FUNNEL */}
         <section id="ai-diet-planner" className="mt-12 mb-12">
           <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100 max-w-3xl mx-auto">
             <AIDietPlanner />
@@ -67,16 +62,18 @@ export default function Home() {
         {/* SOCIAL PROOF */}
         <Testimonials />
 
-        {/* EDUCATIONAL DEPTH (Placed after conversion to keep intent focused) */}
+        {/* EDUCATIONAL CONTENT */}
         <section className="mt-20 space-y-20">
           <HowItWorksSection />
           <BenefitsSection />
         </section>
 
       </main>
-
-      {/* SEO HOARDING ZONE: Move all tool links here */}
-      <Footer />
+      
+      {/* 
+         NOTE: Footer is now handled by RootLayout. 
+         Do NOT include <Footer /> here to avoid duplication.
+      */}
     </div>
   )
 }
