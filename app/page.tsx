@@ -53,20 +53,33 @@ export default function Home() {
       <SiteHeader />
       <main className="container mx-auto px-4 py-8 pt-20">
         
-        {/* HERO: BENSON-STYLE "FUTURE PACING" HOOK */}
-        <section className="text-center py-20 bg-white rounded-2xl shadow-sm mb-12">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
-              Imagine Sliding Into Your Favorite Jeans... <span className="text-orange-600">Without Tucking Your Stomach In.</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto">
-              You've been "doing the work." Counting the calories. Skipping the carbs. But that dormant metabolism is still working <em>against</em> you. It's time to stop the struggle and start the ritual.
-            </p>
-            <div className="flex flex-col items-center gap-4">
-              <ClientButton size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-2xl font-bold px-12 py-5 rounded-full shadow-lg transition-transform hover:scale-105">
-                Build My Custom Plan & Start The Ritual
-              </ClientButton>
-              <p className="text-sm text-slate-400 mt-2">Join 11,000+ users this week who stopped counting and started transforming.</p>
+        {/* HERO: BENSON-STYLE FUTURE PACING WITH VISUAL ANCHOR */}
+        <section className="py-20 bg-white rounded-2xl shadow-sm mb-12 px-6">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            
+            {/* LEFT COLUMN: THE HOOK */}
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
+                Imagine Sliding Into Your Favorite Jeans... <span className="text-orange-600">Without Tucking Your Stomach In.</span>
+              </h1>
+              <p className="text-lg md:text-xl text-slate-600 mb-8">
+                You've been "doing the work." Counting the calories. Skipping the carbs. But that dormant metabolism is still working <em>against</em> you. It's time to stop the struggle and start the ritual.
+              </p>
+              <div className="flex flex-col items-center md:items-start gap-4">
+                <ClientButton size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-xl font-bold px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105">
+                  Build My Custom Plan & Start The Ritual
+                </ClientButton>
+                <p className="text-sm text-slate-400 mt-2">Join 11,000+ users this week who stopped counting and started transforming.</p>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN: THE VISUAL ANCHOR */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="/images/jeans-transformation.jpg" 
+                alt="Woman zipping jeans and smiling" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </section>
