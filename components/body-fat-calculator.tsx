@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Info, ArrowRightLeft } from 'lucide-react'
+import Link from "next/link"
 
 interface BodyFatResult {
   bodyFatPercentage: number;
@@ -118,7 +119,7 @@ export function BodyFatCalculator() {
   }
 
   return (
-    <>
+    <div id="body-fat-calculator">
       {/* SEO-optimized intro paragraph */}
       <div className="max-w-2xl mx-auto mb-6 px-4">
         <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200">
@@ -261,16 +262,16 @@ export function BodyFatCalculator() {
                       Based on your results, our AI recommends checking out <strong>Mitolyne</strong>, a scientifically-formulated supplement that helps support healthy fat metabolism and body composition.
                     </p>
                     <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
-                      <a 
+                      <Link 
                         href="https://18f7ax6zjado3l9hngwk48cpfn.hop.clickbank.net/?&traffic_source=aidietcalc" 
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target="_blank" 
+                        rel="nofollow"
                       >
                         Learn About Mitolyne
-                      </a>
+                      </Link>
                     </Button>
-                    <p className="text-xs text-muted-foreground">
-                      *This is an affiliate recommendation. Results may vary. Consult your healthcare provider before starting any supplement.
+                    <p className="mt-3 text-[10px] text-slate-400 uppercase tracking-wider text-center">
+                      Advertisement — Affiliate Disclosure
                     </p>
                   </div>
                 </CardContent>
@@ -291,6 +292,6 @@ export function BodyFatCalculator() {
           )}
         </CardContent>
       </Card>
-    </>
+    </div>
   )
 }
