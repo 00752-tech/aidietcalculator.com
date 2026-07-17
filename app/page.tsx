@@ -2,11 +2,11 @@
 
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import { Scale, Calculator, Ruler, Zap } from 'lucide-react'
+import { Scale, Calculator, Ruler } from 'lucide-react'
 
 // Components
 import { SiteHeader } from "@/components/site-header"
-import { ToolUsageTicker } from "@/components/tool-usage-ticker" // Corrected import
+import { ToolUsageTicker } from "@/components/tool-usage-ticker" 
 import { ClientButton } from "@/components/client-button"
 import { TableOfContents } from "@/components/table-of-contents"
 import { BenefitsSection } from "@/components/benefits-section"
@@ -28,7 +28,7 @@ export default function Home() {
       <SiteHeader />
       <main className="container mx-auto px-4 py-8 pt-20">
         
-        {/* HERO: BENSON-STYLE FUTURE PACING */}
+        {/* HERO */}
         <section className="py-20 bg-white rounded-2xl shadow-sm mb-12 px-6">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
@@ -46,80 +46,56 @@ export default function Home() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="/images/jeans-transformation.jpeg" 
-                alt="Woman zipping jeans and smiling" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/images/jeans-transformation.jpeg" alt="Woman zipping jeans" className="w-full h-full object-cover" />
             </div>
           </div>
         </section>
 
-        {/* PERSUASION TICKER */}
         <ToolUsageTicker />
 
-        {/* PRIMARY FUNNEL: CUSTOM NUTRITION BLUEPRINT */}
+        {/* PRIMARY FUNNEL */}
         <section id="ai-diet-planner" className="mt-24 mb-20 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
-          <div className="max-w-3xl mx-auto text-center mb-10">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              Your Custom Nutrition Blueprint. <br />
-              <span className="text-orange-600 italic">No Guesswork. Just Results.</span>
-            </h2>
-            <p className="text-xl text-slate-600 leading-relaxed">
-              You’ve spent enough time calculating. It’s time to start <strong>executing</strong>. This isn’t a generic template; this is a precision-engineered nutrition strategy, calibrated to <em>your</em> metabolic signature.
-            </p>
-          </div>
-
-          <div className="bg-slate-50 border border-slate-200 p-8 rounded-2xl max-w-xl mx-auto">
-            <AIDietPlanner />
-            <div className="mt-6 text-center border-t border-slate-200 pt-6">
-              <p className="text-sm text-slate-500 italic">
-                🔒 Your data is encrypted and used only to build your blueprint. We value your privacy.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-slate-500 font-medium">
-              ⚡ 4,812+ custom plans generated this week.
-            </p>
-          </div>
+          <AIDietPlanner />
         </section>
 
         {/* METABOLIC BRIDGE: PIVOT TO NAGANO TONIC */}
         <section className="mb-20 p-8 md:p-12 bg-[#FFF9F5] border-2 border-orange-200 rounded-2xl shadow-sm text-center">
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            The Missing Piece to Your Metabolic Puzzle
-          </h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">The Missing Piece to Your Metabolic Puzzle</h3>
           <p className="text-xl text-slate-700 mb-8 max-w-2xl mx-auto">
-            You have your calorie targets. That's the science. But why do 9 out of 10 people fail to hit those numbers without feeling drained? It’s because your metabolism is <strong>dormant</strong>. Before you stress over every gram, discover the 7-second morning ritual that thousands of others use to spark their metabolism back to life.
+            You have your calorie targets. That's the science. But why do 9 out of 10 people fail to hit those numbers without feeling drained? It’s because your metabolism is <strong>dormant</strong>. Discover the 7-second morning ritual that thousands use to spark their metabolism back to life.
           </p>
-          <a 
-            href="https://5e2adpgvl25m7o5jndpbrz9w04.hop.clickbank.net/?&traffic_source=aidietcalc" 
-            className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-10 rounded-lg text-xl shadow-lg transition-transform hover:scale-105"
-          >
-            See The Morning Elixir That Sparks Metabolism →
+          <a href="https://5e2adpgvl25m7o5jndpbrz9w04.hop.clickbank.net/?&traffic_source=aidietcalc" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-10 rounded-lg text-xl shadow-lg transition-transform hover:scale-105">
+            See The 7-Second Ritual →
           </a>
-          <p className="text-sm text-orange-800/60 mt-4 italic">Editorial Recommendation: See why this tonic is our #1 pick for metabolic support.</p>
+          <p className="text-sm text-orange-800/60 mt-4 italic">Advertisement — Affiliate Disclosure</p>
         </section>
 
-        {/* DIRECTORY: DIAGNOSTIC TOOLS */}
-        <section className="py-12">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-700">Unlock Your Metabolic Data</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 className="font-bold text-lg mb-2 flex items-center"><Calculator className="mr-2"/> Calorie Calculator</h3>
-                    <Link href="#calorie-calculator" className="text-blue-600 hover:underline">Get your energy targets →</Link>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 className="font-bold text-lg mb-2 flex items-center"><Scale className="mr-2"/> Body Fat Calculator</h3>
-                    <Link href="#body-fat-calculator" className="text-blue-600 hover:underline">Decode your body composition →</Link>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 className="font-bold text-lg mb-2 flex items-center"><Ruler className="mr-2"/> BMI Calculator</h3>
-                    <Link href="#bmi-calculator" className="text-blue-600 hover:underline">Unlock health scores →</Link>
-                </div>
+        {/* NEW: DIAGNOSTIC SUITE (Replaces the broken directory) */}
+        <section className="py-12 bg-white rounded-2xl shadow-sm border border-slate-100 mt-12 text-center mb-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Your Metabolic Diagnostic Suite</h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4">
+            
+            <div className="p-6 border border-blue-100 rounded-xl bg-blue-50/50">
+              <Calculator className="mx-auto mb-4 text-blue-600" />
+              <h3 className="font-bold text-lg mb-2">AI Diet Planner</h3>
+              <p className="text-sm text-slate-600 mb-4">Generate your custom nutrition blueprint.</p>
+              <a href="#ai-diet-planner" className="text-blue-600 font-semibold hover:underline">Start Planner →</a>
             </div>
+
+            <div className="p-6 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+              <Scale className="mx-auto mb-4 text-slate-600" />
+              <h3 className="font-bold text-lg mb-2">Protein Calculator</h3>
+              <p className="text-sm text-slate-600 mb-4">Find your optimal daily protein intake.</p>
+              <a href="#protein-calculator" className="text-slate-600 font-semibold hover:text-blue-600">Calculate →</a>
+            </div>
+
+            <div className="p-6 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+              <Ruler className="mx-auto mb-4 text-slate-600" />
+              <h3 className="font-bold text-lg mb-2">Body Fat Calculator</h3>
+              <p className="text-sm text-slate-600 mb-4">Analyze your metabolic baseline.</p>
+              <a href="#body-fat-calculator" className="text-slate-600 font-semibold hover:text-blue-600">Analyze →</a>
+            </div>
+          </div>
         </section>
 
         {/* FOOTER SECTIONS */}
