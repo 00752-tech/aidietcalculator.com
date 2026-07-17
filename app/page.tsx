@@ -4,32 +4,22 @@ import { HowItWorksSection } from "@/components/how-it-works-section"
 import { BenefitsSection } from "@/components/benefits-section"
 import { TableOfContents } from "@/components/table-of-contents"
 
-// A helper to make the build tell us which file is failing
-const safeDynamic = (importFn: () => Promise<any>, name: string) => 
-  dynamic(() => importFn().then((mod) => {
-    const comp = mod[name] || mod.default;
-    if (!comp) {
-      console.error(`🚨 CRITICAL ERROR: Component ${name} could not be loaded from module.`);
-      throw new Error(`Failed to load component: ${name}. Check your exports in the source file.`);
-    }
-    return comp;
-  }), { ssr: false });
-
-const AiDietPlanner = safeDynamic(() => import('@/components/ai-diet-planner'), 'AiDietPlanner')
-const ProteinIntakeCalculator = safeDynamic(() => import('@/components/protein-intake-calculator'), 'ProteinIntakeCalculator')
-const BodyFatPercentageCalculator = safeDynamic(() => import('@/components/body-fat-percentage-calculator'), 'BodyFatPercentageCalculator')
-const CalorieCalculator = safeDynamic(() => import('@/components/calorie-calculator'), 'CalorieCalculator')
-const BmiCalculator = safeDynamic(() => import('@/components/bmi-calculator'), 'BmiCalculator')
-const WaterIntakeCalculator = safeDynamic(() => import('@/components/water-intake-calculator'), 'WaterIntakeCalculator')
-const MacroNutrientCalculator = safeDynamic(() => import('@/components/macro-nutrient-calculator'), 'MacroNutrientCalculator')
-const ExerciseCalorieBurnEstimator = safeDynamic(() => import('@/components/exercise-calorie-burn-estimator'), 'ExerciseCalorieBurnEstimator')
-const WorkoutPlanGenerator = safeDynamic(() => import('@/components/workout-plan-generator'), 'WorkoutPlanGenerator')
-const KetoCalculator = safeDynamic(() => import('@/components/keto-calculator'), 'KetoCalculator')
-const IntermittentFastingCalculator = safeDynamic(() => import('@/components/intermittent-fasting-calculator'), 'IntermittentFastingCalculator')
-const IdealWeightCalculator = safeDynamic(() => import('@/components/ideal-weight-calculator'), 'IdealWeightCalculator')
-const BmrCalculator = safeDynamic(() => import('@/components/bmr-calculator'), 'BmrCalculator')
-const SleepCalculator = safeDynamic(() => import('@/components/sleep-calculator'), 'SleepCalculator')
-const OneRepMaxCalculator = safeDynamic(() => import('@/components/one-rep-max-calculator'), 'OneRepMaxCalculator')
+// Standard dynamic imports with export name fixes applied
+const AiDietPlanner = dynamic(() => import('@/components/ai-diet-planner').then(mod => mod.AiDietPlanner ?? mod.default), { ssr: false })
+const ProteinIntakeCalculator = dynamic(() => import('@/components/protein-intake-calculator').then(mod => mod.ProteinIntakeCalculator ?? mod.default), { ssr: false })
+const BodyFatPercentageCalculator = dynamic(() => import('@/components/body-fat-percentage-calculator').then(mod => mod.BodyFatCalculator ?? mod.default), { ssr: false })
+const CalorieCalculator = dynamic(() => import('@/components/calorie-calculator').then(mod => mod.CalorieCalculator ?? mod.default), { ssr: false })
+const BmiCalculator = dynamic(() => import('@/components/bmi-calculator').then(mod => mod.BMICalculator ?? mod.default), { ssr: false })
+const WaterIntakeCalculator = dynamic(() => import('@/components/water-intake-calculator').then(mod => mod.WaterIntakeCalculator ?? mod.default), { ssr: false })
+const MacroNutrientCalculator = dynamic(() => import('@/components/macro-nutrient-calculator').then(mod => mod.MacroNutrientCalculator ?? mod.default), { ssr: false })
+const ExerciseCalorieBurnEstimator = dynamic(() => import('@/components/exercise-calorie-burn-estimator').then(mod => mod.ExerciseCalorieBurnEstimator ?? mod.default), { ssr: false })
+const WorkoutPlanGenerator = dynamic(() => import('@/components/workout-plan-generator').then(mod => mod.WorkoutPlanGenerator ?? mod.default), { ssr: false })
+const KetoCalculator = dynamic(() => import('@/components/keto-calculator').then(mod => mod.KetoCalculator ?? mod.default), { ssr: false })
+const IntermittentFastingCalculator = dynamic(() => import('@/components/intermittent-fasting-calculator').then(mod => mod.IntermittentFastingCalculator ?? mod.default), { ssr: false })
+const IdealWeightCalculator = dynamic(() => import('@/components/ideal-weight-calculator').then(mod => mod.IdealWeightCalculator ?? mod.default), { ssr: false })
+const BmrCalculator = dynamic(() => import('@/components/bmr-calculator').then(mod => mod.BMRCalculator ?? mod.default), { ssr: false })
+const SleepCalculator = dynamic(() => import('@/components/sleep-calculator').then(mod => mod.SleepCalculator ?? mod.default), { ssr: false })
+const OneRepMaxCalculator = dynamic(() => import('@/components/one-rep-max-calculator').then(mod => mod.OneRepMaxCalculator ?? mod.default), { ssr: false })
 
 export default function Home() {
   return (
