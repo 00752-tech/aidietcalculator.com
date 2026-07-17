@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Info, ArrowRightLeft } from 'lucide-react'
+import Link from "next/link"
 
 interface ProteinIntakeResult {
   dailyProtein: number
@@ -91,7 +92,7 @@ export function ProteinIntakeCalculator() {
   }
 
   return (
-    <>
+    <div id="protein-calculator">
       {/* SEO-optimized intro paragraph */}
       <div className="max-w-2xl mx-auto mb-6 px-4">
         <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200">
@@ -174,7 +175,7 @@ export function ProteinIntakeCalculator() {
           </form>
 
           {result && (
-            <div className="mt-6 space-y-4">
+            <div className="mt-6 space-y-6">
               <h3 className="text-lg font-semibold">Your Recommended Protein Intake:</h3>
               <Card>
                 <CardContent className="pt-6">
@@ -182,6 +183,23 @@ export function ProteinIntakeCalculator() {
                   <p className="text-xl mt-2">Approximately {result.proteinPerMeal}g per meal (assuming 4 meals per day)</p>
                 </CardContent>
               </Card>
+
+              {/* THE METABOLIC BRIDGE CTA */}
+              <div className="bg-[#FFF9F5] border-2 border-orange-200 p-6 rounded-2xl text-center shadow-sm">
+                <h4 className="text-xl font-bold text-slate-900 mb-2">Want to amplify these results?</h4>
+                <p className="text-slate-600 mb-6">
+                  This plan provides the science, but you need the <strong>spark</strong>. Thousands of users combine their protein targets with the 7-second morning ritual to accelerate their metabolism.
+                </p>
+                <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-6 text-lg w-full md:w-auto shadow-lg transition-transform hover:scale-105">
+                  <Link href="https://5e2adpgvl25m7o5jndpbrz9w04.hop.clickbank.net/?&traffic_source=aidietcalc" target="_blank" rel="nofollow">
+                    See The 7-Second Ritual →
+                  </Link>
+                </Button>
+                <p className="mt-3 text-[10px] text-slate-400 uppercase tracking-wider">
+                  Advertisement — Affiliate Disclosure
+                </p>
+              </div>
+
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <Info className="h-4 w-4 mt-0.5" />
                 <p>
@@ -197,6 +215,6 @@ export function ProteinIntakeCalculator() {
           )}
         </CardContent>
       </Card>
-    </>
+    </div>
   )
 }
