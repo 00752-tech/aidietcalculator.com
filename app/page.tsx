@@ -53,20 +53,20 @@ export default function Home() {
       <SiteHeader />
       <main className="container mx-auto px-4 py-8 pt-20">
         
-        {/* HERO: BENSON-STYLE "METABOLIC AWAKENING" */}
+        {/* HERO: BENSON-STYLE "FUTURE PACING" HOOK */}
         <section className="text-center py-20 bg-white rounded-2xl shadow-sm mb-12">
           <div className="max-w-4xl mx-auto px-4">
             <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
-              The 7-Second "Morning Ritual" That <span className="text-orange-600">Ignites</span> a Dormant Metabolism.
+              Imagine Sliding Into Your Favorite Jeans... <span className="text-orange-600">Without Tucking Your Stomach In.</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto">
-              Stop fighting your biology. Use our AI-precision calculator to find your numbers—then discover the simple "Alpine water trick" that helps thousands finally hit their targets.
+              You've been "doing the work." Counting the calories. Skipping the carbs. But that dormant metabolism is still working <em>against</em> you. It's time to stop the struggle and start the ritual.
             </p>
             <div className="flex flex-col items-center gap-4">
               <ClientButton size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-2xl font-bold px-12 py-5 rounded-full shadow-lg transition-transform hover:scale-105">
-                Build My Custom Plan Now
+                Build My Custom Plan & Start The Ritual
               </ClientButton>
-              <p className="text-sm text-slate-400 mt-2">Join 11,000+ users this week. No willpower required.</p>
+              <p className="text-sm text-slate-400 mt-2">Join 11,000+ users this week who stopped counting and started transforming.</p>
             </div>
           </div>
         </section>
@@ -85,13 +85,13 @@ export default function Home() {
             The Missing Piece to Your Metabolic Puzzle
           </h3>
           <p className="text-xl text-slate-700 mb-6 max-w-2xl mx-auto">
-            You have your calorie targets. But here is why 9 out of 10 people fail: <strong>a dormant metabolism.</strong> Before you stress over every gram, see the morning ritual that thousands of others use to spark their metabolism back to life.
+            You have your calorie targets. That's the science. But why do 9 out of 10 people fail to hit those numbers without feeling drained? It’s because your metabolism is <strong>dormant</strong>. Before you stress over every gram, see the 7-second morning ritual that thousands of others use to spark their metabolism back to life.
           </p>
           <a 
             href="https://5e2adpgvl25m7o5jndpbrz9w04.hop.clickbank.net/?&traffic_source=aidietcalc" 
             className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-10 rounded-lg text-xl shadow-lg transition-transform hover:scale-105"
           >
-            See The Morning Elixir That Sparks Metabolism
+            See The Morning Elixir That Sparks Metabolism →
           </a>
           <p className="text-sm text-orange-800/60 mt-4 italic">Editorial Recommendation: See why this tonic is our #1 pick for metabolic support.</p>
         </section>
@@ -112,7 +112,6 @@ export default function Home() {
                     <h3 className="font-bold text-lg mb-2 flex items-center"><Ruler className="mr-2"/> BMI Calculator</h3>
                     <Link href="#bmi-calculator" className="text-blue-600 hover:underline">Unlock health scores →</Link>
                 </div>
-                {/* Add other tool summaries here as needed */}
             </div>
         </section>
 
