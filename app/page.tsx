@@ -76,7 +76,7 @@ export default function Home() {
             {/* RIGHT COLUMN: THE VISUAL ANCHOR */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/images/jeans-transformation.jpg" 
+                src="/images/jeans-transformation.jpeg" 
                 alt="Woman zipping jeans and smiling" 
                 className="w-full h-full object-cover"
               />
