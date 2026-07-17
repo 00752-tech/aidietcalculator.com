@@ -70,7 +70,7 @@ export default function Home() {
           <p className="text-sm text-orange-800/60 mt-4 italic">Advertisement — Affiliate Disclosure</p>
         </section>
 
-        {/* NEW: DIAGNOSTIC SUITE (Replaces the broken directory) */}
+        {/* DIAGNOSTIC SUITE */}
         <section className="py-12 bg-white rounded-2xl shadow-sm border border-slate-100 mt-12 text-center mb-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-8">Your Metabolic Diagnostic Suite</h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4">
