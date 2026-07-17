@@ -8,7 +8,7 @@ type StackIntroProps = {
   disclaimer?: string
 }
 
-export default function StackIntro({ title, subtitle, disclaimer }: StackIntroProps) {
+export function StackIntro({ title, subtitle, disclaimer }: StackIntroProps) {
   return (
     <div className="w-full max-w-3xl mx-auto text-center mt-20 mb-6 px-4">
       <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{title}</h2>
