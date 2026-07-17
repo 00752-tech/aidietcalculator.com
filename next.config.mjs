@@ -19,7 +19,6 @@ const baseConfig = {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
-    legacyBrowsers: false, // ✅ Skips transpiling for outdated browsers
   },
   webpack: (config) => {
     config.resolve.alias = {
