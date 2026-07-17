@@ -249,13 +249,16 @@ export default function AIDietPlanner() {
               <div className="bg-[#FFF9F5] border-2 border-orange-200 p-6 rounded-2xl text-center shadow-sm">
                 <h4 className="text-xl font-bold text-slate-900 mb-2">Want to amplify these results?</h4>
                 <p className="text-slate-600 mb-6">
-                  This plan provides the science, but you need the <strong>spark</strong>. Thousands of users combine this nutrition plan with the 7-second morning ritual to accelerate their metabolism[cite: 1].
+                  This plan provides the science, but you need the <strong>spark</strong>. Thousands of users combine this nutrition plan with the 7-second morning ritual to accelerate their metabolism.
                 </p>
                 <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-6 text-lg w-full md:w-auto shadow-lg transition-transform hover:scale-105">
-                  <Link href="https://5e2adpgvl25m7o5jndpbrz9w04.hop.clickbank.net/?&traffic_source=aidietcalc" target="_blank">
-                    Discover The Morning Ritual That Sparks Metabolism →
+                  <Link href="/go/nagano">
+                    See The 7-Second Ritual →
                   </Link>
                 </Button>
+                <p className="mt-3 text-[10px] text-slate-400 uppercase tracking-wider">
+                  Advertisement — Affiliate Disclosure
+                </p>
               </div>
             </div>
           )}
