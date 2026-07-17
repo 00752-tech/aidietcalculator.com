@@ -1,21 +1,18 @@
 'use client'
 
-import { format } from "date-fns"
-import { Metadata, Viewport } from 'next'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import { Scale, Calculator, Zap, Ruler, Droplet, PieChart, Dumbbell, Utensils, Clock, Moon, BarChart } from 'lucide-react'
+import { Scale, Calculator, Ruler, Zap } from 'lucide-react'
 
 // Components
 import { SiteHeader } from "@/components/site-header"
-import { ToolUsageTicker } from "@/components/tool-usage-ticker"
+import { PersuasionTicker } from "@/components/persuasion-ticker" 
 import { ClientButton } from "@/components/client-button"
 import { TableOfContents } from "@/components/table-of-contents"
 import { BenefitsSection } from "@/components/benefits-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { NutritionInfoSection } from "@/components/nutrition-info-section"
 import { Testimonials } from "@/components/testimonials"
-import { FAQAccordion } from "@/components/faq-accordion"
 import { FeaturedSnippetContent } from "@/components/featured-snippet-content"
 import { PersonalizationDemo } from "@/components/personalization-demo"
 
@@ -24,8 +21,6 @@ const AIDietPlanner = dynamic(() => import('@/components/ai-diet-planner'), {
   loading: () => <p>Loading AI Diet Planner...</p>,
   ssr: false 
 })
-
-// ... [Keep other imports exactly as they are]
 
 export default function Home() {
   return (
@@ -60,10 +55,11 @@ export default function Home() {
           </div>
         </section>
 
-        <ToolUsageTicker />
+        {/* PERSUASION TICKER */}
+        <PersuasionTicker />
 
-        {/* PRIMARY FUNNEL: CUSTOM NUTRITION BLUEPRINT (Added mt-20 for breathing room) */}
-        <section id="ai-diet-planner" className="mt-20 mb-20 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
+        {/* PRIMARY FUNNEL: CUSTOM NUTRITION BLUEPRINT */}
+        <section id="ai-diet-planner" className="mt-24 mb-20 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
           <div className="max-w-3xl mx-auto text-center mb-10">
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
               Your Custom Nutrition Blueprint. <br />
@@ -90,7 +86,51 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ... [Keep the rest of the file identical] ... */}
+        {/* METABOLIC BRIDGE: PIVOT TO NAGANO TONIC */}
+        <section className="mb-20 p-8 md:p-12 bg-[#FFF9F5] border-2 border-orange-200 rounded-2xl shadow-sm text-center">
+          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+            The Missing Piece to Your Metabolic Puzzle
+          </h3>
+          <p className="text-xl text-slate-700 mb-8 max-w-2xl mx-auto">
+            You have your calorie targets. That's the science. But why do 9 out of 10 people fail to hit those numbers without feeling drained? It’s because your metabolism is <strong>dormant</strong>. Before you stress over every gram, discover the 7-second morning ritual that thousands of others use to spark their metabolism back to life.
+          </p>
+          <a 
+            href="https://5e2adpgvl25m7o5jndpbrz9w04.hop.clickbank.net/?&traffic_source=aidietcalc" 
+            className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-10 rounded-lg text-xl shadow-lg transition-transform hover:scale-105"
+          >
+            See The Morning Elixir That Sparks Metabolism →
+          </a>
+          <p className="text-sm text-orange-800/60 mt-4 italic">Editorial Recommendation: See why this tonic is our #1 pick for metabolic support.</p>
+        </section>
+
+        {/* DIRECTORY: DIAGNOSTIC TOOLS */}
+        <section className="py-12">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-700">Unlock Your Metabolic Data</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 className="font-bold text-lg mb-2 flex items-center"><Calculator className="mr-2"/> Calorie Calculator</h3>
+                    <Link href="#calorie-calculator" className="text-blue-600 hover:underline">Get your energy targets →</Link>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 className="font-bold text-lg mb-2 flex items-center"><Scale className="mr-2"/> Body Fat Calculator</h3>
+                    <Link href="#body-fat-calculator" className="text-blue-600 hover:underline">Decode your body composition →</Link>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 className="font-bold text-lg mb-2 flex items-center"><Ruler className="mr-2"/> BMI Calculator</h3>
+                    <Link href="#bmi-calculator" className="text-blue-600 hover:underline">Unlock health scores →</Link>
+                </div>
+            </div>
+        </section>
+
+        {/* FOOTER SECTIONS */}
+        <TableOfContents />
+        <section aria-label="How It Works" className="mt-20"><HowItWorksSection /></section>
+        <section aria-label="Benefits" className="mt-20"><BenefitsSection /></section>
+        <Testimonials />
+        <section aria-label="Nutrition Information" className="mt-20"><NutritionInfoSection /></section>
+        <FeaturedSnippetContent />
+        <PersonalizationDemo />
+
       </main>
     </div>
   )
