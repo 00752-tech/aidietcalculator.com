@@ -15,7 +15,6 @@ import { BenefitsSection } from "@/components/benefits-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { NutritionInfoSection } from "@/components/nutrition-info-section"
 import { Testimonials } from "@/components/testimonials"
-import { FAQAccordion } from "@/components/faq-accordion"
 import { FeaturedSnippetContent } from "@/components/featured-snippet-content"
 import { PersonalizationDemo } from "@/components/personalization-demo"
 
@@ -39,25 +38,15 @@ import { SleepCalculator } from "@/components/sleep-calculator"
 import { OneRepMaxCalculator } from "@/components/one-rep-max-calculator"
 import { ProteinIntakeCalculator } from "@/components/protein-intake-calculator"
 
-// Snippets (Keep these for SEO)
-import { CalorieCalculatorSnippet } from "@/components/calorie-calculator-snippet"
-import { BodyFatCalculatorSnippet } from "@/components/body-fat-calculator-snippet"
-import { BMICalculatorSnippet } from "@/components/bmi-calculator-snippet"
-import { WaterIntakeCalculatorSnippet } from "@/components/water-intake-calculator-snippet"
-import { MacroNutrientCalculatorSnippet } from "@/components/macro-nutrient-calculator-snippet"
-import { ProteinIntakeCalculatorSnippet } from "@/components/protein-intake-calculator-snippet"
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F8F9FF]">
       <SiteHeader />
       <main className="container mx-auto px-4 py-8 pt-20">
         
-        {/* HERO: BENSON-STYLE FUTURE PACING WITH VISUAL ANCHOR */}
+        {/* HERO: FUTURE PACING */}
         <section className="py-20 bg-white rounded-2xl shadow-sm mb-12 px-6">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            
-            {/* LEFT COLUMN: THE HOOK */}
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
                 Imagine Sliding Into Your Favorite Jeans... <span className="text-orange-600">Without Tucking Your Stomach In.</span>
@@ -72,8 +61,6 @@ export default function Home() {
                 <p className="text-sm text-slate-400 mt-2">Join 11,000+ users this week who stopped counting and started transforming.</p>
               </div>
             </div>
-
-            {/* RIGHT COLUMN: THE VISUAL ANCHOR */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="/images/jeans-transformation.jpeg" 
@@ -86,19 +73,38 @@ export default function Home() {
 
         <ToolUsageTicker />
 
-        {/* PRIMARY FUNNEL: AI DIET PLANNER */}
-        <section id="ai-diet-planner" className="mb-20 bg-white p-8 rounded-xl shadow-md border-t-4 border-[#3B82F6]">
-          <h2 className="text-4xl font-bold text-center mb-8">Get Your Custom Meal Plan</h2>
-          <AIDietPlanner />
+        {/* PRECISION NUTRITION BLUEPRINT (Replaces old Planner section) */}
+        <section id="ai-diet-planner" className="mb-20 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+              Your Custom Nutrition Blueprint. <br />
+              <span className="text-orange-600 italic">No Guesswork. Just Results.</span>
+            </h2>
+            <p className="text-xl text-slate-600 leading-relaxed">
+              You’ve spent enough time calculating. It’s time to start <strong>executing</strong>. This isn’t a generic template; this is a precision-engineered nutrition strategy, calibrated to <em>your</em> metabolic signature.
+            </p>
+          </div>
+
+          <div className="bg-slate-50 border border-slate-200 p-8 rounded-2xl">
+            <div className="max-w-xl mx-auto">
+               <AIDietPlanner />
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-slate-500 font-medium">
+              ⚡ 4,812+ custom plans generated this week.
+            </p>
+          </div>
         </section>
 
-        {/* METABOLIC BRIDGE: PIVOT TO NAGANO TONIC */}
-        <section className="mb-20 p-8 bg-[#FFF9F5] border-2 border-orange-200 rounded-2xl shadow-sm text-center">
-          <h3 className="text-3xl font-bold text-slate-900 mb-4">
+        {/* METABOLIC BRIDGE: THE REVEAL */}
+        <section className="mb-20 p-8 md:p-12 bg-[#FFF9F5] border-2 border-orange-200 rounded-2xl shadow-sm text-center">
+          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
             The Missing Piece to Your Metabolic Puzzle
           </h3>
-          <p className="text-xl text-slate-700 mb-6 max-w-2xl mx-auto">
-            You have your calorie targets. That's the science. But why do 9 out of 10 people fail to hit those numbers without feeling drained? It’s because your metabolism is <strong>dormant</strong>. Before you stress over every gram, see the 7-second morning ritual that thousands of others use to spark their metabolism back to life.
+          <p className="text-xl text-slate-700 mb-8 max-w-2xl mx-auto">
+            You have your calorie targets. That's the science. But why do 9 out of 10 people fail to hit those numbers without feeling drained? It’s because your metabolism is <strong>dormant</strong>. Before you stress over every gram, discover the 7-second morning ritual used by the leanest population on earth to spark their metabolism back to life.
           </p>
           <a 
             href="https://5e2adpgvl25m7o5jndpbrz9w04.hop.clickbank.net/?&traffic_source=aidietcalc" 
@@ -109,9 +115,9 @@ export default function Home() {
           <p className="text-sm text-orange-800/60 mt-4 italic">Editorial Recommendation: See why this tonic is our #1 pick for metabolic support.</p>
         </section>
 
-        {/* DEMOTED DIRECTORY: "MORE TOOLS" FOR SEO */}
+        {/* DIRECTORY: DIAGNOSTIC TOOLS */}
         <section className="py-12">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-700">Need Specialized Insights?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-700">Unlock Your Metabolic Data</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
                     <h3 className="font-bold text-lg mb-2 flex items-center"><Calculator className="mr-2"/> Calorie Calculator</h3>
@@ -128,7 +134,7 @@ export default function Home() {
             </div>
         </section>
 
-        {/* KEEP EXISTING SECTIONS FOR SEO */}
+        {/* SOCIAL PROOF */}
         <TableOfContents />
         <section aria-label="How It Works" className="mt-20"><HowItWorksSection /></section>
         <section aria-label="Benefits" className="mt-20"><BenefitsSection /></section>
