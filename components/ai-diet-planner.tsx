@@ -197,8 +197,8 @@ export default function AIDietPlanner() {
           </div>
           
           {mealPlan && (
-            <div className="mt-8 space-y-4">
-              <h3 className="text-xl font-semibold">Your Personalized Meal Plan</h3>
+            <div className="mt-8 space-y-6">
+              <h3 className="text-2xl font-bold text-center border-t pt-8">Your Personalized Meal Plan</h3>
               
               <div className="grid gap-4 md:grid-cols-2">
                 <Card>
@@ -207,47 +207,55 @@ export default function AIDietPlanner() {
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div>
-                      <h4 className="font-medium">Breakfast</h4>
-                      <p>{mealPlan.breakfast}</p>
+                      <h4 className="font-medium text-slate-500">Breakfast</h4>
+                      <p className="font-semibold">{mealPlan.breakfast}</p>
                     </div>
                     <div>
-                      <h4 className="font-medium">Lunch</h4>
-                      <p>{mealPlan.lunch}</p>
+                      <h4 className="font-medium text-slate-500">Lunch</h4>
+                      <p className="font-semibold">{mealPlan.lunch}</p>
                     </div>
                     <div>
-                      <h4 className="font-medium">Dinner</h4>
-                      <p>{mealPlan.dinner}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium">Snacks</h4>
-                      <p>{mealPlan.snacks}</p>
+                      <h4 className="font-medium text-slate-500">Dinner</h4>
+                      <p className="font-semibold">{mealPlan.dinner}</p>
                     </div>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardHeader className="pb-3">
-                    <CardTitle>Macronutrients</CardTitle>
+                    <CardTitle>Daily Targets</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div>
-                      <h4 className="font-medium">Protein</h4>
-                      <p>{mealPlan.macros.protein}g</p>
+                      <h4 className="font-medium text-slate-500">Protein</h4>
+                      <p className="font-semibold">{mealPlan.macros.protein}g</p>
                     </div>
                     <div>
-                      <h4 className="font-medium">Carbohydrates</h4>
-                      <p>{mealPlan.macros.carbs}g</p>
+                      <h4 className="font-medium text-slate-500">Carbohydrates</h4>
+                      <p className="font-semibold">{mealPlan.macros.carbs}g</p>
                     </div>
                     <div>
-                      <h4 className="font-medium">Fat</h4>
-                      <p>{mealPlan.macros.fat}g</p>
+                      <h4 className="font-medium text-slate-500">Fat</h4>
+                      <p className="font-semibold">{mealPlan.macros.fat}g</p>
                     </div>
-                    <div>
-                      <h4 className="font-medium">Total Calories</h4>
-                      <p>{calories} kcal</p>
+                    <div className="pt-2 border-t mt-2">
+                      <h4 className="font-bold text-lg">Total: {calories} kcal</h4>
                     </div>
                   </CardContent>
                 </Card>
+              </div>
+
+              {/* THE METABOLIC BRIDGE CTA */}
+              <div className="bg-[#FFF9F5] border-2 border-orange-200 p-6 rounded-2xl text-center shadow-sm">
+                <h4 className="text-xl font-bold text-slate-900 mb-2">Want to amplify these results?</h4>
+                <p className="text-slate-600 mb-6">
+                  This plan provides the science, but you need the <strong>spark</strong>. Thousands of users combine this nutrition plan with the 7-second morning ritual to accelerate their metabolism[cite: 1].
+                </p>
+                <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-6 text-lg w-full md:w-auto shadow-lg transition-transform hover:scale-105">
+                  <Link href="https://5e2adpgvl25m7o5jndpbrz9w04.hop.clickbank.net/?&traffic_source=aidietcalc" target="_blank">
+                    Discover The Morning Ritual That Sparks Metabolism →
+                  </Link>
+                </Button>
               </div>
             </div>
           )}
