@@ -1,6 +1,5 @@
-import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
-import "./globals.css"
+import "@/styles/globals.css"
 import { SiteHeader } from "@/components/site-header"
 import Script from "next/script"
 import { siteConfig } from "@/config/site"
@@ -130,8 +129,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {children}
         <Toaster />
         <CookieConsent />
+        <Footer />
       </body>
-      <Footer />
     </html>
   )
 }
