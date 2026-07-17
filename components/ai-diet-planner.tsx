@@ -39,7 +39,6 @@ export default function AIDietPlanner() {
   const { toast } = useToast()
 
   const generateSampleMealPlan = useCallback(() => {
-    // This is a placeholder function - in a real app you'd call an API
     const plans: Record<string, MealPlan> = {
       balanced: {
         breakfast: "Greek yogurt with berries and granola",
@@ -72,7 +71,6 @@ export default function AIDietPlanner() {
     setMealPlan(null)
     
     try {
-      // Simulate API call delay
       setTimeout(() => {
         const newMealPlan = generateSampleMealPlan()
         setMealPlan(newMealPlan)
@@ -94,13 +92,6 @@ export default function AIDietPlanner() {
 
   return (
     <>
-      {/* SEO-optimized intro paragraph */}
-      <div className="max-w-4xl mx-auto mb-6 px-4">
-        <p className="text-lg text-gray-800 bg-white bg-opacity-80 rounded-md p-4 shadow-sm border border-gray-200">
-          <strong>Revolutionize your nutrition with our AI-Powered Diet & Meal Planner.</strong> This advanced tool creates personalized meal plans tailored to your calorie needs, dietary preferences, and food restrictions. Whether you're aiming for weight loss, muscle gain, or simply healthier eating habits, our AI analyzes thousands of nutritional profiles to deliver optimal meal suggestions. Get started by entering your details below to receive your custom plan powered by cutting-edge dietary algorithms.
-        </p>
-      </div>
-
       <Card className="w-full max-w-4xl mx-auto">
         <CardHeader>
           <CardTitle className="text-2xl">AI-Powered Diet & Meal Planner</CardTitle>
@@ -175,7 +166,7 @@ export default function AIDietPlanner() {
               
               <Button
                 onClick={handleGenerateMealPlan}
-                className="w-full"
+                className="w-full bg-[#3B82F6] hover:bg-[#2563EB]"
                 disabled={isLoading}
               >
                 {isLoading ? "Generating Your Plan..." : "Generate AI Meal Plan"}
@@ -202,24 +193,6 @@ export default function AIDietPlanner() {
                   <span>Accounts for dietary restrictions</span>
                 </li>
               </ul>
-              
-              <div className="pt-4">
-                <Card className="border-blue-100 bg-blue-50">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-lg">Want More Advanced Features?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="mb-3">
-                      Upgrade to our premium meal planning app for grocery lists, meal prep guides, and continuous AI optimization!
-                    </p>
-                    <Button asChild className="w-full bg-green-600 hover:bg-green-700">
-                      <Link href="https://mitolyn.com/welcome/?hop=zzzzz&hopId=4f9c80db-7c96-4791-9c9e-c4b313b1133a" target="_blank">
-                        Get Premium Meal Plans
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
             </div>
           </div>
           
@@ -276,22 +249,6 @@ export default function AIDietPlanner() {
                   </CardContent>
                 </Card>
               </div>
-              
-              <Card className="mt-4 border-green-100 bg-green-50">
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-lg">Ready to Transform Your Diet?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-3">
-                    For complete meal plans with shopping lists, prep instructions, and ongoing AI optimization, check out our premium partner program!
-                  </p>
-                  <Button asChild className="w-full bg-[rgb(59,130,246)] hover:bg-[rgb(29,100,216)]">
-                    <Link href="https://18f7ax6zjado3l9hngwk48cpfn.hop.clickbank.net/?&traffic_source=aidietcalc" target="_blank">
-                      Get Custom Meal Plans Now
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
             </div>
           )}
         </CardContent>
